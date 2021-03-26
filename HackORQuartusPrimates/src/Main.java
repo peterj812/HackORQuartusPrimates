@@ -9,8 +9,8 @@ public class Main {
 	Player p;
 	
 	// ITEMS
-	Item knife;
-	Item waterBottle;
+	Item knife = new Item("knife");
+	Item waterBottle = new Item("water bottle");
 	
 	public static void main() {
 		
