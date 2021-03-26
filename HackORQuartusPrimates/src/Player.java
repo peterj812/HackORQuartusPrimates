@@ -6,7 +6,12 @@ public class Player {
 	
 	public Player() {
 		name = "";
-		health = 100;
+		health = 10;
+	}
+	
+	public Player(String n) {
+		name = n;
+		health = 10;
 	}
 	
 	void setName(String n) {
@@ -27,9 +32,19 @@ public class Player {
 		
 	}
 	
-	// TODO: this method should print a list of all Items in backpack
+	Item[] getItems() {
+		return backpack;
+	}
+	
+	// TODO: this method should print an array of all Items in backpack
 	void checkBackpack() {
 		
+	}
+	
+	// TODO: this method should check whether there is at least one offensive item in backpack
+	boolean setsoffTSA() {
+		// call checkBackpack()
+		return false;
 	}
 	
 	// TODO: this method should add Item i to the backpack
