@@ -7,7 +7,7 @@ public class Main {
 	private static Random rand = new Random();
 	static Player jimbo = new Player("");
 	
-	static Panel homescreen, init, a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z;
+	static Panel homescreen, init, a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z, aa, ab, ac, ad, ae, af, ag;
 	static Item adultItem, bandages, knife, smallEngine, waterBottle;
 	static Game gam;
 
@@ -77,7 +77,14 @@ public class Main {
 		x = new Panel("", "");
 		y = new Panel("", "");
 		z = new Panel("", "");
-		
+		aa = new Panel("", "");
+		ab = new Panel("", "");
+		ac = new Panel("", "");
+		ad = new Panel("", "");
+		ae = new Panel("", "");
+		af = new Panel("", "");
+		ag = new Panel("", "");
+
 		// SET CHOICES
 		
 		// TODO: set homescreen choices
@@ -103,17 +110,13 @@ public class Main {
 		d.setChoice("Read the newspaper old man!", g);
 		d.setChoice("Put your feet up and just relax", h);
 		
-		// e choices
-		// TODO: Implement prison game over
+		// e choices - TODO: Implement prison game over
 	
-		// f track
-		// TODO: Implement movement to crash shit w/ damage
+		// f track - TODO: Implement movement to crash shit w/ damage
 		
-		// g track
-		// TODO: Either death or higher chance of injury/more damage
+		// g track - TODO: Either death or higher chance of injury/more damage
 		
-		// h choices
-		// TODO: Implement prison game over
+		// h choices - TODO: Implement prison game over
 		
 		
 		// i choices
@@ -133,15 +136,19 @@ public class Main {
 		l.setChoice("Walk further into the Carnival", p);
 		l.setChoice("Just...Cry", q);
 		
+		// l1 track
+		// TODO: Automatically go to track l
+		
 		// m choices
 		m.setChoice("Pick up bandage", n);
 		m.setChoice("Walk into carnival", l);
 		
 		// n 
-	
+		n.setChoice("Walk into the carnival.", o);
+		n.setChoice("Open backpack", ab);
 		
 		// o
-		
+		// TODO: Death from shrapnel 
 		
 		// p
 		p.setChoice("You sure you don't want to give up?", q);
@@ -149,13 +156,69 @@ public class Main {
 		p.setChoice("Go to the hotdog building", p);
 		
 		// q
-		
+		// TODO: Death from crying 
 		
 		// r
-		
+		r.setChoice("Pull on the door", t);
+		r.setChoice("Push the door", v);
+		r.setChoice("Ignore it", u);
 		
 		// s
-
+		s.setChoice("Locate the source of the smell.", w);
+		s.setChoice("Leave the building.", aa);
+		
+		// t
+		t.setChoice("Pull the door.", y);
+		t.setChoice("Push the door.", p);
+		t.setChoice("Walk away.", u);
+		
+		// u
+		u.setChoice("Run as fast as you can in a straight line.", y);
+		u.setChoice("Try to escape the maze.", z);
+		
+		// v
+		v.setChoice("Pull the door.", x);
+		v.setChoice("Push the door.", y);
+		v.setChoice("Just walk awayayyay.", u);
+		
+		// w
+		w.setChoice("Push the door.", ac);
+		w.setChoice("Walk out the way you came.", aa);
+		
+		// x
+		x.setChoice("Yank the door!", y);
+		x.setChoice("Charge the door!", y);
+		x.setChoice("Just walk awayayyay.", u);
+		
+		// y
+		// TODO: Gameover
+		
+		// z - AWAITING PANEL
+		
+		// aa
+		// TODO: GO to track ad
+		
+		// ab
+		ab.setChoice("Close backpack and head to the carnival.", o);
+		ab.setChoice("take out shrapnel and apply bandage.", l1);
+		
+		// ac
+		ac.setChoice("Screeeeeaaammm!!!", ae);
+		ac.setChoice("Run out of the building, but you can't scream.", af);
+				
+		// ad
+		ad.setChoice("You sure you don't want to give up?", q);
+		ad.setChoice("Go to the mirror building.", r);
+		ad.setChoice("Go to the hotdog building.", s);
+		
+		// ae - AWAITING PANEL
+		
+		
+		// af - AWAITING PANEL
+		
+		
+		// determine what items will be in backpack
+		
 	}
 
 	static void RandomItem(Item in) {
