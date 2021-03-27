@@ -7,7 +7,7 @@ public class Main {
 	private static Random rand = new Random();
 	static Player jimbo = new Player("");
 	
-	static Panel homescreen, init, a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z, aa, ab, ac, ad, ae, af, ag;
+	static Panel homescreen, init, a, b, c, d, e, f, g, h, i, j, k, l, l1, m, n, o, p, q, r, s, t, u, v, w, x, y, z, aa, ab, ac, ad, ae, af, ag;
 	static Item adultItem, bandages, knife, smallEngine, waterBottle;
 	static Game gam;
 
@@ -63,6 +63,7 @@ public class Main {
 		j = new Panel("", "You seem to have been impaled by some shrapnel. At least you survived as it seems no one else did. Is that a carnival next to you?");
 		k = new Panel("", "GAME OVER. As you pull the shrapnel out of your body, you feel the life quickly leave your body.");
 		l = new Panel("", "You approach the carnival. The air feels thinner here, as if something is sucking it out of the world. You feel a shiver go down your spine as you walk through the clown headed gates.");
+		l1 = new Panel("", "");
 		m = new Panel("", "As you stare into the firey wreck of the plane, you notice a bandage lying at your feet.");
 		n = new Panel("", "You put the bandage in your backpack.");
 		o = new Panel("", "GAMEOVER. The pain from the shrapnel is too much to handle. Your body gives in on itself, and you feel the life leave you");
