@@ -242,7 +242,7 @@ public class Main {
 		gam.createGameScreen();
 		
 		updatePanel(homescreen);
-
+    
 		// set the player name
 
 		// airport sequence
