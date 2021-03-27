@@ -5,7 +5,7 @@ import java.util.Random;
 
 public class Main {
 	private static Random rand = new Random();
-	Player jimbo = new Player("");
+	static Player jimbo = new Player("");
 
 	// METHODS
 
@@ -36,8 +36,6 @@ public class Main {
 		double hasSmallEngine = 25;
 		double hasWaterBottleChance = 25;
 		double tripChance = 25;
-		
-		Player jimbo = new Player();
 		
 		// ITEMS
 		Item adultItem = new Item("adult item", true);
