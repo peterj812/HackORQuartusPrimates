@@ -33,14 +33,14 @@ public class Player {
 		
 	}
 	
-	// TODO: this method should print an array of all Items in backpack
+	// TODO: this method should print all of the Items in ArrayList backpack
 	void checkBackpack() {
 		
 	}
 	
-	// TODO: this method should check whether there is at least one offensive item in backpack
+	// checks whether there is at least one offensive item in backpack
 	boolean setsoffTSA() {
-		
+		for (int idx = 0; idx < backpack.size(); idx++) { if (backpack.get(idx).willSetoffTSA) return true; }
 		return false;
 	}
 	
