@@ -7,8 +7,9 @@ public class Main {
 	private static Random rand = new Random();
 	static Player jimbo = new Player("");
 	
-	static Panel init, a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z;
+	static Panel homescreen, init, a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z;
 	static Item adultItem, bandages, knife, smallEngine, waterBottle;
+	static Game gam;
 
 	// METHODS
 
@@ -48,6 +49,7 @@ public class Main {
 		waterBottle = new Item("water bottle", true);
 
 		// PANELS
+		homescreen = new Panel("Homescreen", "");
 		init = new Panel("TSA Checkpoint", "");
 		a = new Panel("", "");
 		b = new Panel("", "");
@@ -77,6 +79,9 @@ public class Main {
 		z = new Panel("", "");
 		
 		// SET CHOICES
+		
+		// TODO: set homescreen choices
+		// homescreen choices
 
 		// init choices
 		init.setChoice("Look through bag", a);
@@ -150,12 +155,6 @@ public class Main {
 		
 		
 		// s
-		
-		
-		
-		
-		
-		// determine what items will be in backpack
 
 	}
 
@@ -167,6 +166,8 @@ public class Main {
 		}
 	}
 	
+	// TODO: change mainTextArea, choice1, choice2, and choice3 dynamically based on Panel pan
+	// TODO: see Game.java's method public void airport for guide
 	public static void updatePanel(Panel pan) {
 		
 	}
@@ -174,7 +175,10 @@ public class Main {
 	public static void main(String[] args) {
 		initialize();
 		
-		updatePanel(init);
+		gam = new Game();
+		gam.createGameScreen();
+		
+		updatePanel(homescreen);
 
 		// set the player name
 
