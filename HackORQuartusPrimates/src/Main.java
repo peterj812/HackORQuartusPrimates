@@ -51,16 +51,16 @@ public class Main {
 		// PANELS
 		homescreen = new Panel("Homescreen", "");
 		init = new Panel("TSA Checkpoint", "");
-		a = new Panel("", "");
+		a = new Panel("", "Jimbo sees his water bottle and whatever else is in the bag");
 		b = new Panel("", "");
 		c = new Panel("", "");
 		d = new Panel("", "");
 		e = new Panel("", "");
-		f = new Panel("", "");
+		f = new Panel("Crash site", "");
 		g = new Panel("", "");
-		h = new Panel("", "");
+		h = new Panel("", "The Airmarshall sitting in front of you stands up and knocks you out");
 		i = new Panel("", "");
-		j = new Panel("", "");
+		j = new Panel("", "You seem to have been impaled by some shrapnel. At least you survived as it seems no one else did. Is that a carnival next to you?");
 		k = new Panel("", "");
 		l = new Panel("", "");
 		m = new Panel("", "");
@@ -70,9 +70,9 @@ public class Main {
 		q = new Panel("", "");
 		r = new Panel("", "");
 		s = new Panel("", "");
-		t = new Panel("", "");
+		t = new Panel("", "The door doesn't budge");
 		u = new Panel("", "");
-		v = new Panel("", "");
+		v = new Panel("", "The door doesn't budge");
 		w = new Panel("", "");
 		x = new Panel("", "");
 		y = new Panel("", "");
