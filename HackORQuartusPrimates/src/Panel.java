@@ -1,24 +1,28 @@
+import java.util.HashMap;
+import java.util.Set;
 
 public class Panel {
-	String panelID;
-	Panel[] choices;
+	private String name;
+	private String prompt;
+	private HashMap choices = new HashMap();
 	
-	public Panel(String id) {
-		panelID = id;
+	public Panel(String n, String p) {
+		name = n;
+		prompt = p;
 	}
 	
-	public Panel(String id, Panel[] c) {
-		panelID = id;
-		choices = c;
+	public void setChoice(String choice, Panel p) {
+		if(choices.get(choice) == null) choices.put(choice, p);
+		else choices.replace(choice, p);
 	}
 	
-	// TODO: add Panel c to the array of Panels
-	void addChoice(Panel c) {
-		
+	public void removeChoice(String choice) {
+		choices.remove(choice);
 	}
 	
-	Panel[] getChoices() {
-		return choices;
+	public boolean hasChoice(String choice) {
+		if(choices.containsKey(choice) != false) return true;
+		else return false;
 	}
-
+	
 }
