@@ -157,7 +157,7 @@ public class Game {
         hpLabelNumber.setForeground(Color.white);
         playerPanel.add(hpLabelNumber);
 
-        //calls playerSetup function
+        //callss playerSetup function
         playerSetup();
 
     }
@@ -167,12 +167,12 @@ public class Game {
         playerHp = Main.health;
         hpLabelNumber.setText("" + playerHp);
 
-        airport();
+       panelInit();
     }
 
     //choices to show the first scenario
-    public void airport() {
-        mainTextArea.setText("You approach the gate at TSA what do you do?");
+    public void panelInit() {
+        mainTextArea.setText(Main.init.prompt);
         choice1.setText("Look through bag");
         choice2.setText("Go Through Metal Detector");
         choice3.setText("Go home, flying is scary");
@@ -195,10 +195,12 @@ public class Game {
             createGameScreen();
         }
     }
-
     //actions that handle the choices when user 
     public class ChoiceHandler implements ActionListener {
-
+    	
+    	// TODO: fix this to be dynamic
+    	// ie: actionToPerform = currentPanel.getChoice(buttonClicked.getText())
+    	// actionToPerform, currentPanel, and buttonClicked aren't the actual variable names
         public void actionPerformed(ActionEvent event) {    
             
             String yourChoice = event.getActionCommand();

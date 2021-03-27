@@ -261,19 +261,6 @@ public class Main {
 		initialize();
 		
 		gam = new Game();
-		gam.createGameScreen();
-		
-		updatePanel(homescreen);
-    
-		// set the player name
-
-		// airport sequence
-
-		// plane sequence
-
-		// crash sequence
-
-		// ???
 	}
 
 }
