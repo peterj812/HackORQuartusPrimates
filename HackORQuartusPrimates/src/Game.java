@@ -1000,7 +1000,53 @@ public class Game {
 				case "c2": panelB();break;
 				//case "c3": panelC();break;
 				}
-			}
+			case "panelR()": 
+				switch(buttonPressed) {
+				case "c1": panelT();break;
+				case "c2": panelV();break;
+				case "c3": panelU();break;
+				}
+			case "panelS()": 
+    			switch(buttonPressed) {
+    			case "c1": panelW();break;
+    			case "c2": panelAA();break;
+    			}
+    		case "panelT()": 
+    			switch(buttonPressed) {
+    			case "c1": panelY();break;
+    			case "c2": panelX();break;
+    			case "c3": panelU();break;
+    			}
+    		case "panelU()": 
+    			switch(buttonPressed) {
+    			case "c1": panelY();break;
+    			case "c2": panelZ();break;
+    			}
+    		case "panelV()": 
+    			switch(buttonPressed) {
+    			case "c1": panelX();break;
+    			case "c2": panelY();break;
+    			case "c3": panelU();break;
+    			}
+    		case "panelW()": 
+    			switch(buttonPressed) {
+    			case "c1": panelAC();break;
+    			case "c2": panelAA();break;
+    			}
+    		case "panelX()": 
+    			switch(buttonPressed) {
+    			case "c1": panelY();break;
+    			case "c2": panelY();break;
+    			case "c3": panelU();break;
+    			}
+    		case "panelY()": 
+    			death();
+    		case "panelAC()": 
+    			switch(buttonPressed) {
+    			case "c1": panelAE();break;
+    			case "c2": panelAF();break;
+    			}
+        	}
         }
     }
 }
