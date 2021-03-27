@@ -967,7 +967,24 @@ public class Game {
 
     }
 
+    //supposed to transition to a winning screen when player chooses great routes
+    public void winning() {
+        picturePanel = new JPanel();
+        picturePanel.setBounds(200, 200, 500, 500);
+        picturePanel.setBackground(Color.blue);
+        con.add(picturePanel);
 
+        pictureLabel = new JLabel();
+
+        image1 = new ImageIcon(".//Images//death.jpg");
+
+        pictureLabel.setIcon(image1);
+        picturePanel.add(pictureLabel);
+
+        position = "winning()";
+
+    }
+    
     //actions that handle the titlescreen
     public class TitleScreenHandler implements ActionListener {
 
@@ -997,8 +1014,120 @@ public class Game {
             		case "c2":
             			panelB(); break;
             		case "c3":
-            			//panelC(); break;
+            			panelC(); break;
             	}
+            	
+            case "panelA()":
+            	switch(buttonPressed) {
+            		case "c1":
+            			panelD(); break;
+            		case "c2":
+            			panelE(); break;
+            		case "c3":
+            			break;
+            	}
+            	
+            case "panelB()":
+            	death(); break;
+            	
+            case "panelC()":
+            	winning(); break;
+            
+            case "panelD()":
+            	switch(buttonPressed) {
+            		case "c1":
+            			panelF(); break;
+            		case "c2":
+            			panelG(); break;
+            		case "c3":
+            			panelH(); break;
+            	}
+            	
+            case "panelE()":
+            	death();
+            	
+            case "panelF()":
+            	switch(buttonPressed) {
+            		case "c1":
+            			panelI(); break;
+            		case "c2":
+            			panelJ(); break;
+            		case "c3":
+            			break;
+            	}
+            	
+            case "panelG()":
+            	switch(buttonPressed) {
+            		case "c1":
+            			panelI(); break;
+            		case "c2":
+            			panelJ(); break;
+            		case "c3":
+            			break;
+            	}
+            	
+            case "panelH()":
+            	death();
+            	
+            case "panelI()":
+            	switch(buttonPressed) {
+            		case "c1":
+            			panelL(); break;
+            		case "c2":
+            			panelM(); break;
+            		case "c3":
+            			break;
+            	}
+            	
+            case "panelJ()":
+            	switch(buttonPressed) {
+            		case "c1":
+            			panelK(); break;
+            		case "c2":
+            			panelO(); break;
+            		case "c3":
+            			panelM(); break;
+            	}
+            	
+            case "panelK()":
+            	death();
+            	
+            case "panelL()":
+            	switch(buttonPressed) {
+            		case "c1":
+            			panelP(); break;
+            		case "c2":
+            			panelQ(); break;
+            		case "c3":
+            			break;
+            	}
+            	
+            case "panelM()":
+            	switch(buttonPressed) {
+            		case "c1":
+            			panelN(); break;
+            		case "c2":
+            			panelO(); break;
+            		case "c3":
+            			break;
+            	}
+            	
+            case "panelO()":
+            	death();
+            	
+            case "panelP()":
+            	switch(buttonPressed) {
+            		case "c1":
+            			panelQ(); break;
+            		case "c2":
+            			panelR(); break;
+            		case "c3":
+            			panelS(); break;
+            	}
+            	
+            case "panelQ()":
+            	death(); break;
+            	
             }
         }
     }
