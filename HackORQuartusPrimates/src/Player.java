@@ -64,6 +64,7 @@ public class Player {
 	
 	// TODO: this method should check if Item i is in the backpack, return true or false
 	boolean hasItem(Item i) {
+		for (int idx = 0; idx < backpack.size(); idx++) { if (backpack.get(idx).getName().equals(i.getName())) return true; }
 		return false;
 	}
 
