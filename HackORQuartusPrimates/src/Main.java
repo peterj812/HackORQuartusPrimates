@@ -32,7 +32,7 @@ public class Main {
 	private static Random rand = new Random();
 	public static Player jimbo = new Player("");
 	
-	static Panel homescreen, choosename, init, a, b, c, d, e, f, g, h, i, j, k, l, l1, m, n, o, p, q, r, s, t, u, v, w, x, y, z, aa, ab, ac, ad, ae, af, ag;
+	static Panel homescreen, choosename, init, a, b, c, d, e, f, g, h, i, j, k, l, l1, m, m1, n, o, p, q, r, s, t, u, v, w, x, y, z, aa, ab, ac, ad, ae, af, ag;
   static JPanel titleNamePanel, playGameButtonPanel, mainTextPanel, choiceButtonPanel, playerPanel;
   static JLabel titleNameLabel, hpLabel, hpLabelNumber;
 
@@ -102,6 +102,7 @@ public class Main {
 		l = new Panel("", "You approach the carnival. The air feels thinner here, as if something is sucking it out of the world. You feel a shiver go down your spine as you walk through the clown headed gates.");
 		l1 = new Panel("", "");
 		m = new Panel("", "As you stare into the firey wreck of the plane, you notice a bandage lying at your feet.");
+		m1 = new Panel("", "You stare at the crash and see nothing but burning rubble and all you can think of is George Bush.");
 		n = new Panel("", "You put the bandage in your backpack.");
 		o = new Panel("", "GAMEOVER. The pain from the shrapnel is too much to handle. Your body gives in on itself, and you feel the life leave you");
 		p = new Panel("", "You walk further into the carnival. The sky becomes darker as you leave the fire of the crash. The air getting even thinner. You can hear the sound of clowns laughing in the distance. It seems the noise is coming towards you. You can see a building to your left, and a building to your right. The left building has a giant mirror on it, the right has a giant hotdog on top." );
