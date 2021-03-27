@@ -164,7 +164,7 @@ public class Game {
 
     //where it shows the hp bar with a unspecified hp
     public void playerSetup () {
-        playerHp = 15;
+        playerHp = Main.health;
         hpLabelNumber.setText("" + playerHp);
 
         airport();

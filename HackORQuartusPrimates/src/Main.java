@@ -5,12 +5,13 @@ import java.util.Random;
 
 public class Main {
 	private static Random rand = new Random();
-	static Player jimbo = new Player("");
+	public static Player jimbo = new Player("");
 	
 	static Panel homescreen, init, a, b, c, d, e, f, g, h, i, j, k, l, l1, m, n, o, p, q, r, s, t, u, v, w, x, y, z, aa, ab, ac, ad, ae, af, ag;
 	static Item adultItem, bandages, knife, smallEngine, waterBottle;
 	static Game gam;
-
+	public static int health = jimbo.getHealth();
+	
 	// METHODS
 
 	void trip() {
