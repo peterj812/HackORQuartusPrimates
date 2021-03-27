@@ -23,7 +23,7 @@ public class Main {
 	// TODO: finish this method please :)
 	void injury(int min_damage, int max_damage) {
 		int damage = 0; // determine the damage using min_damage and max_damage inclusive
-		p.setHealth(p.getHealth() - damage);
+		jimbo.setHealth(jimbo.getHealth() - damage);
 	}
 
 	static void initialize() {
@@ -35,9 +35,9 @@ public class Main {
 		double hasSmallEngine = 25;
 		double hasWaterBottleChance = 25;
 		double tripChance = 25;
-
-		Player p = new Player();
-
+		
+		Player jimbo = new Player();
+		
 		// ITEMS
 		Item adultItem = new Item("adult item", true);
 		Item bandages = new Item("bandages", false);
@@ -60,7 +60,20 @@ public class Main {
 		Panel k = new Panel("", "");
 		Panel l = new Panel("", "");
 		Panel m = new Panel("", "");
-
+		Panel n = new Panel("", "");
+		Panel o = new Panel("", "");
+		Panel p = new Panel("", "");
+		Panel q = new Panel("", "");
+		Panel r = new Panel("", "");
+		Panel s = new Panel("", "");
+		Panel t = new Panel("", "");
+		Panel u = new Panel("", "");
+		Panel v = new Panel("", "");
+		Panel w = new Panel("", "");
+		Panel x = new Panel("", "");
+		Panel y = new Panel("", "");
+		Panel z = new Panel("", "");
+		
 		// SET CHOICES
 
 		// init choices
@@ -79,21 +92,41 @@ public class Main {
 		// TODO: implement c outcome (see spreadsheet)
 
 		// d choices
-
+		d.setChoice("Take a nap", f);
+		d.setChoice("Read the newspaper old man!", g);
+		d.setChoice("Put your feet up and just relax.", h);
+		
 		// e choices
-
-		// f choices
-
-		// g choices
-
+		//prison
+	
+		// f track
+		// TODO: 
+		
+		// g track
+		// TODO: Either death or higher chance of injury/more damage
+		
 		// h choices
-
+		// game over prison
+		
+		
 		// i choices
-
+		i.setChoice("Walk toward abadonded carnival.", l);
+		i.setChoice("Examine the plane crash", m);
+		
 		// j choices
-
+		j.setChoice("Pull out the shrapanel in your leg.", k);
+		j.setChoice("Walk toward abadonded carnival.", l);
+		j.setChoice("Examine the plane crash", m);		
+		
+		// k choices
+		// TODO: Say you are starting to bleed out quick
+		k.setChoice("Cover it with your hand", n);
+		
+		// l choices
+		
+		
 		// m choices
-
+		
 		// determine what items will be in backpack
 
 	}
