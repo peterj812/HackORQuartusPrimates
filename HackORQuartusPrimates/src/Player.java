@@ -44,9 +44,9 @@ public class Player {
 		return false;
 	}
 	
-	// TODO: this method should add Item i to the backpack
+	// adds Item i to backpack
 	void addItem(Item i) {
-		backpack.add(i);
+		if(!hasItem(i)) backpack.add(i);
 	}
 	
 	void removeItem(Item i) {
