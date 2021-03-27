@@ -85,10 +85,10 @@ public class Main {
 		a.setChoice("Put bag down and go through security", e);
 
 		// b choices
-		// TODO: implement b outcome (see spreadsheet)
+		// TODO: Implement prison game over
 
 		// c choices
-		// TODO: implement c outcome (see spreadsheet)
+		// TODO: Implement unaccomplished win
 
 		// d choices
 		d.setChoice("Take a nap", f);
@@ -96,16 +96,16 @@ public class Main {
 		d.setChoice("Put your feet up and just relax.", h);
 		
 		// e choices
-		//prison
+		// TODO: Implement prison game over
 	
 		// f track
-		// TODO: 
+		// TODO: Implement movement to crash shit w/ damage
 		
 		// g track
 		// TODO: Either death or higher chance of injury/more damage
 		
 		// h choices
-		// game over prison
+		// TODO: Implement prison game over
 		
 		
 		// i choices
