@@ -91,6 +91,8 @@ public class Main {
 		// j choices
 		
 		// m choices
+		
+		// determine what items will be in backpack
 	}
 	
 	public static void main(String[] args) {
