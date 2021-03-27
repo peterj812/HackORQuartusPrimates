@@ -108,7 +108,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		initialize();
-
+		
 		// set the player name
 
 		// airport sequence
