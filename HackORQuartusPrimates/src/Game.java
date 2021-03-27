@@ -200,13 +200,31 @@ public class Game {
         mainTextArea.setText(Main.init.prompt);
 
         choice1.setText("Look through bag");
-        choice2.setText("Go Through Metal Detector");
+        choice2.setText("Go through metal detector");
         choice3.setText("Go home, flying is scary");
 
     }
     
     public void panelA() {
-    	
+    	//these picture panels is what calls the images from the folder
+        picturePanel = new JPanel();
+        picturePanel.setBounds(200, 90, 500, 500);
+        picturePanel.setBackground(Color.blue);
+        con.add(picturePanel);
+
+        pictureLabel = new JLabel();
+
+        image1 = new ImageIcon("");
+
+        pictureLabel.setIcon(image1);
+        picturePanel.add(pictureLabel);
+
+        position = "panelA()";
+        mainTextArea.setText(Main.a.prompt);
+
+        choice1.setText("Throw away contraband");
+        choice2.setText("Put bag down and go through security");
+        choice3.setText("");
     }
 
     //choices to show the second scenario
@@ -225,12 +243,717 @@ public class Game {
         picturePanel.add(pictureLabel);
         */
         position = "panelB()";
-        mainTextArea.setText("Metal Detector goes off from the Contraband, alarm sounds, TSA agent yells HEY YOU!!");
+        mainTextArea.setText(Main.b.prompt);
         choice1.setText("Next.....");
         choice2.setText("");
         choice3.setText("");
         choice2.setVisible(false);
         choice3.setVisible(false);
+    }
+    
+    public void panelC() {
+    	//these picture panels is what calls the images from the folder
+        picturePanel = new JPanel();
+        picturePanel.setBounds(200, 90, 500, 500);
+        picturePanel.setBackground(Color.blue);
+        con.add(picturePanel);
+
+        pictureLabel = new JLabel();
+
+        image1 = new ImageIcon("");
+
+        pictureLabel.setIcon(image1);
+        picturePanel.add(pictureLabel);
+
+        position = "panelC()";
+        mainTextArea.setText(Main.c.prompt);
+
+        choice1.setText("");
+        choice2.setText("");
+        choice3.setText("");
+    }
+    
+    public void panelD() {
+    	//these picture panels is what calls the images from the folder
+        picturePanel = new JPanel();
+        picturePanel.setBounds(200, 90, 500, 500);
+        picturePanel.setBackground(Color.blue);
+        con.add(picturePanel);
+
+        pictureLabel = new JLabel();
+
+        image1 = new ImageIcon("");
+
+        pictureLabel.setIcon(image1);
+        picturePanel.add(pictureLabel);
+
+        position = "panelD()";
+        mainTextArea.setText(Main.ad.prompt);
+
+        choice1.setText("");
+        choice2.setText("");
+        choice3.setText("");
+    }
+    
+    public void panelE() {
+    	//these picture panels is what calls the images from the folder
+        picturePanel = new JPanel();
+        picturePanel.setBounds(200, 90, 500, 500);
+        picturePanel.setBackground(Color.blue);
+        con.add(picturePanel);
+
+        pictureLabel = new JLabel();
+
+        image1 = new ImageIcon("");
+
+        pictureLabel.setIcon(image1);
+        picturePanel.add(pictureLabel);
+
+        position = "panelE()";
+        mainTextArea.setText(Main.e.prompt);
+
+        choice1.setText("");
+        choice2.setText("");
+        choice3.setText("");
+    }
+    
+    public void panelF() {
+    	//these picture panels is what calls the images from the folder
+        picturePanel = new JPanel();
+        picturePanel.setBounds(200, 90, 500, 500);
+        picturePanel.setBackground(Color.blue);
+        con.add(picturePanel);
+
+        pictureLabel = new JLabel();
+
+        image1 = new ImageIcon("");
+
+        pictureLabel.setIcon(image1);
+        picturePanel.add(pictureLabel);
+
+        position = "panelF()";
+        mainTextArea.setText(Main.f.prompt);
+
+        choice1.setText("");
+        choice2.setText("");
+        choice3.setText("");
+    }
+    
+    public void panelG() {
+    	//these picture panels is what calls the images from the folder
+        picturePanel = new JPanel();
+        picturePanel.setBounds(200, 90, 500, 500);
+        picturePanel.setBackground(Color.blue);
+        con.add(picturePanel);
+
+        pictureLabel = new JLabel();
+
+        image1 = new ImageIcon("");
+
+        pictureLabel.setIcon(image1);
+        picturePanel.add(pictureLabel);
+
+        position = "panelG()";
+        mainTextArea.setText(Main.g.prompt);
+
+        choice1.setText("");
+        choice2.setText("");
+        choice3.setText("");
+    }
+    
+    public void panelH() {
+    	//these picture panels is what calls the images from the folder
+        picturePanel = new JPanel();
+        picturePanel.setBounds(200, 90, 500, 500);
+        picturePanel.setBackground(Color.blue);
+        con.add(picturePanel);
+
+        pictureLabel = new JLabel();
+
+        image1 = new ImageIcon("");
+
+        pictureLabel.setIcon(image1);
+        picturePanel.add(pictureLabel);
+
+        position = "panelH()";
+        mainTextArea.setText(Main.h.prompt);
+
+        choice1.setText("");
+        choice2.setText("");
+        choice3.setText("");
+    }
+    
+    public void panelI() {
+    	//these picture panels is what calls the images from the folder
+        picturePanel = new JPanel();
+        picturePanel.setBounds(200, 90, 500, 500);
+        picturePanel.setBackground(Color.blue);
+        con.add(picturePanel);
+
+        pictureLabel = new JLabel();
+
+        image1 = new ImageIcon("");
+
+        pictureLabel.setIcon(image1);
+        picturePanel.add(pictureLabel);
+
+        position = "panelI()";
+        mainTextArea.setText(Main.i.prompt);
+
+        choice1.setText("Walk toward abandoned carnival");
+        choice2.setText("Examine the plane crash");
+        choice3.setText("");
+    }
+    
+    public void panelJ() {
+    	//these picture panels is what calls the images from the folder
+        picturePanel = new JPanel();
+        picturePanel.setBounds(200, 90, 500, 500);
+        picturePanel.setBackground(Color.blue);
+        con.add(picturePanel);
+
+        pictureLabel = new JLabel();
+
+        image1 = new ImageIcon("");
+
+        pictureLabel.setIcon(image1);
+        picturePanel.add(pictureLabel);
+
+        position = "panelJ()";
+        mainTextArea.setText(Main.j.prompt);
+
+        choice1.setText("Pull out the shrapnel");
+        choice2.setText("Walk toward abandoned carnival");
+        choice3.setText("Examine the plane crash");
+    }
+    
+    public void panelK() {
+    	//these picture panels is what calls the images from the folder
+        picturePanel = new JPanel();
+        picturePanel.setBounds(200, 90, 500, 500);
+        picturePanel.setBackground(Color.blue);
+        con.add(picturePanel);
+
+        pictureLabel = new JLabel();
+
+        image1 = new ImageIcon("");
+
+        pictureLabel.setIcon(image1);
+        picturePanel.add(pictureLabel);
+
+        position = "panelK()";
+        mainTextArea.setText(Main.k.prompt);
+
+        choice1.setText("Cover it with your hand");
+        choice2.setText("");
+        choice3.setText("");
+    }
+    
+    public void panelL() {
+    	//these picture panels is what calls the images from the folder
+        picturePanel = new JPanel();
+        picturePanel.setBounds(200, 90, 500, 500);
+        picturePanel.setBackground(Color.blue);
+        con.add(picturePanel);
+
+        pictureLabel = new JLabel();
+
+        image1 = new ImageIcon("");
+
+        pictureLabel.setIcon(image1);
+        picturePanel.add(pictureLabel);
+
+        position = "panelL()";
+        mainTextArea.setText(Main.l.prompt);
+
+        choice1.setText("Walk toward abandoned carnival");
+        choice2.setText("Give up");
+        choice3.setText("");
+    }
+    
+    public void panelL1() {
+    	//these picture panels is what calls the images from the folder
+        picturePanel = new JPanel();
+        picturePanel.setBounds(200, 90, 500, 500);
+        picturePanel.setBackground(Color.blue);
+        con.add(picturePanel);
+
+        pictureLabel = new JLabel();
+
+        image1 = new ImageIcon("");
+
+        pictureLabel.setIcon(image1);
+        picturePanel.add(pictureLabel);
+
+        position = "panelL1()";
+        mainTextArea.setText(Main.l1.prompt);
+
+        choice1.setText("");
+        choice2.setText("");
+        choice3.setText("");
+    }
+    
+    public void panelM() {
+    	//these picture panels is what calls the images from the folder
+        picturePanel = new JPanel();
+        picturePanel.setBounds(200, 90, 500, 500);
+        picturePanel.setBackground(Color.blue);
+        con.add(picturePanel);
+
+        pictureLabel = new JLabel();
+
+        image1 = new ImageIcon("");
+
+        pictureLabel.setIcon(image1);
+        picturePanel.add(pictureLabel);
+
+        position = "panelM()";
+        mainTextArea.setText(Main.m.prompt);
+
+        choice1.setText("Pick up bandage");
+        choice2.setText("Walk into carnival");
+        choice3.setText("");
+    }
+    
+    public void panelN() {
+    	//these picture panels is what calls the images from the folder
+        picturePanel = new JPanel();
+        picturePanel.setBounds(200, 90, 500, 500);
+        picturePanel.setBackground(Color.blue);
+        con.add(picturePanel);
+
+        pictureLabel = new JLabel();
+
+        image1 = new ImageIcon("");
+
+        pictureLabel.setIcon(image1);
+        picturePanel.add(pictureLabel);
+
+        position = "panelN()";
+        mainTextArea.setText(Main.n.prompt);
+
+        choice1.setText("Walk into the carnival");
+        choice2.setText("Open backpack");
+        choice3.setText("");
+    }
+    
+    // TODO: add choices
+    public void panelO() {
+    	//these picture panels is what calls the images from the folder
+        picturePanel = new JPanel();
+        picturePanel.setBounds(200, 90, 500, 500);
+        picturePanel.setBackground(Color.blue);
+        con.add(picturePanel);
+
+        pictureLabel = new JLabel();
+
+        image1 = new ImageIcon("");
+
+        pictureLabel.setIcon(image1);
+        picturePanel.add(pictureLabel);
+
+        position = "panelO()";
+        mainTextArea.setText(Main.o.prompt);
+
+        choice1.setText("");
+        choice2.setText("");
+        choice3.setText("");
+    }
+    
+    public void panelP() {
+    	//these picture panels is what calls the images from the folder
+        picturePanel = new JPanel();
+        picturePanel.setBounds(200, 90, 500, 500);
+        picturePanel.setBackground(Color.blue);
+        con.add(picturePanel);
+
+        pictureLabel = new JLabel();
+
+        image1 = new ImageIcon("");
+
+        pictureLabel.setIcon(image1);
+        picturePanel.add(pictureLabel);
+
+        position = "panelP()";
+        mainTextArea.setText(Main.p.prompt);
+
+        choice1.setText("You sure you don't want to give up?");
+        choice2.setText("Go to the mirror building");
+        choice3.setText("Go to the hotdog building");
+    }
+    
+    public void panelQ() {
+    	//these picture panels is what calls the images from the folder
+        picturePanel = new JPanel();
+        picturePanel.setBounds(200, 90, 500, 500);
+        picturePanel.setBackground(Color.blue);
+        con.add(picturePanel);
+
+        pictureLabel = new JLabel();
+
+        image1 = new ImageIcon("");
+
+        pictureLabel.setIcon(image1);
+        picturePanel.add(pictureLabel);
+
+        position = "panelQ()";
+        mainTextArea.setText(Main.q.prompt);
+
+        choice1.setText("");
+        choice2.setText("");
+        choice3.setText("");
+    }
+    
+    public void panelR() {
+    	//these picture panels is what calls the images from the folder
+        picturePanel = new JPanel();
+        picturePanel.setBounds(200, 90, 500, 500);
+        picturePanel.setBackground(Color.blue);
+        con.add(picturePanel);
+
+        pictureLabel = new JLabel();
+
+        image1 = new ImageIcon("");
+
+        pictureLabel.setIcon(image1);
+        picturePanel.add(pictureLabel);
+
+        position = "panelR()";
+        mainTextArea.setText(Main.r.prompt);
+
+        choice1.setText("Pull on the door");
+        choice2.setText("Push the door");
+        choice3.setText("Ignore it");
+    }
+    
+    public void panelS() {
+    	//these picture panels is what calls the images from the folder
+        picturePanel = new JPanel();
+        picturePanel.setBounds(200, 90, 500, 500);
+        picturePanel.setBackground(Color.blue);
+        con.add(picturePanel);
+
+        pictureLabel = new JLabel();
+
+        image1 = new ImageIcon("");
+
+        pictureLabel.setIcon(image1);
+        picturePanel.add(pictureLabel);
+
+        position = "panelS()";
+        mainTextArea.setText(Main.s.prompt);
+
+        choice1.setText("Locate the source of the smell");
+        choice2.setText("Leave the building");
+        choice3.setText("");
+    }
+    
+    public void panelT() {
+    	//these picture panels is what calls the images from the folder
+        picturePanel = new JPanel();
+        picturePanel.setBounds(200, 90, 500, 500);
+        picturePanel.setBackground(Color.blue);
+        con.add(picturePanel);
+
+        pictureLabel = new JLabel();
+
+        image1 = new ImageIcon("");
+
+        pictureLabel.setIcon(image1);
+        picturePanel.add(pictureLabel);
+
+        position = "panelT()";
+        mainTextArea.setText(Main.t.prompt);
+
+        choice1.setText("Pull the door");
+        choice2.setText("Push the door");
+        choice3.setText("Walk away");
+    }
+    
+    public void panelU() {
+    	//these picture panels is what calls the images from the folder
+        picturePanel = new JPanel();
+        picturePanel.setBounds(200, 90, 500, 500);
+        picturePanel.setBackground(Color.blue);
+        con.add(picturePanel);
+
+        pictureLabel = new JLabel();
+
+        image1 = new ImageIcon("");
+
+        pictureLabel.setIcon(image1);
+        picturePanel.add(pictureLabel);
+
+        position = "panelU()";
+        mainTextArea.setText(Main.u.prompt);
+
+        choice1.setText("Run as fast as you can in a straight line");
+        choice2.setText("Try to escape the maze");
+        choice3.setText("");
+    }
+    
+    public void panelV() {
+    	//these picture panels is what calls the images from the folder
+        picturePanel = new JPanel();
+        picturePanel.setBounds(200, 90, 500, 500);
+        picturePanel.setBackground(Color.blue);
+        con.add(picturePanel);
+
+        pictureLabel = new JLabel();
+
+        image1 = new ImageIcon("");
+
+        pictureLabel.setIcon(image1);
+        picturePanel.add(pictureLabel);
+
+        position = "panelV()";
+        mainTextArea.setText(Main.v.prompt);
+
+        choice1.setText("Pull the door");
+        choice2.setText("Push the door");
+        choice3.setText("Just walk awayayyay");
+    }
+    
+    public void panelW() {
+    	//these picture panels is what calls the images from the folder
+        picturePanel = new JPanel();
+        picturePanel.setBounds(200, 90, 500, 500);
+        picturePanel.setBackground(Color.blue);
+        con.add(picturePanel);
+
+        pictureLabel = new JLabel();
+
+        image1 = new ImageIcon("");
+
+        pictureLabel.setIcon(image1);
+        picturePanel.add(pictureLabel);
+
+        position = "panelW()";
+        mainTextArea.setText(Main.w.prompt);
+
+        choice1.setText("Push the door");
+        choice2.setText("Walk out the way you came");
+        choice3.setText("");
+    }
+    
+    public void panelX() {
+    	//these picture panels is what calls the images from the folder
+        picturePanel = new JPanel();
+        picturePanel.setBounds(200, 90, 500, 500);
+        picturePanel.setBackground(Color.blue);
+        con.add(picturePanel);
+
+        pictureLabel = new JLabel();
+
+        image1 = new ImageIcon("");
+
+        pictureLabel.setIcon(image1);
+        picturePanel.add(pictureLabel);
+
+        position = "panelX()";
+        mainTextArea.setText(Main.x.prompt);
+
+        choice1.setText("Yank the door!");
+        choice2.setText("Charge the door!");
+        choice3.setText("Just walk awayayyay");
+    }
+    
+    public void panelY() {
+    	//these picture panels is what calls the images from the folder
+        picturePanel = new JPanel();
+        picturePanel.setBounds(200, 90, 500, 500);
+        picturePanel.setBackground(Color.blue);
+        con.add(picturePanel);
+
+        pictureLabel = new JLabel();
+
+        image1 = new ImageIcon("");
+
+        pictureLabel.setIcon(image1);
+        picturePanel.add(pictureLabel);
+
+        position = "panelY()";
+        mainTextArea.setText(Main.y.prompt);
+
+        choice1.setText("");
+        choice2.setText("");
+        choice3.setText("");
+    }
+    
+    public void panelZ() {
+    	//these picture panels is what calls the images from the folder
+        picturePanel = new JPanel();
+        picturePanel.setBounds(200, 90, 500, 500);
+        picturePanel.setBackground(Color.blue);
+        con.add(picturePanel);
+
+        pictureLabel = new JLabel();
+
+        image1 = new ImageIcon("");
+
+        pictureLabel.setIcon(image1);
+        picturePanel.add(pictureLabel);
+
+        position = "panelZ()";
+        mainTextArea.setText(Main.z.prompt);
+
+        choice1.setText("");
+        choice2.setText("");
+        choice3.setText("");
+    }
+    
+    public void panelAA() {
+    	//these picture panels is what calls the images from the folder
+        picturePanel = new JPanel();
+        picturePanel.setBounds(200, 90, 500, 500);
+        picturePanel.setBackground(Color.blue);
+        con.add(picturePanel);
+
+        pictureLabel = new JLabel();
+
+        image1 = new ImageIcon("");
+
+        pictureLabel.setIcon(image1);
+        picturePanel.add(pictureLabel);
+
+        position = "panelAA()";
+        mainTextArea.setText(Main.aa.prompt);
+
+        choice1.setText("");
+        choice2.setText("");
+        choice3.setText("");
+    }
+    
+    public void panelAB() {
+    	//these picture panels is what calls the images from the folder
+        picturePanel = new JPanel();
+        picturePanel.setBounds(200, 90, 500, 500);
+        picturePanel.setBackground(Color.blue);
+        con.add(picturePanel);
+
+        pictureLabel = new JLabel();
+
+        image1 = new ImageIcon("");
+
+        pictureLabel.setIcon(image1);
+        picturePanel.add(pictureLabel);
+
+        position = "panelAB()";
+        mainTextArea.setText(Main.ab.prompt);
+
+        choice1.setText("Close backpack and head to the carnival");
+        choice2.setText("Take out shrapnel and apply bandage");
+        choice3.setText("");
+    }
+    
+    public void panelAC() {
+    	//these picture panels is what calls the images from the folder
+        picturePanel = new JPanel();
+        picturePanel.setBounds(200, 90, 500, 500);
+        picturePanel.setBackground(Color.blue);
+        con.add(picturePanel);
+
+        pictureLabel = new JLabel();
+
+        image1 = new ImageIcon("");
+
+        pictureLabel.setIcon(image1);
+        picturePanel.add(pictureLabel);
+
+        position = "panelAC()";
+        mainTextArea.setText(Main.ac.prompt);
+
+        choice1.setText("Screeeeeaaammm!!!");
+        choice2.setText("Run out of the building, but you can't scream");
+        choice3.setText("");
+    }
+    
+    public void panelAD() {
+    	//these picture panels is what calls the images from the folder
+        picturePanel = new JPanel();
+        picturePanel.setBounds(200, 90, 500, 500);
+        picturePanel.setBackground(Color.blue);
+        con.add(picturePanel);
+
+        pictureLabel = new JLabel();
+
+        image1 = new ImageIcon("");
+
+        pictureLabel.setIcon(image1);
+        picturePanel.add(pictureLabel);
+
+        position = "panelAD()";
+        mainTextArea.setText(Main.ad.prompt);
+
+        choice1.setText("You sure you don't want to give up?");
+        choice2.setText("Go to the mirror building");
+        choice3.setText("Go to the hotdog building");
+    }
+    
+    public void panelAE() {
+    	//these picture panels is what calls the images from the folder
+        picturePanel = new JPanel();
+        picturePanel.setBounds(200, 90, 500, 500);
+        picturePanel.setBackground(Color.blue);
+        con.add(picturePanel);
+
+        pictureLabel = new JLabel();
+
+        image1 = new ImageIcon("");
+
+        pictureLabel.setIcon(image1);
+        picturePanel.add(pictureLabel);
+
+        position = "panelAE()";
+        mainTextArea.setText(Main.ae.prompt);
+
+        choice1.setText("");
+        choice2.setText("");
+        choice3.setText("");
+    }
+    
+    public void panelAF() {
+    	//these picture panels is what calls the images from the folder
+        picturePanel = new JPanel();
+        picturePanel.setBounds(200, 90, 500, 500);
+        picturePanel.setBackground(Color.blue);
+        con.add(picturePanel);
+
+        pictureLabel = new JLabel();
+
+        image1 = new ImageIcon("");
+
+        pictureLabel.setIcon(image1);
+        picturePanel.add(pictureLabel);
+
+        position = "panelAF()";
+        mainTextArea.setText(Main.af.prompt);
+
+        choice1.setText("");
+        choice2.setText("");
+        choice3.setText("");
+    }
+    
+    public void panelAG() {
+    	//these picture panels is what calls the images from the folder
+        picturePanel = new JPanel();
+        picturePanel.setBounds(200, 90, 500, 500);
+        picturePanel.setBackground(Color.blue);
+        con.add(picturePanel);
+
+        pictureLabel = new JLabel();
+
+        image1 = new ImageIcon("");
+
+        pictureLabel.setIcon(image1);
+        picturePanel.add(pictureLabel);
+
+        position = "panelAG()";
+        mainTextArea.setText(Main.ag.prompt);
+
+        choice1.setText("");
+        choice2.setText("");
+        choice3.setText("");
     }
     
     //supposed to transition to a death screen when player chooses to bad routes but still doesn't work yet
