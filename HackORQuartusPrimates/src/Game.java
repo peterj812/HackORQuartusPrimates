@@ -21,7 +21,7 @@ public class Game {
     JFrame window;
     Container con;
     JPanel titleNamePanel, playGameButtonPanel, mainTextPanel, choiceButtonPanel, playerPanel, picturePanel;
-    JLabel titleNameLabel, hpLabel, hpLabelNumber, picutreLabel;
+    JLabel titleNameLabel, hpLabel, hpLabelNumber, pictureLabel;
     Font titleFont = new Font("Times New Roman", Font.PLAIN, 40);
     Font normalFont = new Font("Times New Roman", Font.PLAIN, 30);
     JButton playGameButton, choice1, choice2, choice3;
@@ -160,7 +160,7 @@ public class Game {
         hpLabelNumber.setForeground(Color.white);
         playerPanel.add(hpLabelNumber);
 
-        //calls playerSetup function
+        //callss playerSetup function
         playerSetup();
 
     }
@@ -169,26 +169,13 @@ public class Game {
     public void playerSetup () {
         playerHp = Main.health;
         hpLabelNumber.setText("" + playerHp);
-        airport();
+        panelInit();
     }
 
     //choices to show the first scenario
-    public void airport() {
-        //these picture panels is what calls the images from the folder
-        picturePanel = new JPanel();
-        picturePanel.setBounds(200, 200, 500, 500);
-        picturePanel.setBackground(Color.blue);
-        con.add(picturePanel);
-
-        pictureLabel = new JLabel();
-
-        image1 = new ImageIcon(".//Images//TSA.jpg.jpeg");
-
-        pictureLabel.setIcon(image1);
-        picturePanel.add(pictureLabel);
-
-        position = "airport()";
-        mainTextArea.setText("You approach the gate at TSA what do you do?");
+    public void panelInit() {
+        mainTextArea.setText(Main.init.prompt);
+      
         choice1.setText("Look through bag");
         choice2.setText("Go Through Metal Detector");
         choice3.setText("Go home, flying is scary");
@@ -242,10 +229,12 @@ public class Game {
             createGameScreen();
         }
     }
-
     //actions that handle the choices when user 
     public class ChoiceHandler implements ActionListener {
-
+    	
+    	// TODO: fix this to be dynamic
+    	// ie: actionToPerform = currentPanel.getChoice(buttonClicked.getText())
+    	// actionToPerform, currentPanel, and buttonClicked aren't the actual variable names
         public void actionPerformed(ActionEvent event) {    
             
             String yourChoice = event.getActionCommand();
