@@ -157,7 +157,7 @@ public class Game {
         hpLabelNumber.setForeground(Color.white);
         playerPanel.add(hpLabelNumber);
 
-        //calss playerSetup function
+        //calls playerSetup function
         playerSetup();
 
     }
