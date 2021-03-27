@@ -21,7 +21,7 @@ public class Game {
     JFrame window;
     Container con;
     JPanel titleNamePanel, playGameButtonPanel, mainTextPanel, choiceButtonPanel, playerPanel, picturePanel;
-    JLabel titleNameLabel, hpLabel, hpLabelNumber, picutreLabel;
+    JLabel titleNameLabel, hpLabel, hpLabelNumber, pictureLabel;
     Font titleFont = new Font("Times New Roman", Font.PLAIN, 40);
     Font normalFont = new Font("Times New Roman", Font.PLAIN, 30);
     JButton playGameButton, choice1, choice2, choice3;
