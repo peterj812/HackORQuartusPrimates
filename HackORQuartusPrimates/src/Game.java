@@ -174,6 +174,19 @@ public class Game {
 
     //choices to show the first scenario
     public void panelInit() {
+    	
+    	 //these picture panels is what calls the images from the folder
+    	/*
+        picturePanel = new JPanel();
+        picturePanel.setBounds(200, 90, 500, 500);
+        picturePanel.setBackground(Color.blue);
+        con.add(picturePanel);
+        pictureLabel = new JLabel();
+        image1 = new ImageIcon(".//Images//TSA.jpg.jpeg");
+        pictureLabel.setIcon(image1);
+        picturePanel.add(pictureLabel);
+		*/
+    	
         position = "panelInit";
         mainTextArea.setText(Main.init.prompt);
 
