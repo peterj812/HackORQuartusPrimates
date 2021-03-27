@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Player {
 	public String name;
-	private ArrayList<Item> backpack = new ArrayList<Item>();;
+	public ArrayList<Item> backpack = new ArrayList<Item>();;
 	int health;
 	
 	public Player() {
@@ -33,10 +33,6 @@ public class Player {
 		
 	}
 	
-	Item[] getItems() {
-		return backpack;
-	}
-	
 	// TODO: this method should print an array of all Items in backpack
 	void checkBackpack() {
 		
@@ -44,7 +40,7 @@ public class Player {
 	
 	// TODO: this method should check whether there is at least one offensive item in backpack
 	boolean setsoffTSA() {
-		// call checkBackpack()
+		
 		return false;
 	}
 	
@@ -55,11 +51,7 @@ public class Player {
 	
 	// TODO: this method should check if Item i is in the backpack (call hasItem(i)), and remove Item i from the backpack if it is in the backpack
 	void removeItem(Item i) {
-		if (hasItem(i) == true) {
-			backpack.remove(i);	
-		} else {
-			//give error or output message
-		}
+		if (hasItem(i) == true) { backpack.remove(i); }
 	}
 	
 	// TODO: this method should check if Item i is in the backpack, return true or false
