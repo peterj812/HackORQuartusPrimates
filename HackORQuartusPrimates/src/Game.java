@@ -166,7 +166,6 @@ public class Game {
     public void playerSetup () {
         playerHp = Main.health;
         hpLabelNumber.setText("" + playerHp);
-
         airport();
     }
 
