@@ -1,7 +1,8 @@
+import java.util.ArrayList;
 
 public class Player {
 	public String name;
-	private Item[] backpack;
+	private ArrayList<Item> backpack = new ArrayList<Item>();;
 	int health;
 	
 	public Player() {
@@ -49,12 +50,16 @@ public class Player {
 	
 	// TODO: this method should add Item i to the backpack
 	void addItem(Item i) {
-		
+		backpack.add(i);
 	}
 	
 	// TODO: this method should check if Item i is in the backpack (call hasItem(i)), and remove Item i from the backpack if it is in the backpack
 	void removeItem(Item i) {
-		
+		if (hasItem(i) == true) {
+			backpack.remove(i);	
+		} else {
+			//give error or output message
+		}
 	}
 	
 	// TODO: this method should check if Item i is in the backpack, return true or false
