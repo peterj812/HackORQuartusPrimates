@@ -31,7 +31,6 @@ public class Game {
     int playerHp;
     ImageIcon image1, image2;
 
-
     TitleScreenHandler tsHandler = new TitleScreenHandler();
     ChoiceHandler cHandler = new ChoiceHandler();
 
@@ -45,7 +44,9 @@ public class Game {
 
         //setting the window of the game
         window = new JFrame();
+      
         window.setSize(1080, 1920);
+
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         window.getContentPane().setBackground(Color.black);
         window.setLayout(null);
@@ -108,7 +109,9 @@ public class Game {
 
         //choice button panel that shows the choices for the user
         choiceButtonPanel = new JPanel();
+
         choiceButtonPanel.setBounds(400, 590, 400, 150);
+
         choiceButtonPanel.setBackground(Color.blue);
         choiceButtonPanel.setLayout(new GridLayout(3,1));
         con.add(choiceButtonPanel);
@@ -169,14 +172,13 @@ public class Game {
 
     //where it shows the hp bar with a unspecified hp
     public void playerSetup () {
-        playerHp = 15;
+        playerHp = Main.health;
         hpLabelNumber.setText("" + playerHp);
-
-        airport();
+        panelInit();
     }
 
     //choices to show the first scenario
-    public void airport() {
+    public void panelInit() {
 
         //these picture panels is what calls the images from the folder
         picturePanel = new JPanel();
@@ -191,15 +193,14 @@ public class Game {
         pictureLabel.setIcon(image1);
         picturePanel.add(pictureLabel);
 
-        position = "airport()";
-        mainTextArea.setText("You approach the gate at TSA what do you do?");
+        position = "panelInit()";
+        mainTextArea.setText(Main.init.prompt);
+
         choice1.setText("Look through bag");
         choice2.setText("Go Through Metal Detector");
         choice3.setText("Go home, flying is scary");
 
     }
-
-   
 
     //choices to show the second scenario
     public void tsaMad() {
@@ -214,12 +215,30 @@ public class Game {
 
         pictureLabel.setIcon(image2);
         picturePanel.add(pictureLabel);
-        
+
         position = "tsaMad()";
         mainTextArea.setText("Metal Detector goes off from the Contraband, alarm sounds, TSA agent yells HEY YOU!!");
         choice1.setText("Next.....");
         choice2.setText("");
         choice3.setText("");
+    }
+
+    //supposed to transition to a death screen when player chooses to bad routes but still doesn't work yet
+    public void death() {
+        picturePanel = new JPanel();
+        picturePanel.setBounds(200, 200, 500, 500);
+        picturePanel.setBackground(Color.blue);
+        con.add(picturePanel);
+
+        pictureLabel = new JLabel();
+
+        image1 = new ImageIcon(".//Images//death.jpg");
+
+        pictureLabel.setIcon(image1);
+        picturePanel.add(pictureLabel);
+
+        position = "death()";
+
     }
 
 
@@ -250,10 +269,12 @@ public class Game {
             createGameScreen();
         }
     }
-
     //actions that handle the choices when user 
     public class ChoiceHandler implements ActionListener {
-
+    	
+    	// TODO: fix this to be dynamic
+    	// ie: actionToPerform = currentPanel.getChoice(buttonClicked.getText())
+    	// actionToPerform, currentPanel, and buttonClicked aren't the actual variable names
         public void actionPerformed(ActionEvent event) {    
             
             String yourChoice = event.getActionCommand();
