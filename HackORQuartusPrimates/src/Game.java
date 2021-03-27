@@ -1,5 +1,3 @@
-package HackORQuartusPrimates;
-
 //import statements
 import java.awt.Color;
 import java.awt.Container;
