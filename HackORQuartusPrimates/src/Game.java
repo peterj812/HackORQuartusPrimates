@@ -68,7 +68,7 @@ public class Game {
         //button that prompts user to play the game
         playGameButton = new JButton("PLAY");
         playGameButton.setBackground(Color.black);
-        playGameButton.setForeground(Color.white);
+        playGameButton.setForeground(Color.black);
         playGameButton.setFont(normalFont);
         playGameButton.setFocusPainted(false);
         playGameButton.addActionListener(tsHandler);
@@ -118,7 +118,7 @@ public class Game {
         choice1 = new JButton();
         choice1.setText("test");
         choice1.setBackground(Color.black);
-        choice1.setForeground(Color.white);
+        choice1.setForeground(Color.black);
         choice1.setFont(normalFont);
         choice1.setFocusPainted(false);
         choiceButtonPanel.add(choice1);
@@ -129,7 +129,7 @@ public class Game {
         //creates choice 2 button
         choice2 = new JButton();
         choice2.setBackground(Color.black);
-        choice2.setForeground(Color.white);
+        choice2.setForeground(Color.black);
         choice2.setFont(normalFont);
         choice2.setFocusPainted(false);
         choiceButtonPanel.add(choice2);
@@ -140,7 +140,7 @@ public class Game {
         //creates choice 3 button
         choice3 = new JButton();
         choice3.setBackground(Color.black);
-        choice3.setForeground(Color.white);
+        choice3.setForeground(Color.black);
         choice3.setFont(normalFont);
         choice3.setFocusPainted(false);
         choiceButtonPanel.add(choice3);
