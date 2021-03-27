@@ -50,7 +50,7 @@ public class Main {
 
 		// PANELS
 		homescreen = new Panel("Homescreen", "");
-		init = new Panel("TSA Checkpoint", "Welcome to the...Los Angeles International Airport, your flight leaves soon so you better get a move on.");
+		init = new Panel("TSA Checkpoint", "Welcome to hel...Los Angeles International Airport, your flight leaves soon so you better get a move on.");
 		a = new Panel("", "Jimbo sees his water bottle and whatever else is in the bag.");
 		b = new Panel("", "You have been arrested and put on a terrorist watch list for having CONTRABAND in the airport.");
 		c = new Panel("", "YOU WIN! It's a pandemic, staying home is a smart choice! (Yet do you feel this is a deserved victory?");
