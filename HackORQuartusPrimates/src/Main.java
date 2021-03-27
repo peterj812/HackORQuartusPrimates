@@ -37,7 +37,15 @@ public class Main {
 	}
 	
 	public static void main() {
+		// set the player name
 		
+		// airport sequence
+		
+		// plane sequence
+		
+		// crash sequence
+		
+		// ???
 	}
 
 }
