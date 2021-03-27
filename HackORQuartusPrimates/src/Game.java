@@ -201,9 +201,13 @@ public class Game {
         choice3.setText("Go home, flying is scary");
 
     }
+    
+    public void panelA() {
+    	
+    }
 
     //choices to show the second scenario
-    public void tsaMad() {
+    public void panelB() {
         picturePanel = new JPanel();
         picturePanel.setBounds(200, 90, 500, 500);
         picturePanel.setBackground(Color.blue);
@@ -216,32 +220,13 @@ public class Game {
         pictureLabel.setIcon(image2);
         picturePanel.add(pictureLabel);
 
-        position = "tsaMad()";
+        position = "panelB()";
         mainTextArea.setText("Metal Detector goes off from the Contraband, alarm sounds, TSA agent yells HEY YOU!!");
         choice1.setText("Next.....");
         choice2.setText("");
         choice3.setText("");
     }
-
-    //supposed to transition to a death screen when player chooses to bad routes but still doesn't work yet
-    public void death() {
-        picturePanel = new JPanel();
-        picturePanel.setBounds(200, 200, 500, 500);
-        picturePanel.setBackground(Color.blue);
-        con.add(picturePanel);
-
-        pictureLabel = new JLabel();
-
-        image1 = new ImageIcon(".//Images//death.jpg");
-
-        pictureLabel.setIcon(image1);
-        picturePanel.add(pictureLabel);
-
-        position = "death()";
-
-    }
-
-
+    
     //supposed to transition to a death screen when player chooses to bad routes but still doesn't work yet
     public void death() {
         picturePanel = new JPanel();
@@ -280,7 +265,7 @@ public class Game {
             String yourChoice = event.getActionCommand();
 
                 if (yourChoice.equals("c2")) {
-                    tsaMad();
+                    panelB();
                 }
 
                 if (yourChoice.equals("c1")) {
