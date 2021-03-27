@@ -1,13 +1,30 @@
+
+import java.awt.Color;
+import java.awt.Container;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.*;
+
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Set;
 import java.util.Random;
 
+import javax.swing.*;
+import javax.swing.ImageIcon;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JFrame;
+
 public class Main {
 	private static Random rand = new Random();
 	public static Player jimbo = new Player("");
 	
-	static Panel homescreen, init, a, b, c, d, e, f, g, h, i, j, k, l, l1, m, n, o, p, q, r, s, t, u, v, w, x, y, z, aa, ab, ac, ad, ae, af, ag;
+	static Panel homescreen, choosename, init, a, b, c, d, e, f, g, h, i, j, k, l, l1, m, n, o, p, q, r, s, t, u, v, w, x, y, z, aa, ab, ac, ad, ae, af, ag;
 	static Item adultItem, bandages, knife, smallEngine, waterBottle;
 	static Game gam;
 	public static int health = jimbo.getHealth();
@@ -51,6 +68,7 @@ public class Main {
 
 		// PANELS
 		homescreen = new Panel("Homescreen", "");
+		choosename = new Panel("", "What's your name?");
 		init = new Panel("TSA Checkpoint", "Welcome to hel...Los Angeles International Airport, your flight leaves soon so you better get a move on.");
 		a = new Panel("", "Jimbo sees his water bottle and whatever else is in the bag.");
 		b = new Panel("", "You have been arrested and put on a terrorist watch list for having CONTRABAND in the airport.");
