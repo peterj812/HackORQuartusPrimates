@@ -49,7 +49,6 @@ public class Player {
 		backpack.add(i);
 	}
 	
-	// TODO: this method should check if Item i is in the backpack (call hasItem(i)), and remove Item i from the backpack if it is in the backpack
 	void removeItem(Item i) {
 		if (hasItem(i) == true) { backpack.remove(i); }
 	}
