@@ -147,25 +147,24 @@ public class Main {
 
 		// d choices
 		d.setChoice("Take a nap", f);
-		d.setChoice("Read the newspaper old man!", g);
-		d.setChoice("Put your feet up and just relax", h);
+		d.setChoice("Keep reading paper", g);
+		d.setChoice("Put feet up", h);
 		
-		// e choices - TODO: Implement prison game over
+		// e choices - TODO: Implement prison; game over
 	
 		// f track - TODO: Implement movement to crash shit w/ damage
 		
 		// g track - TODO: Either death or higher chance of injury/more damage
 		
-		// h choices - TODO: Implement prison game over
-		
+		// h choices - TODO: Implement prison; game over
 		
 		// i choices
-		i.setChoice("Walk toward abandoned carnival.", l);
+		i.setChoice("Walk toward abandoned carnival", l);
 		i.setChoice("Examine the plane crash", m);
 		
 		// j choices
-		j.setChoice("Pull out the shrapnel in your leg.", k);
-		j.setChoice("Walk toward abandoned carnival.", l);
+		j.setChoice("Pull out the shrapnel", k);
+		j.setChoice("Walk toward abandoned carnival", l);
 		j.setChoice("Examine the plane crash", m);		
 		
 		// k choices
@@ -173,8 +172,8 @@ public class Main {
 		k.setChoice("Cover it with your hand", n);
 		
 		// l choices
-		l.setChoice("Walk further into the Carnival", p);
-		l.setChoice("Just...Cry", q);
+		l.setChoice("Walk further into carnival", p);
+		l.setChoice("Give up", q);
 		
 		// l1 track
 		// TODO: Automatically go to track l
@@ -184,7 +183,7 @@ public class Main {
 		m.setChoice("Walk into carnival", l);
 		
 		// n 
-		n.setChoice("Walk into the carnival.", o);
+		n.setChoice("Walk into the carnival", o);
 		n.setChoice("Open backpack", ab);
 		
 		// o
@@ -204,31 +203,31 @@ public class Main {
 		r.setChoice("Ignore it", u);
 		
 		// s
-		s.setChoice("Locate the source of the smell.", w);
-		s.setChoice("Leave the building.", aa);
+		s.setChoice("Locate the source of the smell", w);
+		s.setChoice("Leave the building", aa);
 		
 		// t
-		t.setChoice("Pull the door.", y);
-		t.setChoice("Push the door.", p);
-		t.setChoice("Walk away.", u);
+		t.setChoice("Pull the door", y);
+		t.setChoice("Push the door", p);
+		t.setChoice("Walk away", u);
 		
 		// u
-		u.setChoice("Run as fast as you can in a straight line.", y);
-		u.setChoice("Try to escape the maze.", z);
+		u.setChoice("Run as fast as you can in a straight line", y);
+		u.setChoice("Try to escape the maze", z);
 		
 		// v
-		v.setChoice("Pull the door.", x);
-		v.setChoice("Push the door.", y);
-		v.setChoice("Just walk awayayyay.", u);
+		v.setChoice("Pull the door", x);
+		v.setChoice("Push the door", y);
+		v.setChoice("Just walk awayayyay", u);
 		
 		// w
-		w.setChoice("Push the door.", ac);
-		w.setChoice("Walk out the way you came.", aa);
+		w.setChoice("Push the door", ac);
+		w.setChoice("Walk out the way you came", aa);
 		
 		// x
 		x.setChoice("Yank the door!", y);
 		x.setChoice("Charge the door!", y);
-		x.setChoice("Just walk awayayyay.", u);
+		x.setChoice("Just walk awayayyay", u);
 		
 		// y
 		// TODO: Gameover
@@ -239,22 +238,24 @@ public class Main {
 		// TODO: GO to track ad
 		
 		// ab
-		ab.setChoice("Close backpack and head to the carnival.", o);
-		ab.setChoice("take out shrapnel and apply bandage.", l1);
+		ab.setChoice("Close backpack and head to the carnival", o);
+		ab.setChoice("Take out shrapnel and apply bandage", l1);
 		
 		// ac
 		ac.setChoice("Screeeeeaaammm!!!", ae);
-		ac.setChoice("Run out of the building, but you can't scream.", af);
+		ac.setChoice("Run out of the building, but you can't scream", af);
 				
 		// ad
 		ad.setChoice("You sure you don't want to give up?", q);
-		ad.setChoice("Go to the mirror building.", r);
-		ad.setChoice("Go to the hotdog building.", s);
+		ad.setChoice("Go to the mirror building", r);
+		ad.setChoice("Go to the hotdog building", s);
 		
 		// ae - AWAITING PANEL
 		
 		
 		// af - AWAITING PANEL
+		
+		// ag - AWAITING PANEL
 		
 		
 		// determine what items will be in backpack
