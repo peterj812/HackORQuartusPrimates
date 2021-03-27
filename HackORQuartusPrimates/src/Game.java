@@ -974,33 +974,168 @@ public class Game {
 
     }
 
+    //supposed to transition to a winning screen when player chooses great routes
+    public void winning() {
+        picturePanel = new JPanel();
+        picturePanel.setBounds(200, 200, 500, 500);
+        picturePanel.setBackground(Color.blue);
+        con.add(picturePanel);
 
+        pictureLabel = new JLabel();
+
+        image1 = new ImageIcon(".//Images//death.jpg");
+
+        pictureLabel.setIcon(image1);
+        picturePanel.add(pictureLabel);
+
+        position = "winning()";
+
+    }
+    
     //actions that handle the titlescreen
     public class TitleScreenHandler implements ActionListener {
 
         public void actionPerformed(ActionEvent event) {
-
             createGameScreen();
         }
     }
+    
     //actions that handle the choices when user 
     public class ChoiceHandler implements ActionListener {
     	
     	// TODO: fix this to be dynamic
-    	// ie: actionToPerform = currentPanel.getChoice(buttonClicked.getText())
+    	// ie: ACTION = CURRENTPANEL.getChoice(BUTTONCLICKED.getText())
     	// actionToPerform, currentPanel, and buttonClicked aren't the actual variable names
         public void actionPerformed(ActionEvent event) {    
             
+        	// get what button is pressed
             String buttonPressed = event.getActionCommand();
-			
-			switch(position){
-			case "panelInit()":
-				switch(buttonPressed){
-				case "c1": panelA();break;
-				case "c2": panelB();break;
-				//case "c3": panelC();break;
-				}
-			case "panelR()": 
+
+            //Main.init.prompt;
+            // see what button has been pressed
+            switch(position) {
+            case "panelInit()":
+            	switch(buttonPressed) {
+            		case "c1":
+            			panelA(); break;
+            		case "c2":
+            			panelB(); break;
+            		case "c3":
+            			panelC(); break;
+            	}
+            	
+            case "panelA()":
+            	switch(buttonPressed) {
+            		case "c1":
+            			panelD(); break;
+            		case "c2":
+            			panelE(); break;
+            		case "c3":
+            			break;
+            	}
+            	
+            case "panelB()":
+            	death(); break;
+            	
+            case "panelC()":
+            	winning(); break;
+            
+            case "panelD()":
+            	switch(buttonPressed) {
+            		case "c1":
+            			panelF(); break;
+            		case "c2":
+            			panelG(); break;
+            		case "c3":
+            			panelH(); break;
+            	}
+            	
+            case "panelE()":
+            	death(); break;
+            	
+            case "panelF()":
+            	switch(buttonPressed) {
+            		case "c1":
+            			panelI(); break;
+            		case "c2":
+            			panelJ(); break;
+            		case "c3":
+            			break;
+            	}
+            	
+            case "panelG()":
+            	switch(buttonPressed) {
+            		case "c1":
+            			panelI(); break;
+            		case "c2":
+            			panelJ(); break;
+            		case "c3":
+            			break;
+            	}
+            	
+            case "panelH()":
+            	death(); break;
+            	
+            case "panelI()":
+            	switch(buttonPressed) {
+            		case "c1":
+            			panelL(); break;
+            		case "c2":
+            			panelM(); break;
+            		case "c3":
+            			break;
+            	}
+            	
+            case "panelJ()":
+            	switch(buttonPressed) {
+            		case "c1":
+            			panelK(); break;
+            		case "c2":
+            			panelO(); break;
+            		case "c3":
+            			panelM(); break;
+            	}
+            	
+            case "panelK()":
+            	death(); break;
+            	
+            case "panelL()":
+            	switch(buttonPressed) {
+            		case "c1":
+            			panelP(); break;
+            		case "c2":
+            			panelQ(); break;
+            		case "c3":
+            			break;
+            	}
+            	
+            case "panelM()":
+            	switch(buttonPressed) {
+            		case "c1":
+            			panelN(); break;
+            		case "c2":
+            			panelO(); break;
+            		case "c3":
+            			break;
+            	}
+            	
+            case "panelO()":
+            	death(); break;
+            	
+            case "panelP()":
+            	switch(buttonPressed) {
+            		case "c1":
+            			panelQ(); break;
+            		case "c2":
+            			panelR(); break;
+            		case "c3":
+            			panelS(); break;
+            	}
+            	
+            case "panelQ()":
+            	death(); break;
+            	
+      case "panelR()": 
 				switch(buttonPressed) {
 				case "c1": panelT();break;
 				case "c2": panelV();break;
@@ -1011,42 +1146,49 @@ public class Game {
     			case "c1": panelW();break;
     			case "c2": panelAA();break;
     			}
+                
     		case "panelT()": 
     			switch(buttonPressed) {
     			case "c1": panelY();break;
     			case "c2": panelX();break;
     			case "c3": panelU();break;
     			}
+                
     		case "panelU()": 
     			switch(buttonPressed) {
     			case "c1": panelY();break;
     			case "c2": panelZ();break;
     			}
+                
     		case "panelV()": 
     			switch(buttonPressed) {
     			case "c1": panelX();break;
     			case "c2": panelY();break;
     			case "c3": panelU();break;
     			}
+                
     		case "panelW()": 
     			switch(buttonPressed) {
     			case "c1": panelAC();break;
     			case "c2": panelAA();break;
     			}
+                
     		case "panelX()": 
     			switch(buttonPressed) {
     			case "c1": panelY();break;
     			case "c2": panelY();break;
     			case "c3": panelU();break;
     			}
+                
     		case "panelY()": 
-    			death();
+    			death(); break;
+                
     		case "panelAC()": 
     			switch(buttonPressed) {
     			case "c1": panelAE();break;
     			case "c2": panelAF();break;
-    			}
-        	}
-        }
+    		}
+      }
     }
+  }
 }
