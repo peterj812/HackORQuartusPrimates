@@ -7,7 +7,7 @@ public class Main {
 	private static Random rand = new Random();
 	static Player jimbo = new Player("");
 	
-	static Panel homescreen, init, a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z, aa, ab, ac, ad, ae, af, ag;
+	static Panel homescreen, init, a, b, c, d, e, f, g, h, i, j, k, l, l1, m, n, o, p, q, r, s, t, u, v, w, x, y, z, aa, ab, ac, ad, ae, af, ag;
 	static Item adultItem, bandages, knife, smallEngine, waterBottle;
 	static Game gam;
 
@@ -50,7 +50,7 @@ public class Main {
 
 		// PANELS
 		homescreen = new Panel("Homescreen", "");
-		init = new Panel("TSA Checkpoint", "Welcome to he...Los Angeles International Airport, your flight leaves soon so you better get a move on.");
+		init = new Panel("TSA Checkpoint", "Welcome to hel...Los Angeles International Airport, your flight leaves soon so you better get a move on.");
 		a = new Panel("", "Jimbo sees his water bottle and whatever else is in the bag.");
 		b = new Panel("", "You have been arrested and put on a terrorist watch list for having CONTRABAND in the airport.");
 		c = new Panel("", "YOU WIN! It's a pandemic, staying home is a smart choice! (Yet do you feel this is a deserved victory?");
@@ -59,10 +59,11 @@ public class Main {
 		f = new Panel("Crash site", "*Crash noises*");
 		g = new Panel("", "*Crash noises*");
 		h = new Panel("", "The Airmarshall sitting in front of you stands up and knocks you out.");
-		i = new Panel("", "You are shaken up by the plane crash, you are lucky to of surived, it seems no one else did. Is that a carnival next to you?");
+		i = new Panel("", "You are shaken up by the plane crash, you are lucky to have surived, it seems no one else did. Is that a carnival next to you?");
 		j = new Panel("", "You seem to have been impaled by some shrapnel. At least you survived as it seems no one else did. Is that a carnival next to you?");
 		k = new Panel("", "GAME OVER. As you pull the shrapnel out of your body, you feel the life quickly leave your body.");
 		l = new Panel("", "You approach the carnival. The air feels thinner here, as if something is sucking it out of the world. You feel a shiver go down your spine as you walk through the clown headed gates.");
+		l1 = new Panel("", "");
 		m = new Panel("", "As you stare into the firey wreck of the plane, you notice a bandage lying at your feet.");
 		n = new Panel("", "You put the bandage in your backpack.");
 		o = new Panel("", "GAMEOVER. The pain from the shrapnel is too much to handle. Your body gives in on itself, and you feel the life leave you");
