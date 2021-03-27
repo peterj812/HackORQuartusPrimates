@@ -5,6 +5,7 @@ import java.util.Random;
 
 public class Main {
 	private static Random rand = new Random();
+	Player jimbo = new Player("");
 
 	// METHODS
 
@@ -135,7 +136,7 @@ public class Main {
 		int chance = 100;
 		int val = rand.nextInt(chance);
 		if (val <= 25) {
-			p.addItem(in);
+			jimbo.addItem(in);
 		}
 	}
 
