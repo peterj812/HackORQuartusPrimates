@@ -93,7 +93,7 @@ public class Main {
 		// d choices
 		d.setChoice("Take a nap", f);
 		d.setChoice("Read the newspaper old man!", g);
-		d.setChoice("Put your feet up and just relax.", h);
+		d.setChoice("Put your feet up and just relax", h);
 		
 		// e choices
 		//prison
@@ -109,12 +109,12 @@ public class Main {
 		
 		
 		// i choices
-		i.setChoice("Walk toward abadonded carnival.", l);
+		i.setChoice("Walk toward abandoned carnival.", l);
 		i.setChoice("Examine the plane crash", m);
 		
 		// j choices
-		j.setChoice("Pull out the shrapanel in your leg.", k);
-		j.setChoice("Walk toward abadonded carnival.", l);
+		j.setChoice("Pull out the shrapnel in your leg.", k);
+		j.setChoice("Walk toward abandoned carnival.", l);
 		j.setChoice("Examine the plane crash", m);		
 		
 		// k choices

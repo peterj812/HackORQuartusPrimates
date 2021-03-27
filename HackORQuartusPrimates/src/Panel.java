@@ -1,10 +1,9 @@
 import java.util.HashMap;
-import java.util.Set;
 
 public class Panel {
 	private String name;
 	private String prompt;
-	private HashMap choices = new HashMap();
+	private HashMap<String, Panel> choices = new HashMap<String, Panel>();
 	
 	public Panel(String n, String p) {
 		name = n;
