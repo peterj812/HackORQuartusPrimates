@@ -6,6 +6,10 @@ import java.util.Random;
 public class Main {
 	private static Random rand = new Random();
 	static Player jimbo = new Player("");
+	
+	static Panel homescreen, init, a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z, aa, ab, ac, ad, ae, af, ag;
+	static Item adultItem, bandages, knife, smallEngine, waterBottle;
+	static Game gam;
 
 	// METHODS
 
@@ -27,7 +31,7 @@ public class Main {
 		jimbo.setHealth(jimbo.getHealth() - damage);
 	}
 
-	static void initialize() {
+	static final void initialize() {
 
 		// these should be between 0 and 100 inclusive
 		double hasAdultItemChance = 25;
@@ -38,51 +42,53 @@ public class Main {
 		double tripChance = 25;
 		
 		// ITEMS
-		Item adultItem = new Item("adult item", true);
-		Item bandages = new Item("bandages", false);
-		Item knife = new Item("knife", true);
-		Item smallEngine = new Item("small engine", true);
-		Item waterBottle = new Item("water bottle", true);
+		adultItem = new Item("adult item", true);
+		bandages = new Item("bandages", false);
+		knife = new Item("knife", true);
+		smallEngine = new Item("small engine", true);
+		waterBottle = new Item("water bottle", true);
 
 		// PANELS
-		Panel init = new Panel("TSA Checkpoint", "");
-		Panel a = new Panel("", "");
-		Panel b = new Panel("", "");
-		Panel c = new Panel("", "");
-		Panel d = new Panel("", "");
-		Panel e = new Panel("", "");
-		Panel f = new Panel("", "");
-		Panel g = new Panel("", "");
-		Panel h = new Panel("", "");
-		Panel i = new Panel("", "");
-		Panel j = new Panel("", "");
-		Panel k = new Panel("", "");
-		Panel l = new Panel("", "");
-		Panel l1 = new Panel("", "");
-		Panel m = new Panel("", "");
-		Panel n = new Panel("", "");
-		Panel o = new Panel("", "");
-		Panel p = new Panel("", "");
-		Panel q = new Panel("", "");
-		Panel r = new Panel("", "");
-		Panel s = new Panel("", "");
-		Panel t = new Panel("", "");
-		Panel u = new Panel("", "");
-		Panel v = new Panel("", "");
-		Panel w = new Panel("", "");
-		Panel x = new Panel("", "");
-		Panel y = new Panel("", "");
-		Panel z = new Panel("", "");
-		Panel z = new Panel("", "");
-		Panel aa = new Panel("", "");
-		Panel ab = new Panel("", "");
-		Panel ac = new Panel("", "");
-		Panel ad = new Panel("", "");
-		Panel ae = new Panel("", "");
-		Panel af = new Panel("", "");
-		Panel ag = new Panel("", "");
-		
+		homescreen = new Panel("Homescreen", "");
+		init = new Panel("TSA Checkpoint", "");
+		a = new Panel("", "");
+		b = new Panel("", "");
+		c = new Panel("", "");
+		d = new Panel("", "");
+		e = new Panel("", "");
+		f = new Panel("", "");
+		g = new Panel("", "");
+		h = new Panel("", "");
+		i = new Panel("", "");
+		j = new Panel("", "");
+		k = new Panel("", "");
+		l = new Panel("", "");
+		m = new Panel("", "");
+		n = new Panel("", "");
+		o = new Panel("", "");
+		p = new Panel("", "");
+		q = new Panel("", "");
+		r = new Panel("", "");
+		s = new Panel("", "");
+		t = new Panel("", "");
+		u = new Panel("", "");
+		v = new Panel("", "");
+		w = new Panel("", "");
+		x = new Panel("", "");
+		y = new Panel("", "");
+		z = new Panel("", "");
+		aa = new Panel("", "");
+		ab = new Panel("", "");
+		ac = new Panel("", "");
+		ad = new Panel("", "");
+		ae = new Panel("", "");
+		af = new Panel("", "");
+		ag = new Panel("", "");
+
 		// SET CHOICES
+		
+		// TODO: set homescreen choices
+		// homescreen choices
 
 		// init choices
 		init.setChoice("Look through bag", a);
@@ -102,7 +108,7 @@ public class Main {
 		// d choices
 		d.setChoice("Take a nap", f);
 		d.setChoice("Read the newspaper old man!", g);
-		d.setChoice("Put your feet up and just relax.", h);
+		d.setChoice("Put your feet up and just relax", h);
 		
 		// e choices - TODO: Implement prison game over
 	
@@ -114,12 +120,12 @@ public class Main {
 		
 		
 		// i choices
-		i.setChoice("Walk toward abadonded carnival.", l);
+		i.setChoice("Walk toward abandoned carnival.", l);
 		i.setChoice("Examine the plane crash", m);
 		
 		// j choices
-		j.setChoice("Pull out the shrapanel in your leg.", k);
-		j.setChoice("Walk toward abadonded carnival.", k);
+		j.setChoice("Pull out the shrapnel in your leg.", k);
+		j.setChoice("Walk toward abandoned carnival.", l);
 		j.setChoice("Examine the plane crash", m);		
 		
 		// k choices
@@ -158,8 +164,8 @@ public class Main {
 		r.setChoice("Ignore it", u);
 		
 		// s
-		s.setChoice("Locate the source of the smell", w);
-		s.setChoice("Leave the building", aa);
+		s.setChoice("Locate the source of the smell.", w);
+		s.setChoice("Leave the building.", aa);
 		
 		// t
 		t.setChoice("Pull the door.", y);
@@ -173,7 +179,7 @@ public class Main {
 		// v
 		v.setChoice("Pull the door.", x);
 		v.setChoice("Push the door.", y);
-		v.setChoice("Walk away.", u);
+		v.setChoice("Just walk awayayyay.", u);
 		
 		// w
 		w.setChoice("Push the door.", ac);
@@ -182,7 +188,7 @@ public class Main {
 		// x
 		x.setChoice("Yank the door!", y);
 		x.setChoice("Charge the door!", y);
-		x.setChoice("Walk away", u);
+		x.setChoice("Just walk awayayyay.", u);
 		
 		// y
 		// TODO: Gameover
@@ -212,7 +218,6 @@ public class Main {
 		
 		
 		// determine what items will be in backpack
-
 		
 	}
 
@@ -223,9 +228,20 @@ public class Main {
 			jimbo.addItem(in);
 		}
 	}
+	
+	// TODO: change mainTextArea, choice1, choice2, and choice3 dynamically based on Panel pan
+	// TODO: see Game.java's method public void airport for guide
+	public static void updatePanel(Panel pan) {
+		
+	}
 
 	public static void main(String[] args) {
 		initialize();
+		
+		gam = new Game();
+		gam.createGameScreen();
+		
+		updatePanel(homescreen);
 
 		// set the player name
 

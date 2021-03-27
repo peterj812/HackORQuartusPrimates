@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Player {
 	public String name;
-	private ArrayList<Item> backpack = new ArrayList<Item>();;
+	public ArrayList<Item> backpack = new ArrayList<Item>();;
 	int health;
 	
 	public Player() {
@@ -28,41 +28,32 @@ public class Player {
 	}
 	
 	void setHealth(int h) {
-		if (h > 100 || h < 0) /* this is "error handling" */ ;
+		if (h > 10 || h < 0) return;
 		else health = h;
 		
 	}
 	
-	Item[] getItems() {
-		return backpack;
-	}
-	
-	// TODO: this method should print an array of all Items in backpack
+	// TODO: this method should print all of the Items in ArrayList backpack
 	void checkBackpack() {
 		
 	}
 	
-	// TODO: this method should check whether there is at least one offensive item in backpack
+	// checks whether there is at least one offensive item in backpack
 	boolean setsoffTSA() {
-		// call checkBackpack()
+		for (int idx = 0; idx < backpack.size(); idx++) { if (backpack.get(idx).willSetoffTSA) return true; }
 		return false;
 	}
 	
-	// TODO: this method should add Item i to the backpack
+	// adds Item i to backpack
 	void addItem(Item i) {
-		backpack.add(i);
+		if(!hasItem(i)) backpack.add(i);
 	}
 	
-	// TODO: this method should check if Item i is in the backpack (call hasItem(i)), and remove Item i from the backpack if it is in the backpack
 	void removeItem(Item i) {
-		if (hasItem(i) == true) {
-			backpack.remove(i);	
-		} else {
-			//give error or output message
-		}
+		if (hasItem(i) == true) { backpack.remove(i); }
 	}
 	
-	// TODO: this method should check if Item i is in the backpack, return true or false
+	// checks if Item i is in Backpack
 	boolean hasItem(Item i) {
 		for (int idx = 0; idx < backpack.size(); idx++) { if (backpack.get(idx).getName().equals(i.getName())) return true; }
 		return false;
