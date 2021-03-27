@@ -20,14 +20,17 @@ public class Game {
 
     JFrame window;
     Container con;
-    JPanel titleNamePanel, playGameButtonPanel, mainTextPanel, choiceButtonPanel, playerPanel;
-    JLabel titleNameLabel, hpLabel, hpLabelNumber;
-    Font titleFont = new Font("Times New Roman", Font.PLAIN, 30);
+    JPanel titleNamePanel, playGameButtonPanel, mainTextPanel, choiceButtonPanel, playerPanel, picturePanel;
+    JLabel titleNameLabel, hpLabel, hpLabelNumber, picutreLabel;
+    Font titleFont = new Font("Times New Roman", Font.PLAIN, 40);
     Font normalFont = new Font("Times New Roman", Font.PLAIN, 30);
     JButton playGameButton, choice1, choice2, choice3;
     JTextArea mainTextArea;
+    String position;
     int playerHp;
-
+    ImageIcon image1, image2;
+    
+    
     TitleScreenHandler tsHandler = new TitleScreenHandler();
     ChoiceHandler cHandler = new ChoiceHandler();
 
@@ -41,7 +44,7 @@ public class Game {
 
         //setting the window of the game
         window = new JFrame();
-        window.setSize(800, 600);
+        window.setSize(1080, 1360);
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         window.getContentPane().setBackground(Color.black);
         window.setLayout(null);
@@ -50,7 +53,7 @@ public class Game {
 
         //creates the title page panel
         titleNamePanel = new JPanel();
-        titleNamePanel.setBounds(100, 100, 600, 150);
+        titleNamePanel.setBounds(200, 200, 700, 200);
         titleNamePanel.setBackground(Color.black);
         titleNameLabel = new JLabel("WELCOME TO FLIGHT SIMULATOR X");
         titleNameLabel.setForeground(Color.white);
@@ -58,7 +61,7 @@ public class Game {
 
         //panel that holds the buttons in order to play the game
         playGameButtonPanel = new JPanel();
-        playGameButtonPanel.setBounds(300, 400, 200, 100);
+        playGameButtonPanel.setBounds(200, 400, 200, 100);
         playGameButtonPanel.setBackground(Color.black);
 
         //button that prompts user to play the game
@@ -88,13 +91,13 @@ public class Game {
 
         //creates a text area panel that shows the message to the user
         mainTextPanel = new JPanel();
-        mainTextPanel.setBounds(100, 100, 600, 150);
+        mainTextPanel.setBounds(100, 100, 800, 150);
         mainTextPanel.setBackground(Color.black);
         con.add(mainTextPanel);
 
         //sets the text area
         mainTextArea = new JTextArea();
-        mainTextArea.setBounds(100, 100, 600, 250);
+        mainTextArea.setBounds(100, 350, 600, 250);
         mainTextArea.setBackground(Color.black);
         mainTextArea.setForeground(Color.white);
         mainTextArea.setFont(normalFont);
@@ -103,7 +106,7 @@ public class Game {
 
         //choice button panel that shows the choices for the user
         choiceButtonPanel = new JPanel();
-        choiceButtonPanel.setBounds(250, 300, 400, 150);
+        choiceButtonPanel.setBounds(400, 500, 400, 150);
         choiceButtonPanel.setBackground(Color.blue);
         choiceButtonPanel.setLayout(new GridLayout(3,1));
         con.add(choiceButtonPanel);
@@ -126,7 +129,7 @@ public class Game {
         choice2.setFocusPainted(false);
         choiceButtonPanel.add(choice2);
         choice2.addActionListener(cHandler);
-        choice1.setActionCommand("c2");
+        choice2.setActionCommand("c2");
          
         //creates choice 3 button
         choice3 = new JButton();
@@ -136,7 +139,7 @@ public class Game {
         choice3.setFocusPainted(false);
         choiceButtonPanel.add(choice3);
         choice3.addActionListener(cHandler);
-        choice1.setActionCommand("c3");
+        choice3.setActionCommand("c3");
 
         //shows the status of the player when they lose or gain hp
         playerPanel = new JPanel();
@@ -171,6 +174,20 @@ public class Game {
 
     //choices to show the first scenario
     public void airport() {
+        //these picture panels is what calls the images from the folder
+        picturePanel = new JPanel();
+        picturePanel.setBounds(200, 200, 500, 500);
+        picturePanel.setBackground(Color.blue);
+        con.add(picturePanel);
+
+        pictureLabel = new JLabel();
+
+        image1 = new ImageIcon(".//Images//TSA.jpg.jpeg");
+
+        pictureLabel.setIcon(image1);
+        picturePanel.add(pictureLabel);
+
+        position = "airport()";
         mainTextArea.setText("You approach the gate at TSA what do you do?");
         choice1.setText("Look through bag");
         choice2.setText("Go Through Metal Detector");
@@ -178,11 +195,42 @@ public class Game {
     }
 
     //choices to show the second scenario
-    public void choice2Chosen() {
+    public void tsaMad() {
+        picturePanel = new JPanel();
+        picturePanel.setBounds(200, 200, 500, 500);
+        picturePanel.setBackground(Color.blue);
+        con.add(picturePanel);
+
+        pictureLabel = new JLabel();
+
+        image2 = new ImageIcon(".//Images//Tsamad.jpg");
+
+        pictureLabel.setIcon(image2);
+        picturePanel.add(pictureLabel);
+
+        position = "tsaMad()";
         mainTextArea.setText("Metal Detector goes off from the Contraband, alarm sounds, TSA agent yells HEY YOU!!");
-        choice1.setText("");
+        choice1.setText("Next.....");
         choice2.setText("");
         choice3.setText("");
+    }
+
+    //supposed to transition to a death screen when player chooses to bad routes but still doesn't work yet
+    public void death() {
+        picturePanel = new JPanel();
+        picturePanel.setBounds(200, 200, 500, 500);
+        picturePanel.setBackground(Color.blue);
+        con.add(picturePanel);
+
+        pictureLabel = new JLabel();
+
+        image1 = new ImageIcon(".//Images//death.jpg");
+
+        pictureLabel.setIcon(image1);
+        picturePanel.add(pictureLabel);
+
+        position = "death()";
+
     }
 
 
@@ -203,7 +251,11 @@ public class Game {
             String yourChoice = event.getActionCommand();
 
             if (yourChoice.equals("c2")) {
-                choice2Chosen();
+                tsaMad();
+            }
+
+            if (yourChoice.equals("c1")) {
+                death();
             }
         }
     }
