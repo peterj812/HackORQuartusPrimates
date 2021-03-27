@@ -1,5 +1,3 @@
-package HackORQuartusPrimates;
-
 //import statements
 import java.awt.Color;
 import java.awt.Container;
@@ -44,8 +42,10 @@ public class Game {
 
         //setting the window of the game
         window = new JFrame();
-      
-        window.setSize(1080, 1920);
+        window.setExtendedState(JFrame.MAXIMIZED_BOTH); 
+        window.setUndecorated(true);
+        window.setVisible(true);
+        
 
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         window.getContentPane().setBackground(Color.black);
@@ -56,7 +56,7 @@ public class Game {
         titleNamePanel = new JPanel();
         titleNamePanel.setBounds(200, 200, 700, 200);
         titleNamePanel.setBackground(Color.black);
-        titleNameLabel = new JLabel("WELCOME TO FLIGHT SIMULATOR X");
+        titleNameLabel = new JLabel("Laughing Stock");
         titleNameLabel.setForeground(Color.white);
         titleNameLabel.setFont(titleFont);
 
@@ -66,7 +66,7 @@ public class Game {
         playGameButtonPanel.setBackground(Color.black);
 
         //button that prompts user to play the game
-        playGameButton = new JButton("PLAY GAME");
+        playGameButton = new JButton("PLAY");
         playGameButton.setBackground(Color.black);
         playGameButton.setForeground(Color.white);
         playGameButton.setFont(normalFont);
@@ -109,15 +109,14 @@ public class Game {
 
         //choice button panel that shows the choices for the user
         choiceButtonPanel = new JPanel();
-
         choiceButtonPanel.setBounds(400, 590, 400, 150);
-
-        choiceButtonPanel.setBackground(Color.blue);
+        choiceButtonPanel.setBackground(Color.black);
         choiceButtonPanel.setLayout(new GridLayout(3,1));
         con.add(choiceButtonPanel);
 
         //creates choice 1 button
         choice1 = new JButton();
+        choice1.setText("test");
         choice1.setBackground(Color.black);
         choice1.setForeground(Color.white);
         choice1.setFont(normalFont);
@@ -125,7 +124,8 @@ public class Game {
         choiceButtonPanel.add(choice1);
         choice1.addActionListener(cHandler);
         choice1.setActionCommand("c1");
-
+        choiceButtonPanel.add(choice1);
+        
         //creates choice 2 button
         choice2 = new JButton();
         choice2.setBackground(Color.black);
@@ -135,7 +135,8 @@ public class Game {
         choiceButtonPanel.add(choice2);
         choice2.addActionListener(cHandler);
         choice2.setActionCommand("c2");
-         
+        choiceButtonPanel.add(choice2); 
+        
         //creates choice 3 button
         choice3 = new JButton();
         choice3.setBackground(Color.black);
@@ -145,6 +146,7 @@ public class Game {
         choiceButtonPanel.add(choice3);
         choice3.addActionListener(cHandler);
         choice3.setActionCommand("c3");
+        choiceButtonPanel.add(choice3);
 
         //shows the status of the player when they lose or gain hp
         playerPanel = new JPanel();
@@ -181,6 +183,7 @@ public class Game {
     public void panelInit() {
 
         //these picture panels is what calls the images from the folder
+    	/*
         picturePanel = new JPanel();
         picturePanel.setBounds(200, 90, 500, 500);
         picturePanel.setBackground(Color.blue);
@@ -192,7 +195,7 @@ public class Game {
 
         pictureLabel.setIcon(image1);
         picturePanel.add(pictureLabel);
-
+		*/
         position = "panelInit()";
         mainTextArea.setText(Main.init.prompt);
 
@@ -208,7 +211,8 @@ public class Game {
 
     //choices to show the second scenario
     public void panelB() {
-        picturePanel = new JPanel();
+        /*
+    	picturePanel = new JPanel();
         picturePanel.setBounds(200, 90, 500, 500);
         picturePanel.setBackground(Color.blue);
         con.add(picturePanel);
@@ -219,12 +223,14 @@ public class Game {
 
         pictureLabel.setIcon(image2);
         picturePanel.add(pictureLabel);
-
+        */
         position = "panelB()";
         mainTextArea.setText("Metal Detector goes off from the Contraband, alarm sounds, TSA agent yells HEY YOU!!");
         choice1.setText("Next.....");
         choice2.setText("");
         choice3.setText("");
+        choice2.setVisible(false);
+        choice3.setVisible(false);
     }
     
     //supposed to transition to a death screen when player chooses to bad routes but still doesn't work yet
@@ -262,15 +268,16 @@ public class Game {
     	// actionToPerform, currentPanel, and buttonClicked aren't the actual variable names
         public void actionPerformed(ActionEvent event) {    
             
-            String yourChoice = event.getActionCommand();
-
-                if (yourChoice.equals("c2")) {
-                    panelB();
-                }
-
-                if (yourChoice.equals("c1")) {
-                    death();
-                }
+            String buttonPressed = event.getActionCommand();
+			
+			switch(position){
+			case "panelInit()":
+				switch(buttonPressed){
+				case "c1": panelA();break;
+				case "c2": panelB();break;
+				//case "c3": panelC();break;
+				}
+			}
         }
     }
 }
