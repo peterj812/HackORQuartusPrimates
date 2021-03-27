@@ -27,5 +27,23 @@ public class Panel {
 		if(choices.containsKey(choice) != false) return true;
 		else return false;
 	}
+
+	
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	
+	public void setPrompt(String prompt) {
+		this.prompt = prompt;
+	}
+	
+	public String getName() {
+		return name;
+	}
+	
+	public String getPrompt() {
+		return prompt;
+	}
 	
 }

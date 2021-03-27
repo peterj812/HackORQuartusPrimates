@@ -9,6 +9,14 @@ import java.awt.*;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Set;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextArea;
+
+
 import java.util.Random;
 
 import javax.swing.*;
@@ -25,6 +33,16 @@ public class Main {
 	public static Player jimbo = new Player("");
 	
 	static Panel homescreen, choosename, init, a, b, c, d, e, f, g, h, i, j, k, l, l1, m, n, o, p, q, r, s, t, u, v, w, x, y, z, aa, ab, ac, ad, ae, af, ag;
+  static JPanel titleNamePanel, playGameButtonPanel, mainTextPanel, choiceButtonPanel, playerPanel;
+  static JLabel titleNameLabel, hpLabel, hpLabelNumber;
+
+  static Font titleFont = new Font("Times New Roman", Font.PLAIN, 30);
+  static Font normalFont = new Font("Times New Roman", Font.PLAIN, 30);
+  static JButton playGameButton, choice1, choice2, choice3;
+  static JTextArea mainTextArea;
+	static JFrame window;
+	static Container con;
+
 	static Item adultItem, bandages, knife, smallEngine, waterBottle;
 	static Game gam;
 	public static int health = jimbo.getHealth();
@@ -254,7 +272,43 @@ public class Main {
 	// TODO: change mainTextArea, choice1, choice2, and choice3 dynamically based on Panel pan
 	// TODO: see Game.java's method public void airport for guide
 	public static void updatePanel(Panel pan) {
-		
+        window = new JFrame();
+        window.setSize(800, 600);
+        window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        window.getContentPane().setBackground(Color.black);
+        window.setLayout(null);
+        window.setVisible(true);
+        con = window.getContentPane();
+
+        titleNamePanel = new JPanel();
+        titleNamePanel.setBounds(100, 100, 600, 150);
+        titleNamePanel.setBackground(Color.black);
+        titleNameLabel = new JLabel("WELCOME TO FLIGHT SI");
+        titleNameLabel = new JLabel(pan.getPrompt());
+        
+        titleNameLabel.setForeground(Color.white);
+        titleNameLabel.setFont(titleFont);
+
+        //panel that holds the buttons in order to play the game
+        playGameButtonPanel = new JPanel();
+        playGameButtonPanel.setBounds(300, 400, 200, 100);
+        playGameButtonPanel.setBackground(Color.black);
+
+        //button that prompts user to play the game
+        playGameButton = new JButton("PLAY GAME");
+        playGameButton.setBackground(Color.black);
+        playGameButton.setForeground(Color.white);
+        playGameButton.setFont(normalFont);
+        playGameButton.setFocusPainted(false);
+
+
+        //adds the title name and the play button to the panel
+        titleNamePanel.add(titleNameLabel);
+        playGameButtonPanel.add(playGameButton);
+
+        //adds the panels to the container
+        con.add(titleNamePanel);
+        con.add(playGameButtonPanel);
 	}
 
 	public static void main(String[] args) {
