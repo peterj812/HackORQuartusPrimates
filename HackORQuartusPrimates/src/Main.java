@@ -79,6 +79,9 @@ public class Main {
 		z = new Panel("", "");
 		
 		// SET CHOICES
+		
+		// TODO: set homescreen choices
+		// homescreen choices
 
 		// init choices
 		init.setChoice("Look through bag", a);
