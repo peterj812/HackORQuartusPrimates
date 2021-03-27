@@ -28,7 +28,7 @@ public class Player {
 	}
 	
 	void setHealth(int h) {
-		if (h > 100 || h < 0) /* this is "error handling" */ ;
+		if (h > 10 || h < 0) return;
 		else health = h;
 		
 	}
@@ -53,7 +53,7 @@ public class Player {
 		if (hasItem(i) == true) { backpack.remove(i); }
 	}
 	
-	// TODO: this method should check if Item i is in the backpack, return true or false
+	// checks if Item i is in Backpack
 	boolean hasItem(Item i) {
 		for (int idx = 0; idx < backpack.size(); idx++) { if (backpack.get(idx).getName().equals(i.getName())) return true; }
 		return false;
