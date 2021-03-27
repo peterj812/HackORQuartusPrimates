@@ -87,8 +87,10 @@ public class Main {
 
 		// SET CHOICES
 		
-		// TODO: set homescreen choices
-		// homescreen choices
+		// homescreen choices - Start(/Credits/Exit -> if time)
+		homescreen.setChoice("Start", init);
+		// homescreen.setChoice("Credits", credits);
+		// homescreen.setChoice("Exit", exit);
 
 		// init choices
 		init.setChoice("Look through bag", a);
