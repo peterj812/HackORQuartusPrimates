@@ -3,7 +3,7 @@ import java.util.HashMap;
 import java.util.Set;
 
 public class Main {
-	
+	Player p = new Player();
 	
 	// METHODS
 	
@@ -33,8 +33,6 @@ public class Main {
 		double hasSmallEngine = 25;
 		double hasWaterBottleChance = 25;
 		double tripChance = 25;
-		
-		Player p = new Player();
 		
 		// ITEMS
 		Item adultItem = new Item("adult item", true);
