@@ -114,7 +114,7 @@ public class Main {
 		
 		// j choices
 		j.setChoice("Pull out the shrapanel in your leg.", k);
-		j.setChoice("Walk toward abadonded carnival.", l);
+		j.setChoice("Walk toward abadonded carnival.", k);
 		j.setChoice("Examine the plane crash", m);		
 		
 		// k choices
@@ -122,9 +122,35 @@ public class Main {
 		k.setChoice("Cover it with your hand", n);
 		
 		// l choices
-		
+		l.setChoice("Walk further into the Carnival", p);
+		l.setChoice("Just...Cry", q);
 		
 		// m choices
+		m.setChoice("Pick up bandage", n);
+		m.setChoice("Walk into carnival", l);
+		
+		// n 
+	
+		
+		// o
+		
+		
+		// p
+		p.setChoice("You sure you don't want to give up?", q);
+		p.setChoice("Go to the mirror building", r);
+		p.setChoice("Go to the hotdog building", p);
+		
+		// q
+		
+		
+		// r
+		
+		
+		// s
+		
+		
+		
+		
 		
 		// determine what items will be in backpack
 
