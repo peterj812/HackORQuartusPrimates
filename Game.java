@@ -1,3 +1,5 @@
+package HackORQuartusPrimates;
+
 //import statements
 import java.awt.Color;
 import java.awt.Container;
@@ -43,11 +45,10 @@ public class Game {
 
         //setting the window of the game
         window = new JFrame();
-        window.setSize(1080, 1360);
+        window.setSize(1080, 1920);
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         window.getContentPane().setBackground(Color.black);
         window.setLayout(null);
-        window.setVisible(true);
         con = window.getContentPane();
 
         //creates the title page panel
@@ -79,6 +80,8 @@ public class Game {
         con.add(titleNamePanel);
         con.add(playGameButtonPanel);
 
+        window.setVisible(true);
+
     }
 
     //function that creates the game screen 
@@ -105,7 +108,7 @@ public class Game {
 
         //choice button panel that shows the choices for the user
         choiceButtonPanel = new JPanel();
-        choiceButtonPanel.setBounds(400, 500, 400, 150);
+        choiceButtonPanel.setBounds(400, 590, 400, 150);
         choiceButtonPanel.setBackground(Color.blue);
         choiceButtonPanel.setLayout(new GridLayout(3,1));
         con.add(choiceButtonPanel);
@@ -177,7 +180,7 @@ public class Game {
 
         //these picture panels is what calls the images from the folder
         picturePanel = new JPanel();
-        picturePanel.setBounds(200, 200, 500, 500);
+        picturePanel.setBounds(200, 90, 500, 500);
         picturePanel.setBackground(Color.blue);
         con.add(picturePanel);
 
@@ -201,7 +204,7 @@ public class Game {
     //choices to show the second scenario
     public void tsaMad() {
         picturePanel = new JPanel();
-        picturePanel.setBounds(200, 200, 500, 500);
+        picturePanel.setBounds(200, 90, 500, 500);
         picturePanel.setBackground(Color.blue);
         con.add(picturePanel);
 
