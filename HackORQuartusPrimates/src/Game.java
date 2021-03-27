@@ -1,3 +1,4 @@
+package HackORQuartusPrimates;
 
 //import statements
 import java.awt.Color;
@@ -29,8 +30,7 @@ public class Game {
     String position;
     int playerHp;
     ImageIcon image1, image2;
-    
-    
+
     TitleScreenHandler tsHandler = new TitleScreenHandler();
     ChoiceHandler cHandler = new ChoiceHandler();
 
@@ -44,11 +44,12 @@ public class Game {
 
         //setting the window of the game
         window = new JFrame();
-        window.setSize(1080, 1360);
+      
+        window.setSize(1080, 1920);
+
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         window.getContentPane().setBackground(Color.black);
         window.setLayout(null);
-        window.setVisible(true);
         con = window.getContentPane();
 
         //creates the title page panel
@@ -80,6 +81,8 @@ public class Game {
         con.add(titleNamePanel);
         con.add(playGameButtonPanel);
 
+        window.setVisible(true);
+
     }
 
     //function that creates the game screen 
@@ -106,7 +109,9 @@ public class Game {
 
         //choice button panel that shows the choices for the user
         choiceButtonPanel = new JPanel();
-        choiceButtonPanel.setBounds(400, 500, 400, 150);
+
+        choiceButtonPanel.setBounds(400, 590, 400, 150);
+
         choiceButtonPanel.setBackground(Color.blue);
         choiceButtonPanel.setLayout(new GridLayout(3,1));
         con.add(choiceButtonPanel);
@@ -160,7 +165,7 @@ public class Game {
         hpLabelNumber.setForeground(Color.white);
         playerPanel.add(hpLabelNumber);
 
-        //callss playerSetup function
+        //calls playerSetup function
         playerSetup();
 
     }
@@ -174,17 +179,33 @@ public class Game {
 
     //choices to show the first scenario
     public void panelInit() {
+
+        //these picture panels is what calls the images from the folder
+        picturePanel = new JPanel();
+        picturePanel.setBounds(200, 90, 500, 500);
+        picturePanel.setBackground(Color.blue);
+        con.add(picturePanel);
+
+        pictureLabel = new JLabel();
+
+        image1 = new ImageIcon(".//Images//TSA.jpg.jpeg");
+
+        pictureLabel.setIcon(image1);
+        picturePanel.add(pictureLabel);
+
+        position = "panelInit()";
         mainTextArea.setText(Main.init.prompt);
-      
+
         choice1.setText("Look through bag");
         choice2.setText("Go Through Metal Detector");
         choice3.setText("Go home, flying is scary");
+
     }
 
     //choices to show the second scenario
     public void tsaMad() {
         picturePanel = new JPanel();
-        picturePanel.setBounds(200, 200, 500, 500);
+        picturePanel.setBounds(200, 90, 500, 500);
         picturePanel.setBackground(Color.blue);
         con.add(picturePanel);
 
@@ -201,6 +222,25 @@ public class Game {
         choice2.setText("");
         choice3.setText("");
     }
+
+    //supposed to transition to a death screen when player chooses to bad routes but still doesn't work yet
+    public void death() {
+        picturePanel = new JPanel();
+        picturePanel.setBounds(200, 200, 500, 500);
+        picturePanel.setBackground(Color.blue);
+        con.add(picturePanel);
+
+        pictureLabel = new JLabel();
+
+        image1 = new ImageIcon(".//Images//death.jpg");
+
+        pictureLabel.setIcon(image1);
+        picturePanel.add(pictureLabel);
+
+        position = "death()";
+
+    }
+
 
     //supposed to transition to a death screen when player chooses to bad routes but still doesn't work yet
     public void death() {
@@ -239,13 +279,13 @@ public class Game {
             
             String yourChoice = event.getActionCommand();
 
-            if (yourChoice.equals("c2")) {
-                tsaMad();
-            }
+                if (yourChoice.equals("c2")) {
+                    tsaMad();
+                }
 
-            if (yourChoice.equals("c1")) {
-                death();
-            }
+                if (yourChoice.equals("c1")) {
+                    death();
+                }
         }
     }
 }
