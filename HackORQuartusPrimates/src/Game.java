@@ -1,5 +1,3 @@
-package HackORQuartusPrimates;
-
 //import statements
 import java.awt.Color;
 import java.awt.Container;
@@ -225,6 +223,7 @@ public class Game {
         choice1.setText("Next.....");
         choice2.setText("");
         choice3.setText("");
+        
     }
     
     //supposed to transition to a death screen when player chooses to bad routes but still doesn't work yet
@@ -250,27 +249,34 @@ public class Game {
     public class TitleScreenHandler implements ActionListener {
 
         public void actionPerformed(ActionEvent event) {
-
             createGameScreen();
         }
     }
+    
     //actions that handle the choices when user 
     public class ChoiceHandler implements ActionListener {
     	
     	// TODO: fix this to be dynamic
-    	// ie: actionToPerform = currentPanel.getChoice(buttonClicked.getText())
+    	// ie: ACTION = CURRENTPANEL.getChoice(BUTTONCLICKED.getText())
     	// actionToPerform, currentPanel, and buttonClicked aren't the actual variable names
         public void actionPerformed(ActionEvent event) {    
             
-            String yourChoice = event.getActionCommand();
+        	// get what button is pressed
+            String buttonPressed = event.getActionCommand();
 
-                if (yourChoice.equals("c2")) {
-                    panelB();
-                }
-
-                if (yourChoice.equals("c1")) {
-                    death();
-                }
+            //Main.init.prompt;
+            // see what button has been pressed
+            switch(position) {
+            case "panelInit()":
+            	switch(buttonPressed) {
+            		case "c1":
+            			panelA(); break;
+            		case "c2":
+            			panelB(); break;
+            		case "c3":
+            			//panelC(); break;
+            	}
+            }
         }
     }
 }
