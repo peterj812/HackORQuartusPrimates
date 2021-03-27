@@ -9,6 +9,7 @@ public class Main {
 	
 	static Panel init, a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z;
 	static Item adultItem, bandages, knife, smallEngine, waterBottle;
+	static Game gam;
 
 	// METHODS
 
@@ -88,10 +89,10 @@ public class Main {
 		a.setChoice("Put bag down and go through security", e);
 
 		// b choices
-		// TODO: implement b outcome (see spreadsheet)
+		// TODO: Implement prison game over
 
 		// c choices
-		// TODO: implement c outcome (see spreadsheet)
+		// TODO: Implement unaccomplished win
 
 		// d choices
 		d.setChoice("Take a nap", f);
@@ -99,16 +100,16 @@ public class Main {
 		d.setChoice("Put your feet up and just relax", h);
 		
 		// e choices
-		//prison
+		// TODO: Implement prison game over
 	
 		// f track
-		// TODO: 
+		// TODO: Implement movement to crash shit w/ damage
 		
 		// g track
 		// TODO: Either death or higher chance of injury/more damage
 		
 		// h choices
-		// game over prison
+		// TODO: Implement prison game over
 		
 		
 		// i choices
@@ -125,11 +126,31 @@ public class Main {
 		k.setChoice("Cover it with your hand", n);
 		
 		// l choices
-		
+		l.setChoice("Walk further into the Carnival", p);
+		l.setChoice("Just...Cry", q);
 		
 		// m choices
+		m.setChoice("Pick up bandage", n);
+		m.setChoice("Walk into carnival", l);
 		
-		// determine what items will be in backpack
+		// n 
+	
+		
+		// o
+		
+		
+		// p
+		p.setChoice("You sure you don't want to give up?", q);
+		p.setChoice("Go to the mirror building", r);
+		p.setChoice("Go to the hotdog building", p);
+		
+		// q
+		
+		
+		// r
+		
+		
+		// s
 
 	}
 
@@ -147,6 +168,9 @@ public class Main {
 
 	public static void main(String[] args) {
 		initialize();
+		
+		gam = new Game();
+		gam.createGameScreen();
 		
 		updatePanel(init);
 
