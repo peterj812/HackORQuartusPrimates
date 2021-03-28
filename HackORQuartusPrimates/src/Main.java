@@ -109,7 +109,7 @@ public class Main {
 		j = new Panel("",
 				"<html><center>You seem to have been impaled by some shrapnel. <br> At least you survived as it seems no one else did. <br> Is that a carnival next to you?</center></html>");
 		k = new Panel("",
-				"<html><center>GAME OVER. <br> As you pull the shrapnel out of your body, you feel the life quickly leave your body.</center></html>");
+				"<html><center>You are bleeding.</center></html>");
 		l = new Panel("",
 				"<html><center>You approach the carnival. The air feels thinner here, <br> as if something is sucking it out of the world. You feel a shiver go <br> down your spine as you walk through the clown headed gates.</center></html>");
 		l1 = new Panel("",
