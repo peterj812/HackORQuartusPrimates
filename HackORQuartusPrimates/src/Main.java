@@ -29,7 +29,7 @@ public class Main {
 	public static Player jimbo = new Player("");
 
 	static Panel homescreen, choosename, init, a, b, c, d, e, f, g, h, i, j, k, l, l1, m, m1, n, o, p, q, r, s, t, u, v,
-			w, x, y, z, aa, ab, ac, ad, ae, af, ag, ah, ai, home;
+			w, x, y, z, aa, ab, ac, ad, ae, af, ag, ah, home;
 	static JPanel titleNamePanel, playGameButtonPanel, mainTextPanel, choiceButtonPanel, playerPanel;
 	static JLabel titleNameLabel, hpLabel, hpLabelNumber;
 
@@ -60,11 +60,6 @@ public class Main {
 	static void injury(int min_damage, int max_damage) {
 		int damage = rand.nextInt(max_damage - min_damage) + min_damage; // determine the damage using min_damage and max_damage inclusive
 		jimbo.setHealth(jimbo.getHealth() - damage);
-	}
-	
-	static void heal(int min_gain, int max_gain) {
-		int regain = rand.nextInt(max_gain - min_gain) + min_gain; // determine the damage using min_damage and max_damage inclusive
-		jimbo.setHealth(jimbo.getHealth() + regain);
 	}
 
 	static final void initialize() {
@@ -97,8 +92,8 @@ public class Main {
 		d = new Panel("", "You successfully got on the flight and are sitting comfortably.\n Only a few hours to go");
 		e = new Panel("",
 				"TSA found contraband in your luggage! You have been arrested and put on a terrorist watch list for having CONTRABAND in the airport.");
-		f = new Panel("Crash site", "You get startled by an announcement." + "\n" + "\"MAYDAY! MAYDAY! PLANE GOING DOWN!\"" + "\n" + "*Crash noises*");
-		g = new Panel("", "You get startled by an announcement." + "\n" + "\"MAYDAY! MAYDAY! PLANE GOING DOWN!\"" + "\n" + "*Crash noises*");
+		f = new Panel("Crash site", "You get startled by an announcement." + "\n" + "\"EMERGENCY! EMERGENCY! PLANE GOING DOWN!\"" + "\n" + "*Crash noises*");
+		g = new Panel("", "You get startled by an announcement." + "\n" + "\"EMERGENCY! EMERGENCY! PLANE GOING DOWN!\"" + "\n" + "*Crash noises*");
 		h = new Panel("",
 				"Time to relax! As you put your feet up on the chair,\n the Airmarshall sitting in front of you \nstands up and knocks you out.");
 		i = new Panel("",
@@ -106,14 +101,14 @@ public class Main {
 		j = new Panel("",
 				"You seem to have been impaled by some shrapnel. At least you survived as it seems no one else did." + "\n" + "Is that a carnival next to you?");
 		k = new Panel("",
-				"You're bleeding!");
+				"GAME OVER." + "\n" + "As you pull the shrapnel out of your body, you feel the life quickly leave your body.");
 		l = new Panel("",
 				"You approach the carnival." + "\n" + "The air feels thinner here, as if something is sucking it out of the world." + "\n" + "You feel a shiver go down your spine as you walk through the clown headed gates.");
-		l1 = new Panel("", "You feel relieved. There's nothing else here, time to head into the carnival");
+		l1 = new Panel("", "");
 		m = new Panel("", "As you stare into the firey wreck of the plane, you notice a bandage lying at your feet.");
 		m1 = new Panel("",
 				"You stare at the crash and see nothing but burning rubble. For some reason, all you can think of is George Bush.");
-		n = new Panel("", "You pick up the bandage.");
+		n = new Panel("", "You put the bandage in your backpack.");
 		o = new Panel("",
 				"GAMEOVER." + "\n" + "The pain from the shrapnel is too much to handle. Your body gives in on itself, and you feel the life leave you");
 		p = new Panel("",
@@ -137,7 +132,7 @@ public class Main {
 				"GAME OVER." + "\n" + "You run into a clown and are knocked out");
 		aa = new Panel("",
 				"You turn and leave the hotdog building. The smell of meat gets fainter. Maybe you made the wrong choice...");
-		ab = new Panel("", "You have a bandage. Would you like to apply it?");
+		ab = new Panel("", "You open your backpack.");
 		ac = new Panel("",
 				"You push open the door. To your horror, you see a clown cooking what looks like a deceased mime!");
 		ad = new Panel("", "You walk back into the carnival and once again can see the two buildings");
@@ -146,8 +141,7 @@ public class Main {
 		af = new Panel("",
 				"YOU WIN!" + "\n" + "You join the clown and live happily ever after");
 		ag = new Panel("", "");
-		ah = new Panel("", "GAME OVER!" + "\n" + " You died in the plane crash!");
-		ai = new Panel("", "GAME OVER!" + "\n" + " The bleeding is too much, you feel the life rushing out of you. You know there's nothing left to do but let death take you.");
+		ah = new Panel("", "GAME OVER");
 		home = new Panel("", "Laughing Stock");
 
 	}

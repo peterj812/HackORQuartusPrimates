@@ -1,5 +1,6 @@
 package HackORQuartusPrimates.HackORQuartusPrimates.src;
 
+
 import java.util.HashMap;
 
 public class Panel {

@@ -1,5 +1,6 @@
 package HackORQuartusPrimates.HackORQuartusPrimates.src;
 
+
 //import statements
 import java.awt.Color;
 import java.awt.Container;
@@ -23,12 +24,12 @@ public class Game {
     JFrame window;
     Container con;
     JPanel titleNamePanel, endGameButtonPanel, playGameButtonPanel, mainTextPanel, choiceButtonPanel, playerPanel, picturePanel;
-    JLabel titleNameLabel, hpLabel, hpLabelNumber, pictureLabel, mainTextArea;
+    JLabel titleNameLabel, hpLabel, hpLabelNumber, pictureLabel;
     
     JTextArea mainTextArea = new JTextArea();
     Font titleFont = new Font("Times New Roman", Font.BOLD, 90);
     Font titleButtonFont = new Font("Times New Roman", Font.PLAIN, 60);
-    Font promptFont = new Font("Calibri", Font.BOLD, 25);
+    Font promptFont = new Font("Calibri", Font.BOLD, 20);
     Font choiceFont = new Font("Calibri", Font.BOLD, 12);
     Font hpFont = new Font("Calibri", Font.BOLD, 35);
     Font otherButtonFont = new Font("Times New Roman", Font.PLAIN, 45);
@@ -105,18 +106,6 @@ public class Game {
         con.add(endGameButtonPanel);
         window.setVisible(true);
     }
-    
-    //method to set up typing
-    public void createrTextEdit() {
-    	// Make start button come here
-    	// Set title and play button vis to false
-    	
-    	
-    	
-    	// Implement entering of name here
-    	
-    	// Have continue button move to createGameScreen
-    }
 
     //function that creates the game screen 
     public void createGameScreen() {
@@ -185,13 +174,13 @@ public class Game {
 
         //shows the status of the player when they lose or gain hp
         playerPanel = new JPanel();
-        playerPanel.setBounds(5, 5, 105, 37);
-        playerPanel.setBackground(Color.black);
+        playerPanel.setBounds(110, 0, 102, 37);
+        playerPanel.setBackground(Color.red);
         playerPanel.setLayout(new GridLayout(1,3));
         con.add(playerPanel);
       
         //sets the hp label
-        hpLabel = new JLabel("HP ");
+        hpLabel = new JLabel("HP:");
         hpLabel.setFont(hpFont);
         hpLabel.setForeground(Color.white);
         playerPanel.add(hpLabel);
@@ -208,30 +197,18 @@ public class Game {
     }
     
     private void takeDamageL() {
-    	int min_damage = 2;
-		int max_damage = 5;
-    	Main.injury(min_damage, max_damage);
+    	Main.injury(2, 5);
     	playerHp = Main.jimbo.getHealth();
     	hpLabelNumber.setText("" + playerHp);
     }
     
     private void takeDamageH() {
-    	int min_damage = 5;
-		int max_damage = 11;
-    	Main.injury(min_damage, max_damage);
+    	Main.injury(5, 11);
     	playerHp = Main.jimbo.getHealth();
     	hpLabelNumber.setText("" + playerHp);
     	if (playerHp <= 0) {
     		deathCrash();
     	}
-    }
-    
-    private void applyBandage() {
-    	int min_gain = 3;
-		int max_gain = 6;
-		Main.heal(min_gain, max_gain);
-		playerHp = Main.jimbo.getHealth();
-    	hpLabelNumber.setText("" + playerHp);
     }
         
     //where it shows the hp bar with a unspecified hp
@@ -473,6 +450,7 @@ public class Game {
     }
     
     public void panelK() {
+
         position = "panelK";
         mainTextArea.setText(Main.k.prompt);
 
@@ -616,6 +594,16 @@ public class Game {
     }
     
     public void panelQ() {
+        //deathGeneric();
+
+        picturePanel = new JPanel();
+        picturePanel.setBounds(110, -5, 500, 500);
+        con.add(picturePanel);
+        pictureLabel = new JLabel();
+        deathGeneric = new ImageIcon(".//Images//YouDiedGeneric.jpg");
+        pictureLabel.setIcon(deathGeneric);
+        picturePanel.add(pictureLabel);
+
         position = "panelQ";
         mainTextArea.setText(Main.q.prompt);
 
@@ -632,8 +620,8 @@ public class Game {
         picturePanel.setBounds(110, -5, 500, 500);
         con.add(picturePanel);
         pictureLabel = new JLabel();
-        mirrorBuilding = new ImageIcon(".//Images//MirrorBuilding.jpg");
-        pictureLabel.setIcon(mirrorBuilding);
+        doorSlams = new ImageIcon(".//Images//DoorSlams.jpg");
+        pictureLabel.setIcon(doorSlams);
         picturePanel.add(pictureLabel);
         
         position = "panelR";
@@ -692,8 +680,8 @@ public class Game {
         picturePanel.setBounds(110, -5, 500, 500);
         con.add(picturePanel);
         pictureLabel = new JLabel();
-        twoBuilding = new ImageIcon(".//Images//2Building.jpg");
-        pictureLabel.setIcon(twoBuilding);
+        mirrorBuilding = new ImageIcon(".//Images//MirrorBuilding.jpg");
+        pictureLabel.setIcon(mirrorBuilding);
         picturePanel.add(pictureLabel);
 
         position = "panelU";
@@ -780,6 +768,8 @@ public class Game {
     }
     
     public void panelZ() {
+        deathGeneric();
+
         position = "panelZ";
         mainTextArea.setText(Main.z.prompt);
 
@@ -823,8 +813,8 @@ public class Game {
         position = "panelAB";
         mainTextArea.setText(Main.ab.prompt);
 
-        choice1.setText("Yes");
-        choice2.setText("No");
+        choice1.setText("Close backpack and head to the carnival");
+        choice2.setText("Take out shrapnel and apply bandage");
         choice3.setText("");
         choice1.setVisible(true);
         choice2.setVisible(true);
@@ -872,6 +862,7 @@ public class Game {
     }
     
     public void panelAE() {
+        deathGeneric();
         position = "panelAE";
         mainTextArea.setText(Main.ae.prompt);
 
@@ -910,11 +901,20 @@ public class Game {
     //supposed to transition to a death screen when player chooses to bad routes but still doesn't work yet
     
     public void deathGeneric() {
+        picturePanel = new JPanel();
+        picturePanel.setBounds(110, -5, 500, 500);
+        con.add(picturePanel);
+        pictureLabel = new JLabel();
+        deathGeneric = new ImageIcon(".//Images//YouDiedGeneric.jpg");
+        pictureLabel.setIcon(deathGeneric);
+        picturePanel.add(pictureLabel);
+
     	position = "deathG";
     	mainTextArea.setText(Main.ah.prompt);
     	Main.injury(10, 11);
     	playerHp = Main.jimbo.getHealth();
     	hpLabelNumber.setText("" + playerHp);
+
     	//GAME OVER
 		choice1.setText("Restart");
 		choice2.setText("");
@@ -938,7 +938,7 @@ public class Game {
     
     public void deathShrapnel() {
     	position = "deathS";
-    	mainTextArea.setText(Main.ai.prompt);
+    	mainTextArea.setText(Main.o.prompt);
     	Main.injury(10, 11);
     	playerHp = Main.jimbo.getHealth();
     	hpLabelNumber.setText("" + playerHp);
@@ -963,6 +963,14 @@ public class Game {
     
     //supposed to transition to a winning screen when player chooses great routes
     public void winning() {
+        picturePanel = new JPanel();
+        picturePanel.setBounds(110, -5, 500, 500);
+        con.add(picturePanel);
+        pictureLabel = new JLabel();
+        winImage = new ImageIcon(".//Images//YouWin.jpg");
+        pictureLabel.setIcon(winImage);
+        picturePanel.add(pictureLabel);
+
     	position = "winning";
     	mainTextArea.setText(Main.c.prompt);
     	
@@ -1046,7 +1054,7 @@ public class Game {
             	break;
             case "panelG":
             	switch(buttonPressed) {
-            		case "c1": panelJ(); break;
+            		case "c1": panelI(); break;
             	}
             	break;
             case "panelH":
@@ -1066,7 +1074,7 @@ public class Game {
             	}
             	break;
             case "panelK":
-            	deathShrapnel(); break;
+            	deathGeneric(); break;
             	
             case "panelL":
             	switch(buttonPressed) {
@@ -1074,8 +1082,6 @@ public class Game {
             		case "c2": panelP(); break;
             	}
             	break;
-            case "panelL1":
-            		panelL(); break;
             case "panelM":
             	switch(buttonPressed) {
             		case "c1": panelN(); break;
@@ -1085,12 +1091,6 @@ public class Game {
             case "panelM1":
             	switch(buttonPressed) {
             	case "c1": panelL(); break;
-            	}
-            	break;
-            case "panelN":
-            	switch(buttonPressed) {
-            	case "c1": panelO(); break;
-            	case "c2": panelAB(); break;
             	}
             	break;
             case "panelO":
@@ -1159,17 +1159,7 @@ public class Game {
     			switch(buttonPressed) {
     			case "c1": panelAD();break;
     			}
-    			break;
-    		case "panelAB":
-    			switch(buttonPressed) {
-    			case "c1": {
-        			panelL1();
-        			applyBandage();
-        			break;
-        		}
-    			case "c2": panelO(); break;
-    			}
-    			break;
+    			break;   
     		case "panelAC": 
     			switch(buttonPressed) {
     			case "c1": panelAE();break;
