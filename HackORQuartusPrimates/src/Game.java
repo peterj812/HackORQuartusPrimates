@@ -25,7 +25,7 @@ public class Game {
     
     Font titleFont = new Font("Times New Roman", Font.BOLD, 90);
     Font titleButtonFont = new Font("Times New Roman", Font.PLAIN, 60);
-    Font promptFont = new Font("Calibri", Font.BOLD, 25);
+    Font promptFont = new Font("Calibri", Font.BOLD, 20);
     Font choiceFont = new Font("Calibri", Font.BOLD, 18);
     Font hpFont = new Font("Calibri", Font.BOLD, 35);
     Font otherButtonFont = new Font("Times New Roman", Font.PLAIN, 45);

@@ -68,12 +68,12 @@ public class Main {
 	static final void initialize() {
 
 		// these should be between 0 and 100 inclusive
-		double hasAdultItemChance = 25;
+		/*double hasAdultItemChance = 25;
 		double hasBandagesChance = 25;
 		double hasKnifeChance = 25;
 		double hasSmallEngine = 25;
 		double hasWaterBottleChance = 25;
-		double tripChance = 25;
+		double tripChance = 25; */
 
 		// ITEMS
 		adultItem = new Item("adult item", true);
@@ -86,69 +86,77 @@ public class Main {
 		homescreen = new Panel("Homescreen", "");
 		choosename = new Panel("", "What's your name?");
 
-		init = new Panel("TSA Checkpoint", "Welcome to hel...Los Angeles International Airport, your flight leaves soon so you better get a move on.");
-		a = new Panel("", "You have contraband in your bag! Good thing you checked...");
+		init = new Panel("TSA Checkpoint",
+				"<html><center> Welcome to hel...Los Angeles International Airport,<br> your flight leaves soon so you better get a move on.</center></html>");
+		a = new Panel("",
+				"<html><center>You have contraband in your bag! Good thing you checked...</html></center>");
 		b = new Panel("",
-				"TSA found contraband in your luggage! You have been arrested and put on a terrorist watch list for having CONTRABAND in the airport.");
+				"<html><center>TSA found contraband in your luggage! <br> You have been arrested and put on a terrorist watch list <br> for having CONTRABAND in the airport.</center></html>");
 		c = new Panel("",
-				"YOU WIN! It's a pandemic, staying home is a smart choice! (Yet do you feel this is a deserved victory?");
-		d = new Panel("", "You successfully got on the flight and are sitting comfortably. Only a few hours to go");
+				"<html><center>YOU WIN! It's a pandemic, staying home is a smart choice! <br> (Yet do you feel this is a deserved victory?</center></html>");
+		d = new Panel("",
+				"<html><center>You successfully got on the flight and are sitting comfortably. <br> Only a few hours to go</center></html>");
 		e = new Panel("",
-				"TSA found contraband in your luggage! You have been arrested and put on a terrorist watch list for having CONTRABAND in the airport.");
-		f = new Panel("Crash site", "You get startled by an announcement." + "\n" + "\"MAYDAY! MAYDAY! PLANE GOING DOWN!\"" + "\n" + "*Crash noises*");
-		g = new Panel("", "You get startled by an announcement." + "\n" + "\"MAYDAY! MAYDAY! PLANE GOING DOWN!\"" + "\n" + "*Crash noises*");
+				"<html><center>TSA found contraband in your luggage! <br> You have been arrested and put on a terrorist watch list <br> for having CONTRABAND in the airport.</center></break>");
+		f = new Panel("Crash site",
+				"<html><center>You get startled by an announcement. <br> MAYDAY! MAYDAY! PLANE GOING DOWN! <br> *Crash noises*</center></html>");
+		g = new Panel("",
+				"<html><center>You get startled by an announcement. <br> MAYDAY! MAYDAY! PLANE GOING DOWN! <br> *Crash noises*</center></html>");
 		h = new Panel("",
-				"Time to relax!" + "\n" + "As you put your feet up on the chair, the Airmarshall sitting in front of you stands up and knocks you out.");
+				"<html><center>Time to relax! <br> As you put your feet up on the chair, <br> 0the Airmarshall sitting in front of you stands up and knocks you out.</center></html>");
 		i = new Panel("",
-				"You are shaken up by the plane crash, you are lucky to have surived, it seems no one else did." + "\n" + " Is that a carnival next to you?");
+				"<html><center>You are shaken up by the plane crash, <br> you are lucky to have survived, it seems no one else did. <br> Is that a carnival next to you?</center></html>");
 		j = new Panel("",
-				"You seem to have been impaled by some shrapnel. At least you survived as it seems no one else did." + "\n" + "Is that a carnival next to you?");
+				"<html><center>You seem to have been impaled by some shrapnel. <br> At least you survived as it seems no one else did. <br> Is that a carnival next to you?</center></html>");
 		k = new Panel("",
-				"You're bleeding!");
+				"<html><center>You are bleeding.</center></html>");
 		l = new Panel("",
-				"You approach the carnival." + "\n" + "The air feels thinner here, as if something is sucking it out of the world." + "\n" + "You feel a shiver go down your spine as you walk through the clown headed gates.");
-		l1 = new Panel("", "You feel relieved. There's nothing else here, time to head into the carnival");
-		m = new Panel("", "As you stare into the firey wreck of the plane, you notice a bandage lying at your feet.");
+				"<html><center>You approach the carnival. The air feels thinner here, <br> as if something is sucking it out of the world. You feel a shiver go <br> down your spine as you walk through the clown headed gates.</center></html>");
+		l1 = new Panel("",
+				"<html><center>You feel relieved. <br> There's nothing else here, time to head into the carnival.</center></html>");
+		m = new Panel("",
+				"<html><center>As you stare into the firey wreck of the plane, <br> you notice a bandage lying at your feet.</center></html>");
 		m1 = new Panel("",
-				"You stare at the crash and see nothing but burning rubble. For some reason, all you can think of is George Bush.");
-		n = new Panel("", "You pick up the bandage.");
+				"<html><center>You stare at the crash and see nothing but burning rubble. <br> For some reason, all you can think of is George Bush.</center></html>");
+		n = new Panel("", "<html><center>You pick up the bandage.</center></html>");
 		o = new Panel("",
-				"GAMEOVER." + "\n" + "The pain from the shrapnel is too much to handle. Your body gives in on itself, and you feel the life leave you");
+				"<html><center>GAMEOVER. <br> The pain from the shrapnel is too much to handle. <br> Your body gives in on itself, and you feel the life leave you.</center></html>");
 		p = new Panel("",
-				"You walk further into the carnival. The sky becomes darker as you leave the fire of the crash. The air getting even thinner. You can hear the sound of clowns laughing in the distance. It seems the noise is coming towards you." + "\n" + "You can see a building to your left, and a building to your right. The left building has a giant mirror on it, the right has a giant hotdog on top.");
+				"<html><center>You walk further into the carnival. The sky becomes darker as you leave <br> the fire of the crash. The air getting even thinner. You can hear the sound of clowns laughing in the distance. <br> It seems the noise is coming towards you. You can see a building to your left, and a building to your right. <br> The left building has a giant mirror on it, the right has a giant hotdog on top.</center></html>");
 		q = new Panel("",
-				"GAME OVER." + "\n" + "\"F*** this\" you say to yourself as you curl into a fetal position, giving yourself up to the darkness. You can hear the faint sound of a clown laughing. It seems to be coming closer.");
+				"<html><center>GAME OVER. <br> <q>F*** this</q> you say to yourself as you curl into a fetal position, <br> giving yourself up to the darkness. You can hear the faint sound of a clown laughing. <br> It seems to be coming closer.</center></html>");
 		r = new Panel("",
-				"You go towards the mirror building in hopes of finding a telephone, maybe a place to collect your thoughts." + "\n" + "As you walk through the front door, you hear it slam shut behind you.");
+				"<html><center>You go towards the mirror building in hopes of finding a telephone, <br> maybe a place to collect your thoughts. As you walk through the front door, <br> you hear it slam shut behind you.</center></html>");
 		s = new Panel("",
-				"You go towards the hotdog building in hopes of finding a telephone, maybe a place to collect your thoughts." + "\n" + "As you enter the building the sweet aroma of freshly cooked meat fills your nose. Strange, no one seems to be around.");
-		t = new Panel("", "The door doesn't budge.");
+				"<html><center>You go towards the hotdog building in hopes of finding a telephone, <br> maybe a place to collect your thoughts. As you enter the building the sweet aroma of freshly cooked meat fills your nose. <br> Strange, no one seems to be around.</center></html>");
+		t = new Panel("", "<html><center>The door doesn't budge.</center></html>");
 		u = new Panel("",
-				"You walk further into the building. Quickly, you become lost in a maze of mirrors. Which way is forward? Where did you come from? You swear the sound of the clowns is even closer now");
-		v = new Panel("", "The door doesn't budge.");
+				"<html><center>You walk further into the building. Quickly, you become lost in a maze of mirrors. <br> Which way is forward? Where did you come from? <br> You swear the sound of the clowns is even closer now.</center></html>");
+		v = new Panel("", "<html><center>The door doesn't budge.</center></html>");
 		w = new Panel("",
-				"You follow your nose and find a door slightly gaped. It looks like it leads into a kitchen.");
-		x = new Panel("", "The door doesn't budge.");
+				"<html><center>You follow your nose and find a door slightly gaped. It looks like it leads into a kitchen.</center></html>");
+		x = new Panel("", "<html><center>The door doesn't budge.</center></html>");
 		y = new Panel("",
-				"GAME OVER." + "\n" + "Trust us, we're doing you a favor. You're not smart enough to make it any farther. Your arms fall off and you bleed out.");
+				"<html><center>GAME OVER. <br> Trust us, we're doing you a favor. You're not smart enough to <br> make it any farther. Your arms fall off and you bleed out.</center></html>");
 		z = new Panel("",
-				"\n" + "As you run you hear the laughing of a clown close in on you. Suddenly, you feel a blunt object hit you in the head.");
+				"<html><center>As you run you hear the laughing of a clown close in on you. <br> Suddenly, you feel a blunt object hit you in the head.</center></html>");
 		aa = new Panel("",
-				"You turn and leave the hotdog building. The smell of meat gets fainter. Maybe you made the wrong choice...");
-		ab = new Panel("", "You have a bandage. Would you like to apply it?");
+				"<html><center>You turn and leave the hotdog building. <br> The smell of meat gets fainter. Maybe you made the wrong choice...</center></html>");
+		ab = new Panel("", "<html><center>You have a bandage. Would you like to apply it?</center></html>");
 		ac = new Panel("",
-				"You push open the door. To your horror, you see a clown cooking what looks like a deceased mime!");
-		ad = new Panel("", "You walk back into the carnival and once again can see the two buildings");
+				"<html><center>You push open the door. <br> To your horror, you see a clown cooking what looks like a deceased mime!</center></html>");
+		ad = new Panel("", "<html><center>You walk back into the carnival and once again can see the two buildings</center></html>");
 		ae = new Panel("",
-				"\n" + "You scream, spooking the clown who chases after you, a hungry look on his face");
+				"<html><center>You scream, spooking the clown who chases after you, a hungry look on his face.</center></html>");
 		af = new Panel("",
-				"\n" + "You ask the clown if he needs help cooking. He nods and you join him.");
-		ah = new Panel("", "GAME OVER!" + "\n" + " You died in the plane crash!");
-		ai = new Panel("", "GAME OVER!" + "\n" + " The bleeding is too much, you feel the life rushing out of you. You know there's nothing left to do but let death take you.");
-		home = new Panel("", "Laughing Stock");
-		go = new Panel("", "GAME OVER!");
-		win = new Panel("", "Congradulations! You win!");
-		winC = new Panel("YOU WIN!", "Joining the clown, you and he develop and unbreakable bond and live happily ever after");
+				"<html><center>You ask the clown if he needs help cooking. <br> He nods and you join him.</center></html>");
+		ag = new Panel("", "");
+		ah = new Panel("", "<html><center>GAME OVER! <br> You died in the plane crash!</center</html>");
+		home = new Panel("", "<html><center>Laughing Stock</center></html>");
+		go = new Panel("", "<html><center>GAME OVER!</center></html>");
+    win = new Panel("", "<html><center>Congratulations! You win!</center></html>");
+    winC = new Panel("YOU WIN!", "<html><center>Joining the clown, <br> you and he develop an unbreakable bond and live happily ever after</center></html>");
+		ai = new Panel("", "<html><center>GAME OVER! <br> The bleeding is too much, you feel the life rushing out of you. <br> You know there's nothing left to do but let death take you.</center></html>");
 
 	}
 
