@@ -652,17 +652,6 @@ public class Game {
 		choice3.setVisible(false);
     }
     
-    public void restart() {
-    	titleNamePanel.add(titleNameLabel);
-        playGameButtonPanel.add(playGameButton);
-        endGameButtonPanel.add(endGameButton);
-        
-        con.add(titleNamePanel);
-        con.add(playGameButtonPanel);
-        con.add(endGameButtonPanel);
-        window.setVisible(true);
-    }
-    
     public void deathShrapnel() {
     	position = "death";
     	mainTextArea.setText(Main.o.prompt);
@@ -675,6 +664,16 @@ public class Game {
 		choice3.setVisible(false);
     }
 
+    public void restart() {
+        position = "restart";
+        mainTextArea.setText(Main.init.prompt);
+
+        choice1.setText("Go home, flying is scary");
+        choice2.setText("Look through bag");
+        choice3.setText("Go through metal detector");
+    }
+    
+    
     //supposed to transition to a winning screen when player chooses great routes
     public void winning() {
     	position = "winning";
@@ -872,11 +871,6 @@ public class Game {
     			case "c3": panelS(); break;
     			}
     			break;
-    		case "deathG":
-            	switch(buttonPressed) {
-            		case "c1": panelInit(); break;
-            	}
-            	break;
             }
         }
     }
