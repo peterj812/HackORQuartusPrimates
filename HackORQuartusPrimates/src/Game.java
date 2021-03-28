@@ -882,18 +882,7 @@ public class Game {
         choice2.setVisible(true);
         choice3.setVisible(true);
     }
-    
-    public void panelAG() {
-        position = "panelAG";
-        mainTextArea.setText(Main.ag.prompt);
 
-        choice1.setText("");
-        choice2.setText("");
-        choice3.setText("");
-        choice1.setVisible(false);
-        choice2.setVisible(false);
-        choice3.setVisible(false);
-    }
     
     //supposed to transition to a death screen when player chooses to bad routes but still doesn't work yet
     

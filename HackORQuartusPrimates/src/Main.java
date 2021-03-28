@@ -27,7 +27,7 @@ public class Main {
 	public static Player jimbo = new Player("");
 
 	static Panel homescreen, choosename, init, a, b, c, d, e, f, g, h, i, j, k, l, l1, m, m1, n, o, p, q, r, s, t, u, v,
-			w, x, y, z, aa, ab, ac, ad, ae, af, ag, ah, ai, go, win, winC, home;
+			w, x, y, z, aa, ab, ac, ad, ae, af, ah, ai, go, win, winC, home;
 	static JPanel titleNamePanel, playGameButtonPanel, mainTextPanel, choiceButtonPanel, playerPanel;
 	static JLabel titleNameLabel, hpLabel, hpLabelNumber;
 
@@ -157,7 +157,6 @@ public class Main {
     win = new Panel("", "<html><center>Congratulations! You win!</center></html>");
     winC = new Panel("YOU WIN!", "<html><center>Joining the clown, <br> you and he develop an unbreakable bond and live happily ever after</center></html>");
 		ai = new Panel("", "<html><center>GAME OVER! <br> The bleeding is too much, you feel the life rushing out of you. <br> You know there's nothing left to do but let death take you.</center></html>");
-
 
 	}
 
