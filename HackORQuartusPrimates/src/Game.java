@@ -34,7 +34,8 @@ public class Game {
     JTextArea mainTextArea;
     String position;
     int playerHp;
-    ImageIcon image1, image2;
+    ImageIcon tsaNormal, tsaMad, planeMarshall, planeOne, planeTwo, planeCrash, mirrorBuilding, inHotDogBuild,
+    hotDogBuild, gates, feetBandage, doorSlams, doorInHotDogBuild, backPack, afterPickUpBandage, twoBuilding;
 
     TitleScreenHandler tsHandler = new TitleScreenHandler();
     ExitHandler eHandler = new ExitHandler();
@@ -96,12 +97,10 @@ public class Game {
         //adds the title name and the play button to the panel
         titleNamePanel.add(titleNameLabel);
         playGameButtonPanel.add(playGameButton);
-        endGameButtonPanel.add(endGameButton);
 
         //adds the panels to the container
         con.add(titleNamePanel);
         con.add(playGameButtonPanel);
-        con.add(endGameButtonPanel);
         window.setVisible(true);
     }
 
@@ -136,9 +135,11 @@ public class Game {
 
         //creates choice 1 button
         choice1 = new JButton();
+
         choice1.setBackground(Color.white);
         choice1.setForeground(Color.black);
         choice1.setFont(choiceFont);
+
         choice1.setFocusPainted(false);
         choice1.addActionListener(cHandler);
         choice1.setActionCommand("c1");
@@ -146,9 +147,11 @@ public class Game {
         
         //creates choice 2 button
         choice2 = new JButton();
+
         choice2.setBackground(Color.white);
         choice2.setForeground(Color.black);
         choice2.setFont(choiceFont);
+
         choice2.setFocusPainted(false);
         choice2.addActionListener(cHandler);
         choice2.setActionCommand("c2");
@@ -156,6 +159,7 @@ public class Game {
         
         //creates choice 3 button
         choice3 = new JButton();
+
         choice3.setBackground(Color.white);
         choice3.setForeground(Color.black);
         choice3.setFont(choiceFont);
@@ -199,16 +203,16 @@ public class Game {
     public void panelInit() {
     	
     	 //these picture panels is what calls the images from the folder
-    	/*
+    	
         picturePanel = new JPanel();
         picturePanel.setBounds(200, 90, 500, 500);
-        picturePanel.setBackground(Color.blue);
+
         con.add(picturePanel);
         pictureLabel = new JLabel();
-        image1 = new ImageIcon(".//Images//TSA.jpg.jpeg");
-        pictureLabel.setIcon(image1);
+        tsaNormal = new ImageIcon(".//Images//TSA.jpg.jpeg");
+        pictureLabel.setIcon(tsaNormal);
         picturePanel.add(pictureLabel);
-		*/
+		
     	
         position = "panelInit";
         mainTextArea.setText(Main.init.prompt);
@@ -219,6 +223,14 @@ public class Game {
     }
     
     public void panelA() {
+        picturePanel = new JPanel();
+        picturePanel.setBounds(200, 90, 500, 500);
+        con.add(picturePanel);
+        pictureLabel = new JLabel();
+        backPack = new ImageIcon(".//Images//Backpack.jpg");
+        pictureLabel.setIcon(backPack);
+        picturePanel.add(pictureLabel);
+
         position = "panelA";
         mainTextArea.setText(Main.a.prompt);
 
@@ -230,8 +242,25 @@ public class Game {
 
     //choices to show the second scenario
     public void panelB() {
+        picturePanel = new JPanel();
+        picturePanel.setBounds(200, 90, 500, 500);
+        con.add(picturePanel);
+        pictureLabel = new JLabel();
+        tsaMad = new ImageIcon(".//Images//Tsamad.jpg");
+        pictureLabel.setIcon(tsaMad);
+        picturePanel.add(pictureLabel);
+
         position = "panelB";
         mainTextArea.setText(Main.b.prompt);
+
+        picturePanel = new JPanel();
+        picturePanel.setBounds(200, 90, 500, 500);
+        //picturePanel.setBackground(Color.blue);
+        con.add(picturePanel);
+        pictureLabel = new JLabel();
+        tsaMad = new ImageIcon(".//Images//Tsamad.jpg");
+        pictureLabel.setIcon(tsaMad);
+        picturePanel.add(pictureLabel);
         
         choice1.setText("Next.....");
         choice2.setText("");
@@ -253,8 +282,25 @@ public class Game {
     }
     
     public void panelD() {
+        picturePanel = new JPanel();
+        picturePanel.setBounds(200, 90, 500, 500);
+        con.add(picturePanel);
+        pictureLabel = new JLabel();
+        planeOne = new ImageIcon(".//Images//PLane1.jpg");
+        pictureLabel.setIcon(planeOne);
+        picturePanel.add(pictureLabel);
+
         position = "panelD";
         mainTextArea.setText(Main.d.prompt);
+
+        picturePanel = new JPanel();
+        picturePanel.setBounds(200, 90, 500, 500);
+        //picturePanel.setBackground(Color.blue);
+        con.add(picturePanel);
+        pictureLabel = new JLabel();
+        tsaMad = new ImageIcon(".//Images//Plane1.jpg");
+        pictureLabel.setIcon(tsaMad);
+        picturePanel.add(pictureLabel);
 
         choice1.setText("Keep reading paper");
         choice2.setText("Put feet up");
@@ -265,6 +311,14 @@ public class Game {
     }
     
     public void panelE() {
+        picturePanel = new JPanel();
+        picturePanel.setBounds(200, 90, 500, 500);
+        con.add(picturePanel);
+        pictureLabel = new JLabel();
+        tsaMad = new ImageIcon(".//Images//Tsamad.jpg");
+        pictureLabel.setIcon(tsaMad);
+        picturePanel.add(pictureLabel);
+
         position = "panelE";
         mainTextArea.setText(Main.e.prompt);
 
@@ -277,6 +331,14 @@ public class Game {
     }
     
     public void panelF() {
+        picturePanel = new JPanel();
+        picturePanel.setBounds(200, 90, 500, 500);
+        con.add(picturePanel);
+        pictureLabel = new JLabel();
+        planeCrash = new ImageIcon(".//Images//Plane rash.jpg");
+        pictureLabel.setIcon(planeCrash);
+        picturePanel.add(pictureLabel);
+
         position = "panelF";
         mainTextArea.setText(Main.f.prompt);
 
@@ -289,6 +351,14 @@ public class Game {
     }
     
     public void panelG() {
+        picturePanel = new JPanel();
+        picturePanel.setBounds(200, 90, 500, 500);
+        con.add(picturePanel);
+        pictureLabel = new JLabel();
+        planeCrash = new ImageIcon(".//Images//Plane rash.jpg");
+        pictureLabel.setIcon(planeCrash);
+        picturePanel.add(pictureLabel);
+
         position = "panelG";
         mainTextArea.setText(Main.g.prompt);
 
@@ -301,6 +371,13 @@ public class Game {
     }
     
     public void panelH() {
+        picturePanel = new JPanel();
+        picturePanel.setBounds(200, 90, 500, 500);
+        con.add(picturePanel);
+        pictureLabel = new JLabel();
+        planeMarshall = new ImageIcon(".//Images//PlaneMarshal.jpg");
+        pictureLabel.setIcon(planeMarshall);
+        picturePanel.add(pictureLabel);
         position = "panelH";
         mainTextArea.setText(Main.h.prompt);
 
@@ -313,6 +390,14 @@ public class Game {
     }
     
     public void panelI() {
+        picturePanel = new JPanel();
+        picturePanel.setBounds(200, 90, 500, 500);
+        con.add(picturePanel);
+        pictureLabel = new JLabel();
+        planeCrash = new ImageIcon(".//Images//Plane rash.jpg");
+        pictureLabel.setIcon(planeCrash);
+        picturePanel.add(pictureLabel);
+
         position = "panelI";
         mainTextArea.setText(Main.i.prompt);
 
@@ -325,6 +410,14 @@ public class Game {
     }
     
     public void panelJ() {
+        picturePanel = new JPanel();
+        picturePanel.setBounds(200, 90, 500, 500);
+        con.add(picturePanel);
+        pictureLabel = new JLabel();
+        planeCrash = new ImageIcon(".//Images//Plane rash.jpg");
+        pictureLabel.setIcon(planeCrash);
+        picturePanel.add(pictureLabel);
+
         position = "panelJ";
         mainTextArea.setText(Main.j.prompt);
 
@@ -349,6 +442,14 @@ public class Game {
     }
     
     public void panelL() {
+        picturePanel = new JPanel();
+        picturePanel.setBounds(200, 90, 500, 500);
+        con.add(picturePanel);
+        pictureLabel = new JLabel();
+        gates = new ImageIcon(".//Images//Gates.jpg");
+        pictureLabel.setIcon(gates);
+        picturePanel.add(pictureLabel);
+
         position = "panelL";
         mainTextArea.setText(Main.l.prompt);
 
@@ -361,6 +462,13 @@ public class Game {
     }
     
     public void panelL1() {
+        picturePanel = new JPanel();
+        picturePanel.setBounds(200, 90, 500, 500);
+        con.add(picturePanel);
+        pictureLabel = new JLabel();
+        planeCrash = new ImageIcon(".//Images//Plane rash.jpg");
+        pictureLabel.setIcon(planeCrash);
+        picturePanel.add(pictureLabel);
         position = "panelL1";
         mainTextArea.setText(Main.l1.prompt);
 
@@ -373,6 +481,13 @@ public class Game {
     }
     
     public void panelM() {
+        picturePanel = new JPanel();
+        picturePanel.setBounds(200, 90, 500, 500);
+        con.add(picturePanel);
+        pictureLabel = new JLabel();
+        feetBandage = new ImageIcon(".//Images//FeetBandage.jpg");
+        pictureLabel.setIcon(feetBandage);
+        picturePanel.add(pictureLabel);
         position = "panelM";
         mainTextArea.setText(Main.m.prompt);
 
@@ -385,6 +500,14 @@ public class Game {
     }
     
     public void panelM1() {
+        picturePanel = new JPanel();
+        picturePanel.setBounds(200, 90, 500, 500);
+        con.add(picturePanel);
+        pictureLabel = new JLabel();
+        planeCrash = new ImageIcon(".//Images//Plane rash.jpg");
+        pictureLabel.setIcon(planeCrash);
+        picturePanel.add(pictureLabel);
+
         position = "panelM1";
         mainTextArea.setText(Main.m1.prompt);
 
@@ -397,6 +520,14 @@ public class Game {
     }
     
     public void panelN() {
+        picturePanel = new JPanel();
+        picturePanel.setBounds(200, 90, 500, 500);
+        con.add(picturePanel);
+        pictureLabel = new JLabel();
+        backPack = new ImageIcon(".//Images//Backpack.jpg");
+        pictureLabel.setIcon(backPack);
+        picturePanel.add(pictureLabel);
+
         position = "panelN";
         mainTextArea.setText(Main.n.prompt);
 
@@ -422,6 +553,14 @@ public class Game {
     }
     
     public void panelP() {
+        picturePanel = new JPanel();
+        picturePanel.setBounds(200, 90, 500, 500);
+        con.add(picturePanel);
+        pictureLabel = new JLabel();
+        twoBuilding = new ImageIcon(".//Images//2Building.jpg");
+        pictureLabel.setIcon(twoBuilding);
+        picturePanel.add(pictureLabel);
+
         position = "panelP";
         mainTextArea.setText(Main.p.prompt);
 
@@ -446,6 +585,14 @@ public class Game {
     }
     
     public void panelR() {
+        picturePanel = new JPanel();
+        picturePanel.setBounds(200, 90, 500, 500);
+        con.add(picturePanel);
+        pictureLabel = new JLabel();
+        mirrorBuilding = new ImageIcon(".//Images//MirrorBuilding.jpg");
+        pictureLabel.setIcon(mirrorBuilding);
+        picturePanel.add(pictureLabel);
+        
         position = "panelR";
         mainTextArea.setText(Main.r.prompt);
 
@@ -458,6 +605,14 @@ public class Game {
     }
     
     public void panelS() {
+        picturePanel = new JPanel();
+        picturePanel.setBounds(200, 90, 500, 500);
+        con.add(picturePanel);
+        pictureLabel = new JLabel();
+        hotDogBuild = new ImageIcon(".//Images//HotDogBuild.jpg");
+        pictureLabel.setIcon(hotDogBuild);
+        picturePanel.add(pictureLabel);
+
         position = "panelS";
         mainTextArea.setText(Main.s.prompt);
 
@@ -470,6 +625,13 @@ public class Game {
     }
     
     public void panelT() {
+        picturePanel = new JPanel();
+        picturePanel.setBounds(200, 90, 500, 500);
+        con.add(picturePanel);
+        pictureLabel = new JLabel();
+        doorSlams = new ImageIcon(".//Images//DoorSlams.jpg");
+        pictureLabel.setIcon(doorSlams);
+        picturePanel.add(pictureLabel);
 
         position = "panelT";
         mainTextArea.setText(Main.t.prompt);
@@ -483,6 +645,13 @@ public class Game {
     }
     
     public void panelU() {
+        picturePanel = new JPanel();
+        picturePanel.setBounds(200, 90, 500, 500);
+        con.add(picturePanel);
+        pictureLabel = new JLabel();
+        twoBuilding = new ImageIcon(".//Images//2Building.jpg");
+        pictureLabel.setIcon(twoBuilding);
+        picturePanel.add(pictureLabel);
 
         position = "panelU";
         mainTextArea.setText(Main.u.prompt);
@@ -496,6 +665,14 @@ public class Game {
     }
     
     public void panelV() {
+        picturePanel = new JPanel();
+        picturePanel.setBounds(200, 90, 500, 500);
+        con.add(picturePanel);
+        pictureLabel = new JLabel();
+        doorSlams = new ImageIcon(".//Images//DoorSlams.jpg");
+        pictureLabel.setIcon(doorSlams);
+        picturePanel.add(pictureLabel);
+
         position = "panelV";
         mainTextArea.setText(Main.v.prompt);
 
@@ -508,6 +685,14 @@ public class Game {
     }
     
     public void panelW() {
+        picturePanel = new JPanel();
+        picturePanel.setBounds(200, 90, 500, 500);
+        con.add(picturePanel);
+        pictureLabel = new JLabel();
+        doorInHotDogBuild = new ImageIcon(".//Images//DoorInHotDogBuild.jpg");
+        pictureLabel.setIcon(doorInHotDogBuild);
+        picturePanel.add(pictureLabel);
+
         position = "panelW";
         mainTextArea.setText(Main.w.prompt);
 
@@ -520,6 +705,14 @@ public class Game {
     }
     
     public void panelX() {
+        picturePanel = new JPanel();
+        picturePanel.setBounds(200, 90, 500, 500);
+        con.add(picturePanel);
+        pictureLabel = new JLabel();
+        doorSlams = new ImageIcon(".//Images//DoorSlams.jpg");
+        pictureLabel.setIcon(doorSlams);
+        picturePanel.add(pictureLabel);
+
         position = "panelX";
         mainTextArea.setText(Main.x.prompt);
 
@@ -556,6 +749,14 @@ public class Game {
     }
     
     public void panelAA() {
+        picturePanel = new JPanel();
+        picturePanel.setBounds(200, 90, 500, 500);
+        con.add(picturePanel);
+        pictureLabel = new JLabel();
+        doorInHotDogBuild = new ImageIcon(".//Images//DoorInHotDogBuild.jpg");
+        pictureLabel.setIcon(doorInHotDogBuild);
+        picturePanel.add(pictureLabel);
+
         position = "panelAA";
         mainTextArea.setText(Main.aa.prompt);
 
@@ -568,6 +769,14 @@ public class Game {
     }
     
     public void panelAB() {
+        picturePanel = new JPanel();
+        picturePanel.setBounds(200, 90, 500, 500);
+        con.add(picturePanel);
+        pictureLabel = new JLabel();
+        backPack = new ImageIcon(".//Images//BackPack.jpg");
+        pictureLabel.setIcon(backPack);
+        picturePanel.add(pictureLabel);
+
         position = "panelAB";
         mainTextArea.setText(Main.ab.prompt);
 
@@ -580,6 +789,7 @@ public class Game {
     }
     
     public void panelAC() {
+        //clown cooking image missing? possibly
         position = "panelAC";
         mainTextArea.setText(Main.ac.prompt);
 
@@ -592,6 +802,14 @@ public class Game {
     }
     
     public void panelAD() {
+        picturePanel = new JPanel();
+        picturePanel.setBounds(200, 90, 500, 500);
+        con.add(picturePanel);
+        pictureLabel = new JLabel();
+        twoBuilding = new ImageIcon(".//Images//2Building.jpg");
+        pictureLabel.setIcon(twoBuilding);
+        picturePanel.add(pictureLabel);
+
         position = "panelAD";
         mainTextArea.setText(Main.ad.prompt);
 
@@ -697,7 +915,6 @@ public class Game {
         }
     }
     
-    //action that handles the exit button
     public class ExitHandler implements ActionListener {
     	public void actionPerformed(ActionEvent event) {
     		System.exit(0);
