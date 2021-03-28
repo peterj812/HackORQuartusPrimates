@@ -150,7 +150,6 @@ public class Main {
 				"<html><center>You scream, spooking the clown who chases after you, a hungry look on his face.</center></html>");
 		af = new Panel("",
 				"<html><center>You ask the clown if he needs help cooking. <br> He nods and you join him.</center></html>");
-		ag = new Panel("", "");
 		ah = new Panel("", "<html><center>GAME OVER! <br> You died in the plane crash!</center</html>");
 		home = new Panel("", "<html><center>Laughing Stock</center></html>");
 		go = new Panel("", "<html><center>GAME OVER!</center></html>");

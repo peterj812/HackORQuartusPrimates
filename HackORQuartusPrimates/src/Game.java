@@ -241,7 +241,8 @@ public class Game {
     public void panelInit() {
     	
     	 //these picture panels is what calls the images from the folder
-    	
+    	playerHp = Main.health;
+        hpLabelNumber.setText("" + playerHp);
         picturePanel = new JPanel();
         picturePanel.setBounds(110, -5, 500, 500);
         picturePanel.setBackground(Color.black);
@@ -272,9 +273,11 @@ public class Game {
         mainTextArea.setText(Main.a.prompt);
 
         choice1.setText("<html><center>Put bag down and <br> go through security</center></html>");
-        choice2.setText("Throw away contraband");
-        choice3.setText("");
-        choice3.setVisible(false);
+        choice2.setText("");
+        choice3.setText("Throw away contraband");
+        choice1.setVisible(true);
+        choice2.setVisible(true);
+        choice3.setVisible(true);
         // do right before switching panels con.remove(picturePanel);
     }
 
@@ -300,11 +303,12 @@ public class Game {
         pictureLabel.setIcon(tsaMad);
         picturePanel.add(pictureLabel);
         
-        choice1.setText("Next.....");
-        choice2.setText("");
+        choice1.setText("");
+        choice2.setText("Continue");
         choice3.setText("");
-        choice2.setVisible(false);
-        choice3.setVisible(false);
+        choice2.setVisible(true);
+        choice3.setVisible(true);
+        choice3.setVisible(true);
     }
     
     public void panelC() {
@@ -360,12 +364,12 @@ public class Game {
         position = "panelE";
         mainTextArea.setText(Main.e.prompt);
 
-        choice1.setText("Next");
-        choice2.setText("");
+        choice1.setText("");
+        choice2.setText("Continue");
         choice3.setText("");
         choice1.setVisible(true);
-        choice2.setVisible(false);
-        choice3.setVisible(false);
+        choice2.setVisible(true);
+        choice3.setVisible(true);
     }
     
     public void panelF() {
@@ -380,12 +384,12 @@ public class Game {
         position = "panelF";
         mainTextArea.setText(Main.f.prompt);
 
-        choice1.setText("Continue");
-        choice2.setText("");
+        choice1.setText("");
+        choice2.setText("Continue");
         choice3.setText("");
         choice1.setVisible(true);
-        choice2.setVisible(false);
-        choice3.setVisible(false);
+        choice2.setVisible(true);
+        choice3.setVisible(true);
     }
     
     public void panelG() {
@@ -400,12 +404,12 @@ public class Game {
         position = "panelG";
         mainTextArea.setText(Main.g.prompt);
 
-        choice1.setText("Continue");
-        choice2.setText("");
+        choice1.setText("");
+        choice2.setText("Continue");
         choice3.setText("");        
         choice1.setVisible(true);
-        choice2.setVisible(false);
-        choice3.setVisible(false);
+        choice2.setVisible(true);
+        choice3.setVisible(true);
     }
     
     public void panelH() {
@@ -440,11 +444,11 @@ public class Game {
         mainTextArea.setText(Main.i.prompt);
 
         choice1.setText("<html><center>Walk toward <br> abandoned carnival</center></html>");
-        choice2.setText("Examine the plane crash");
-        choice3.setText("");
+        choice2.setText("");
+        choice3.setText("Examine the plane crash");
         choice1.setVisible(true);
         choice2.setVisible(true);
-        choice3.setVisible(false);
+        choice3.setVisible(true);
     }
     
     public void panelJ() {
@@ -471,12 +475,12 @@ public class Game {
         position = "panelK";
         mainTextArea.setText(Main.k.prompt);
 
-        choice1.setText("Cover it with your hand");
-        choice2.setText("");
+        choice1.setText("");
+        choice2.setText("Cover it with your hand");
         choice3.setText("");
         choice1.setVisible(true);
-        choice2.setVisible(false);
-        choice3.setVisible(false);
+        choice2.setVisible(true);
+        choice3.setVisible(true);
     }
     
     public void panelL() {
@@ -492,11 +496,11 @@ public class Game {
         mainTextArea.setText(Main.l.prompt);
 
         choice1.setText("Give up");
-        choice2.setText("<html><center>Walk toward <br> abandoned carnival</center></html>");
-        choice3.setText("");
+        choice2.setText("");
+        choice3.setText("<html><center>Walk toward <br> abandoned carnival</center></html>");
         choice1.setVisible(true);
         choice2.setVisible(true);
-        choice3.setVisible(false);
+        choice3.setVisible(true);
     }
     
     public void panelL1() {
@@ -510,12 +514,12 @@ public class Game {
         position = "panelL1";
         mainTextArea.setText(Main.l1.prompt);
 
-        choice1.setText("Continue");
-        choice2.setText("");
+        choice1.setText("");
+        choice2.setText("Continue");
         choice3.setText("");
         choice1.setVisible(true);
-        choice2.setVisible(false);
-        choice3.setVisible(false);
+        choice2.setVisible(true);
+        choice3.setVisible(true);
     }
     
     public void panelM() {
@@ -530,11 +534,11 @@ public class Game {
         mainTextArea.setText(Main.m.prompt);
 
         choice1.setText("Pick up bandage");
-        choice2.setText("Walk into carnival");
-        choice3.setText("");
+        choice2.setText("");
+        choice3.setText("Walk into carnival");
         choice1.setVisible(true);
         choice2.setVisible(true);
-        choice3.setVisible(false);
+        choice3.setVisible(true);
     }
     
     public void panelM1() {
@@ -549,12 +553,12 @@ public class Game {
         position = "panelM1";
         mainTextArea.setText(Main.m1.prompt);
 
-        choice1.setText("Walk into carnival");
-        choice2.setText("");
+        choice1.setText("");
+        choice2.setText("Walk into carnival");
         choice3.setText("");
         choice1.setVisible(true);
-        choice2.setVisible(false);
-        choice3.setVisible(false);
+        choice2.setVisible(true);
+        choice3.setVisible(true);
     }
     
     public void panelN() {
@@ -570,11 +574,11 @@ public class Game {
         mainTextArea.setText(Main.n.prompt);
 
         choice1.setText("Walk into the carnival");
-        choice2.setText("Open backpack");
-        choice3.setText("");
+        choice2.setText("");
+        choice3.setText("Open backpack");
         choice1.setVisible(true);
         choice2.setVisible(true);
-        choice3.setVisible(false);
+        choice3.setVisible(true);
     }
     
     // TODO: add choices
@@ -655,11 +659,11 @@ public class Game {
         mainTextArea.setText(Main.s.prompt);
 
         choice1.setText("<html><center>Locate the <br> source of the smell</center></html>");
-        choice2.setText("Leave the building");
-        choice3.setText("");
+        choice2.setText("");
+        choice3.setText("Leave the building");
         choice1.setVisible(true);
         choice2.setVisible(true);
-        choice3.setVisible(false);
+        choice3.setVisible(true);
     }
     
     public void panelT() {
@@ -695,11 +699,11 @@ public class Game {
         mainTextArea.setText(Main.u.prompt);
 
         choice1.setText("<html><center>Run as fast as you <br> can in a straight line</center></html>");
-        choice2.setText("<html><center>Try to escape <br> the maze</center></html>");
-        choice3.setText("");
+        choice2.setText("");
+        choice3.setText("<html><center>Try to escape <br> the maze</center></html>");
         choice1.setVisible(true);
         choice2.setVisible(true);
-        choice3.setVisible(false);
+        choice3.setVisible(true);
     }
     
     public void panelV() {
@@ -735,11 +739,11 @@ public class Game {
         mainTextArea.setText(Main.w.prompt);
 
         choice1.setText("Push the door");
-        choice2.setText("<html><center>Walk out the <br> way you came</center></html>");
-        choice3.setText("");
+        choice2.setText("");
+        choice3.setText("<html><center>Walk out the <br> way you came</center></html>");
         choice1.setVisible(true);
         choice2.setVisible(true);
-        choice3.setVisible(false);
+        choice3.setVisible(true);
     }
     
     public void panelX() {
@@ -798,12 +802,12 @@ public class Game {
         position = "panelAA";
         mainTextArea.setText(Main.aa.prompt);
 
-        choice1.setText("Continue");
-        choice2.setText("");
+        choice1.setText("");
+        choice2.setText("Continue");
         choice3.setText("");
         choice1.setVisible(true);
-        choice2.setVisible(false);
-        choice3.setVisible(false);
+        choice2.setVisible(true);
+        choice3.setVisible(true);
     }
     
     public void panelAB() {
@@ -819,11 +823,11 @@ public class Game {
         mainTextArea.setText(Main.ab.prompt);
 
         choice1.setText("Yes");
-        choice2.setText("No");
-        choice3.setText("");
+        choice2.setText("");
+        choice3.setText("No");
         choice1.setVisible(true);
         choice2.setVisible(true);
-        choice3.setVisible(false);
+        choice3.setVisible(true);
     }
     
     public void panelAC() {
@@ -832,11 +836,11 @@ public class Game {
         mainTextArea.setText(Main.ac.prompt);
 
         choice1.setText("Screeeeeaaammm!!!");
-        choice2.setText("Ask if he needs help");
-        choice3.setText("");
+        choice2.setText("");
+        choice3.setText("Ask if he needs help");
         choice1.setVisible(true);
         choice2.setVisible(true);
-        choice3.setVisible(false);
+        choice3.setVisible(true);
     }
     
     public void panelAD() {
@@ -927,15 +931,6 @@ public class Game {
 		choice2.setVisible(true);
 		choice3.setVisible(true);
     }
-
-    public void restart() {
-        position = "restart";
-        mainTextArea.setText(Main.init.prompt);
-
-        choice1.setText("Go home, flying is scary");
-        choice2.setText("Look through bag");
-        choice3.setText("Go through metal detector");
-    }
     
     
     //supposed to transition to a winning screen when player chooses great routes
@@ -1001,7 +996,7 @@ public class Game {
             case "panelA":
             	switch(buttonPressed) {
             		case "c1": panelE(); break;
-            		case "c2": panelD(); break;
+            		case "c3": panelD(); break;
             	}
             	break;
             case "panelB":
@@ -1032,12 +1027,12 @@ public class Game {
             	
             case "panelF":
             	switch(buttonPressed) {
-            		case "c1": panelI(); break;
+            		case "c2": panelI(); break;
             	}
             	break;
             case "panelG":
             	switch(buttonPressed) {
-            		case "c1": panelJ(); break;
+            		case "c2": panelJ(); break;
             	}
             	break;
             case "panelH":
@@ -1048,7 +1043,7 @@ public class Game {
             case "panelI":
             	switch(buttonPressed) {
             		case "c1": panelL(); break;
-            		case "c2": panelM1(); break;
+            		case "c3": panelM1(); break;
             	}
             	break;
             case "panelJ":
@@ -1064,7 +1059,7 @@ public class Game {
             case "panelL":
             	switch(buttonPressed) {
             		case "c1": panelQ(); break;
-            		case "c2": panelP(); break;
+            		case "c3": panelP(); break;
             	}
             	break;
             case "panelL1":
@@ -1072,18 +1067,18 @@ public class Game {
             case "panelM":
             	switch(buttonPressed) {
             		case "c1": panelN(); break;
-            		case "c2": panelO(); break;
+            		case "c3": panelO(); break;
             	}
             	break;
             case "panelM1":
             	switch(buttonPressed) {
-            	case "c1": panelL(); break;
+            	case "c2": panelL(); break;
             	}
             	break;
             case "panelN":
             	switch(buttonPressed) {
             	case "c1": panelO(); break;
-            	case "c2": panelAB(); break;
+            	case "c3": panelAB(); break;
             	}
             	break;
             case "panelO":
@@ -1115,7 +1110,7 @@ public class Game {
 			case "panelS": 
     			switch(buttonPressed) {
     			case "c1": panelW();break;
-    			case "c2": panelAA();break;
+    			case "c3": panelAA();break;
     			}
     			break;
     		case "panelT": 
@@ -1128,7 +1123,7 @@ public class Game {
     		case "panelU": 
     			switch(buttonPressed) {
     			case "c1": panelY();break;
-    			case "c2": panelZ();break;
+    			case "c3": panelZ();break;
     			}
     			break;
     		case "panelV": 
@@ -1141,7 +1136,7 @@ public class Game {
     		case "panelW": 
     			switch(buttonPressed) {
     			case "c1": panelAC();break;
-    			case "c2": panelAA();break;
+    			case "c3": panelAA();break;
     			}
     			break;
     		case "panelX": 
@@ -1160,7 +1155,7 @@ public class Game {
     			deathGeneric(); break;
     		case "panelAA": 
     			switch(buttonPressed) {
-    			case "c1": panelAD();break;
+    			case "c2": panelAD();break;
     			}
     			break;
     		case "panelAB":
@@ -1170,13 +1165,13 @@ public class Game {
         			applyBandage();
         			break;
         		}
-    			case "c2": panelO(); break;
+    			case "c3": panelO(); break;
     			}
     			break;
     		case "panelAC": 
     			switch(buttonPressed) {
     			case "c1": panelAE();break;
-    			case "c2": panelAF();break;
+    			case "c3": panelAF();break;
     			}
     			break;
     		case "panelAD": 
