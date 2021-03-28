@@ -32,7 +32,7 @@ public class Main {
 	private static Random rand = new Random();
 	public static Player jimbo = new Player("");
 	
-	static Panel homescreen, choosename, init, a, b, c, d, e, f, g, h, i, j, k, l, l1, m, m1, n, o, p, q, r, s, t, u, v, w, x, y, z, aa, ab, ac, ad, ae, af, ag;
+	static Panel homescreen, choosename, init, a, b, c, d, e, f, g, h, i, j, k, l, l1, m, m1, n, o, p, q, r, s, t, u, v, w, x, y, z, aa, ab, ac, ad, ae, af, ag, ah;
   static JPanel titleNamePanel, playGameButtonPanel, mainTextPanel, choiceButtonPanel, playerPanel;
   static JLabel titleNameLabel, hpLabel, hpLabelNumber;
 
@@ -84,25 +84,26 @@ public class Main {
 		smallEngine = new Item("small engine", true);
 		waterBottle = new Item("water bottle", true);
 
-		// PANELS
+		// PANELS/PROMPTS
 		homescreen = new Panel("Homescreen", "");
 		choosename = new Panel("", "What's your name?");
-		init = new Panel("TSA Checkpoint", "Welcome to hel...Los Angeles International Airport\n, your flight leaves soon so you better get a move on.");
-		a = new Panel("", "Jimbo sees his water bottle and whatever else is in the bag.");
+
+		init = new Panel("TSA Checkpoint", "Welcome to hel...Los Angeles International Airport, your flight leaves soon so you better get a move on.");
+		a = new Panel("", "You have contraband in your bag! Good thing you checked...");
 		b = new Panel("", "You have been arrested and put on a terrorist watch list for having CONTRABAND in the airport.");
 		c = new Panel("", "YOU WIN! It's a pandemic, staying home is a smart choice! (Yet do you feel this is a deserved victory?");
-		d = new Panel("", "*Airplane go brrrr.*");
+		d = new Panel("", "You successfully got on the flight and are sitting comfortably. Only a few hours to go");
 		e = new Panel("", "You have been arrested and put on a terrorist watch list for having CONTRABAND in the airport.");
-		f = new Panel("Crash site", "*Crash noises*");
+		f = new Panel("Crash site", " 'EMERGENCY! EMERGENCY! PLANE GOING DOWN!' *Crash noises*");
 		g = new Panel("", "*Crash noises*");
-		h = new Panel("", "The Airmarshall sitting in front of you stands up and knocks you out.");
+		h = new Panel("", "Time to relax! As you put your feet up on the chair, the Airmarshall sitting in front of you stands up and knocks you out.");
 		i = new Panel("", "You are shaken up by the plane crash, you are lucky to have surived, it seems no one else did. Is that a carnival next to you?");
 		j = new Panel("", "You seem to have been impaled by some shrapnel. At least you survived as it seems no one else did. Is that a carnival next to you?");
 		k = new Panel("", "GAME OVER. As you pull the shrapnel out of your body, you feel the life quickly leave your body.");
 		l = new Panel("", "You approach the carnival. The air feels thinner here, as if something is sucking it out of the world. You feel a shiver go down your spine as you walk through the clown headed gates.");
 		l1 = new Panel("", "");
 		m = new Panel("", "As you stare into the firey wreck of the plane, you notice a bandage lying at your feet.");
-		m1 = new Panel("", "You stare at the crash and see nothing but burning rubble and all you can think of is George Bush.");
+		m1 = new Panel("", "You stare at the crash and see nothing but burning rubble. For some reason, all you can think of is George Bush.");
 		n = new Panel("", "You put the bandage in your backpack.");
 		o = new Panel("", "GAMEOVER. The pain from the shrapnel is too much to handle. Your body gives in on itself, and you feel the life leave you");
 		p = new Panel("", "You walk further into the carnival. The sky becomes darker as you leave the fire of the crash. The air getting even thinner. You can hear the sound of clowns laughing in the distance. It seems the noise is coming towards you. You can see a building to your left, and a building to your right. The left building has a giant mirror on it, the right has a giant hotdog on top." );
@@ -118,11 +119,12 @@ public class Main {
 		z = new Panel("", "");
 		aa = new Panel("", "You turn and leave the hotdog building. The smell of meat gets fainter. Maybe you made the wrong choice...");
 		ab = new Panel("", "You open your backpack.");
-		ac = new Panel("", "You push open the door. To your horror, you see a clown cooking what looks like a deceased mime, a clowns worst enemy.");
+		ac = new Panel("", "You push open the door. To your horror, you see a clown cooking what looks like a deceased mime!");
 		ad = new Panel("", "You walk back into the carnival and once again can see the two buildings");
 		ae = new Panel("", "");
 		af = new Panel("", "");
 		ag = new Panel("", "");
+		ah = new Panel("", "GAME OVER");
 
 		// SET CHOICES
 		
