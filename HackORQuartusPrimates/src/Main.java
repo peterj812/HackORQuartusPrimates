@@ -83,21 +83,21 @@ public class Main {
 		homescreen = new Panel("Homescreen", "");
 		choosename = new Panel("", "What's your name?");
 
-		init = new Panel("TSA Checkpoint", "Welcome to hel...Los Angeles International Airport, your flight leaves soon so you better get a move on.");
+		init = new Panel("TSA Checkpoint", "Welcome to hel...Los Angeles International Airport,\nyour flight leaves soon so you better get a move on.");
 		a = new Panel("", "You have contraband in your bag! Good thing you checked...");
 		b = new Panel("",
-				"TSA found contraband in your luggage! You have been arrested and put on a terrorist watch list for having CONTRABAND in the airport.");
+				"TSA found contraband in your luggage! \nYou have been arrested and put on a terrorist\n watch list for having CONTRABAND \nin the airport.");
 		c = new Panel("",
-				"YOU WIN! It's a pandemic, staying home is a smart choice! (Yet do you feel this is a deserved victory?");
-		d = new Panel("", "You successfully got on the flight and are sitting comfortably. Only a few hours to go");
+				"YOU WIN! It's a pandemic, staying home is a smart choice!\nYet do you feel this is a deserved victory?");
+		d = new Panel("", "You successfully got on the flight and are sitting comfortably.\n Only a few hours to go");
 		e = new Panel("",
 				"TSA found contraband in your luggage! You have been arrested and put on a terrorist watch list for having CONTRABAND in the airport.");
 		f = new Panel("Crash site", "You get startled by an announcement." + "\n" + "\"EMERGENCY! EMERGENCY! PLANE GOING DOWN!\"" + "\n" + "*Crash noises*");
 		g = new Panel("", "You get startled by an announcement." + "\n" + "\"EMERGENCY! EMERGENCY! PLANE GOING DOWN!\"" + "\n" + "*Crash noises*");
 		h = new Panel("",
-				"Time to relax!" + "\n" + "As you put your feet up on the chair, the Airmarshall sitting in front of you stands up and knocks you out.");
+				"Time to relax! As you put your feet up on the chair,\n the Airmarshall sitting in front of you \nstands up and knocks you out.");
 		i = new Panel("",
-				"You are shaken up by the plane crash, you are lucky to have surived, it seems no one else did." + "\n" + " Is that a carnival next to you?");
+				"You are shaken up by the plane crash,\nyou are lucky to have surived, it seems no one else did." + "\n" + " Is that a carnival next to you?");
 		j = new Panel("",
 				"You seem to have been impaled by some shrapnel. At least you survived as it seems no one else did." + "\n" + "Is that a carnival next to you?");
 		k = new Panel("",
