@@ -19,9 +19,8 @@ public class Game {
 
     JFrame window;
     Container con;
-    JPanel titleNamePanel, playGameButtonPanel, mainTextPanel, choiceButtonPanel, playerPanel, picturePanel;
+    JPanel titleNamePanel, endGameButtonPanel, playGameButtonPanel, mainTextPanel, choiceButtonPanel, playerPanel, picturePanel;
     JLabel titleNameLabel, hpLabel, hpLabelNumber, pictureLabel;
-<<<<<<< HEAD
     JTextField jtext;
 
     Font titleFont = new Font("Times New Roman", Font.BOLD, 90);
@@ -37,17 +36,9 @@ public class Game {
     int playerHp;
     ImageIcon tsaNormal, tsaMad, planeMarshall, planeOne, planeTwo, planeCrash, mirrorBuilding, inHotDogBuild,
     hotDogBuild, gates, feetBandage, doorSlams, doorInHotDogBuild, backPack, afterPickUpBandage, twoBuilding;
-=======
-    Font titleFont = new Font("Times New Roman", Font.PLAIN, 40);
-    Font normalFont = new Font("Times New Roman", Font.PLAIN, 30);
-    JButton playGameButton, choice1, choice2, choice3;
-    JTextArea mainTextArea;
-    String position;
-    int playerHp;
-    ImageIcon tsaNormal, tsaMad, plane1;
->>>>>>> cd4ea2e1307a57ee2abda6804a9d0ce00b9fd0d7
 
     TitleScreenHandler tsHandler = new TitleScreenHandler();
+    ExitHandler eHandler = new ExitHandler();
     ChoiceHandler cHandler = new ChoiceHandler();
 
     public static void main(String[] args) {
@@ -77,7 +68,6 @@ public class Game {
 
         //panel that holds the buttons in order to play the game
         playGameButtonPanel = new JPanel();
-<<<<<<< HEAD
         playGameButtonPanel.setBounds(250, 400, 200, 100);
         playGameButtonPanel.setBackground(Color.white);
 
@@ -103,19 +93,6 @@ public class Game {
         
         endGameButton.addActionListener(eHandler);
         endGameButton.setFocusPainted(false);
-=======
-        playGameButtonPanel.setBounds(200, 400, 200, 100);
-        playGameButtonPanel.setBackground(Color.black);
-
-        //button that prompts user to play the game
-        playGameButton = new JButton("PLAY");
-        playGameButton.setBackground(Color.black);
-        playGameButton.setForeground(Color.white);
-        playGameButton.setFont(normalFont);
-        
-        playGameButton.addActionListener(tsHandler);
-        playGameButton.setFocusPainted(false);
->>>>>>> cd4ea2e1307a57ee2abda6804a9d0ce00b9fd0d7
         
         //adds the title name and the play button to the panel
         titleNamePanel.add(titleNameLabel);
@@ -182,15 +159,10 @@ public class Game {
         
         //creates choice 3 button
         choice3 = new JButton();
-<<<<<<< HEAD
+
         choice3.setBackground(Color.white);
         choice3.setForeground(Color.black);
         choice3.setFont(choiceFont);
-=======
-        choice3.setBackground(Color.black);
-        choice3.setForeground(Color.white);
-        choice3.setFont(normalFont);
->>>>>>> cd4ea2e1307a57ee2abda6804a9d0ce00b9fd0d7
         choice3.setFocusPainted(false);
         choice3.addActionListener(cHandler);
         choice3.setActionCommand("c3");
@@ -253,18 +225,10 @@ public class Game {
     public void panelA() {
         picturePanel = new JPanel();
         picturePanel.setBounds(200, 90, 500, 500);
-<<<<<<< HEAD
         con.add(picturePanel);
         pictureLabel = new JLabel();
         backPack = new ImageIcon(".//Images//Backpack.jpg");
         pictureLabel.setIcon(backPack);
-=======
-        //picturePanel.setBackground(Color.blue);
-        con.add(picturePanel);
-        pictureLabel = new JLabel();
-        tsaNormal = new ImageIcon(".//Images//TSA.jpg.jpeg");
-        pictureLabel.setIcon(tsaNormal);
->>>>>>> cd4ea2e1307a57ee2abda6804a9d0ce00b9fd0d7
         picturePanel.add(pictureLabel);
 
         position = "panelA";
@@ -949,6 +913,12 @@ public class Game {
         public void actionPerformed(ActionEvent event) {
             createGameScreen();
         }
+    }
+    
+    public class ExitHandler implements ActionListener {
+    	public void actionPerformed(ActionEvent event) {
+    		System.exit(0);
+    	}
     }
     
     //actions that handle the choices when user 
