@@ -186,7 +186,22 @@ public class Game {
         playerSetup();
 
     }
-
+    
+    private void takeDamageL() {
+    	Main.injury(2, 5);
+    	playerHp = Main.jimbo.getHealth();
+    	hpLabelNumber.setText("" + playerHp);
+    }
+    
+    private void takeDamageH() {
+    	Main.injury(5, 11);
+    	playerHp = Main.jimbo.getHealth();
+    	hpLabelNumber.setText("" + playerHp);
+    	if (playerHp <= 0) {
+    		deathCrash();
+    	}
+    }
+        
     //where it shows the hp bar with a unspecified hp
     public void playerSetup () {
         playerHp = Main.health;
@@ -643,6 +658,21 @@ public class Game {
     public void deathGeneric() {
     	position = "deathG";
     	mainTextArea.setText(Main.ah.prompt);
+    	Main.injury(10, 11);
+    	playerHp = Main.jimbo.getHealth();
+    	hpLabelNumber.setText("" + playerHp);
+    	//GAME OVER
+		choice1.setText("Restart");
+		choice2.setText("");
+		choice3.setText("");
+		choice1.setVisible(true);
+		choice2.setVisible(false);
+		choice3.setVisible(false);
+    }
+    
+    public void deathCrash() {
+    	position = "deathG";
+    	mainTextArea.setText(Main.ah.prompt);
     	//GAME OVER
 		choice1.setText("Restart");
 		choice2.setText("");
@@ -653,8 +683,11 @@ public class Game {
     }
     
     public void deathShrapnel() {
-    	position = "death";
+    	position = "deathS";
     	mainTextArea.setText(Main.o.prompt);
+    	Main.injury(10, 11);
+    	playerHp = Main.jimbo.getHealth();
+    	hpLabelNumber.setText("" + playerHp);
     	//GAME OVER, SHRAPNEL IN YOUR LEG WAS TOO MUCH
 		choice1.setText("Restart");
 		choice2.setText("");
@@ -737,9 +770,17 @@ public class Game {
             
             case "panelD":
             	switch(buttonPressed) {
-            		case "c1": panelG(); break;
+            		case "c1": { 
+            			panelG();
+            			takeDamageH();
+            			break;
+            		}
             		case "c2": panelH(); break;
-            		case "c3": panelF(); break;
+            		case "c3": {
+            			panelF(); 
+            			takeDamageL();
+            			break;
+            		}
             	}
             	break;
             case "panelE":
