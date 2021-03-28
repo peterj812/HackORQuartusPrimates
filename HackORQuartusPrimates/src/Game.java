@@ -1,3 +1,5 @@
+package HackORQuartusPrimates.HackORQuartusPrimates.src;
+
 //import statements
 import java.awt.Color;
 import java.awt.Container;
@@ -23,6 +25,7 @@ public class Game {
     JPanel titleNamePanel, endGameButtonPanel, playGameButtonPanel, mainTextPanel, choiceButtonPanel, playerPanel, picturePanel;
     JLabel titleNameLabel, hpLabel, hpLabelNumber, pictureLabel;
     
+    JTextArea mainTextArea = new JTextArea();
     Font titleFont = new Font("Times New Roman", Font.BOLD, 90);
     Font titleButtonFont = new Font("Times New Roman", Font.PLAIN, 60);
     Font promptFont = new Font("Calibri", Font.BOLD, 25);
@@ -37,7 +40,8 @@ public class Game {
     int playerHp;
     ImageIcon image1, image2;
     ImageIcon tsaNormal, tsaMad, planeMarshall, planeOne, planeTwo, planeCrash, mirrorBuilding, inHotDogBuild,
-    hotDogBuild, gates, feetBandage, doorSlams, doorInHotDogBuild, backPack, afterPickUpBandage, twoBuilding;
+    hotDogBuild, gates, feetBandage, doorSlams, doorInHotDogBuild, backPack, afterPickUpBandage, twoBuilding, 
+    clownCooking, winImage, deathGeneric;
 
     TitleScreenHandler tsHandler = new TitleScreenHandler();
     ExitHandler eHandler = new ExitHandler();
@@ -129,12 +133,12 @@ public class Game {
         con.add(mainTextPanel);
 
         //sets the text area
-        mainTextArea = new JLabel();
+        mainTextArea = new JTextArea();
         mainTextArea.setBounds(2, 500, 680, 100);
         mainTextArea.setBackground(Color.white);
         mainTextArea.setForeground(Color.black);
         mainTextArea.setFont(promptFont);
-        //mainTextArea.setLineWrap(true);
+        mainTextArea.setLineWrap(true);
         mainTextPanel.add(mainTextArea);
 
         //choice button panel that shows the choices for the user
@@ -815,7 +819,14 @@ public class Game {
     }
     
     public void panelAC() {
-        //clown cooking image missing? possibly
+        picturePanel = new JPanel();
+        picturePanel.setBounds(110, -5, 500, 500);
+        con.add(picturePanel);
+        pictureLabel = new JLabel();
+        clownCooking = new ImageIcon(".//Images//ClownCooking.jpg");
+        pictureLabel.setIcon(clownCooking);
+        picturePanel.add(pictureLabel);
+        
         position = "panelAC";
         mainTextArea.setText(Main.ac.prompt);
 
