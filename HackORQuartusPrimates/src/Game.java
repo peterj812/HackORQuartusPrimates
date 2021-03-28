@@ -25,8 +25,8 @@ public class Game {
     
     Font titleFont = new Font("Times New Roman", Font.BOLD, 90);
     Font titleButtonFont = new Font("Times New Roman", Font.PLAIN, 60);
-    Font promptFont = new Font("Times New Roman", Font.PLAIN, 20);
-    Font choiceFont = new Font("Times New Roman", Font.PLAIN, 40);
+    Font promptFont = new Font("Times New Roman", Font.PLAIN, 30);
+    Font choiceFont = new Font("Times New Roman", Font.PLAIN, 20);
     Font otherButtonFont = new Font("Times New Roman", Font.PLAIN, 40);
     
     JButton endGameButton, playGameButton,chooseNameButton, choice1, choice2, choice3;
@@ -112,6 +112,18 @@ public class Game {
 	con.add(endGameButtonPanel);
         window.setVisible(true);
     }
+    
+    //method to set up typing
+    public void createrTextEdit() {
+    	// Make start button come here
+    	// Set title and play button vis to false
+    	
+    	
+    	
+    	// Implement entering of name here
+    	
+    	// Have continue button move to createGameScreen
+    }
 
     //function that creates the game screen 
     public void createGameScreen() {
@@ -123,22 +135,22 @@ public class Game {
 
         //creates a text area panel that shows the message to the user
         mainTextPanel = new JPanel();
-        mainTextPanel.setBounds(0, 200, 720, 250);
+        mainTextPanel.setBounds(2, 500, 700, 100);
         mainTextPanel.setBackground(Color.black);
         con.add(mainTextPanel);
 
         //sets the text area
         mainTextArea = new JTextArea();
-        mainTextArea.setBounds(0, 350, 700, 250);
-        mainTextArea.setBackground(Color.red);
-        mainTextArea.setForeground(Color.white);
+        mainTextArea.setBounds(2, 500, 680, 100);
+        mainTextArea.setBackground(Color.white);
+        mainTextArea.setForeground(Color.black);
         mainTextArea.setFont(promptFont);
         mainTextArea.setLineWrap(true);
         mainTextPanel.add(mainTextArea);
 
         //choice button panel that shows the choices for the user
         choiceButtonPanel = new JPanel();
-        choiceButtonPanel.setBounds(0, 600, 720, 100);
+        choiceButtonPanel.setBounds(9, 600, 680, 70);
         choiceButtonPanel.setBackground(Color.black);
         choiceButtonPanel.setLayout(new GridLayout(1,3));
         con.add(choiceButtonPanel);
@@ -201,7 +213,22 @@ public class Game {
         playerSetup();
 
     }
-
+    
+    private void takeDamageL() {
+    	Main.injury(2, 5);
+    	playerHp = Main.jimbo.getHealth();
+    	hpLabelNumber.setText("" + playerHp);
+    }
+    
+    private void takeDamageH() {
+    	Main.injury(5, 11);
+    	playerHp = Main.jimbo.getHealth();
+    	hpLabelNumber.setText("" + playerHp);
+    	if (playerHp <= 0) {
+    		deathCrash();
+    	}
+    }
+        
     //where it shows the hp bar with a unspecified hp
     public void playerSetup () {
         playerHp = Main.health;
@@ -221,7 +248,7 @@ public class Game {
         con.add(picturePanel);
         pictureLabel = new JLabel();
 	image1 = new ImageIcon(".//Images//TSA.jpg.jpeg");
-	picutreLabel.setIcon(image1);
+	pictureLabel.setIcon(image1);
         tsaNormal = new ImageIcon(".//Images//TSA.jpg.jpeg");
         pictureLabel.setIcon(tsaNormal);
         picturePanel.add(pictureLabel);
@@ -875,6 +902,9 @@ public class Game {
     public void deathGeneric() {
     	position = "deathG";
     	mainTextArea.setText(Main.ah.prompt);
+    	Main.injury(10, 11);
+    	playerHp = Main.jimbo.getHealth();
+    	hpLabelNumber.setText("" + playerHp);
     	//GAME OVER
 		choice1.setText("Restart");
 		choice2.setText("");
@@ -884,20 +914,24 @@ public class Game {
 		choice3.setVisible(false);
     }
     
-    public void restart() {
-    	titleNamePanel.add(titleNameLabel);
-        playGameButtonPanel.add(playGameButton);
-        endGameButtonPanel.add(endGameButton);
-        
-        con.add(titleNamePanel);
-        con.add(playGameButtonPanel);
-        con.add(endGameButtonPanel);
-        window.setVisible(true);
+    public void deathCrash() {
+    	position = "deathG";
+    	mainTextArea.setText(Main.ah.prompt);
+    	//GAME OVER
+		choice1.setText("Restart");
+		choice2.setText("");
+		choice3.setText("");
+		choice1.setVisible(true);
+		choice2.setVisible(false);
+		choice3.setVisible(false);
     }
     
     public void deathShrapnel() {
-    	position = "death";
+    	position = "deathS";
     	mainTextArea.setText(Main.o.prompt);
+    	Main.injury(10, 11);
+    	playerHp = Main.jimbo.getHealth();
+    	hpLabelNumber.setText("" + playerHp);
     	//GAME OVER, SHRAPNEL IN YOUR LEG WAS TOO MUCH
 		choice1.setText("Restart");
 		choice2.setText("");
@@ -907,6 +941,16 @@ public class Game {
 		choice3.setVisible(false);
     }
 
+    public void restart() {
+        position = "restart";
+        mainTextArea.setText(Main.init.prompt);
+
+        choice1.setText("Go home, flying is scary");
+        choice2.setText("Look through bag");
+        choice3.setText("Go through metal detector");
+    }
+    
+    
     //supposed to transition to a winning screen when player chooses great routes
     public void winning() {
     	position = "winning";
@@ -969,9 +1013,17 @@ public class Game {
             
             case "panelD":
             	switch(buttonPressed) {
-            		case "c1": panelG(); break;
+            		case "c1": { 
+            			panelG();
+            			takeDamageH();
+            			break;
+            		}
             		case "c2": panelH(); break;
-            		case "c3": panelF(); break;
+            		case "c3": {
+            			panelF(); 
+            			takeDamageL();
+            			break;
+            		}
             	}
             	break;
             case "panelE":
@@ -1103,11 +1155,6 @@ public class Game {
     			case "c3": panelS(); break;
     			}
     			break;
-    		case "deathG":
-            	switch(buttonPressed) {
-            		case "c1": panelInit(); break;
-            	}
-            	break;
             }
         }
     }
