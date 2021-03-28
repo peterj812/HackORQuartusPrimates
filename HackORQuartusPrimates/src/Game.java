@@ -256,7 +256,7 @@ public class Game {
 
         choice1.setText("Go home, flying is scary");
         choice2.setText("Look through bag");
-        choice3.setText("Go through metal detector");
+        choice3.setText("<html><center>Go through metal <br> detector</center></html>");
     }
     
     public void panelA() {
@@ -271,7 +271,7 @@ public class Game {
         position = "panelA";
         mainTextArea.setText(Main.a.prompt);
 
-        choice1.setText("Put bag down and go through security");
+        choice1.setText("<html><center>Put bag down and <br> go through security</center></html>");
         choice2.setText("Throw away contraband");
         choice3.setText("");
         choice3.setVisible(false);
@@ -439,7 +439,7 @@ public class Game {
         position = "panelI";
         mainTextArea.setText(Main.i.prompt);
 
-        choice1.setText("Walk toward abandoned carnival");
+        choice1.setText("<html><center>Walk toward <br> abandoned carnival</center></html>");
         choice2.setText("Examine the plane crash");
         choice3.setText("");
         choice1.setVisible(true);
@@ -492,7 +492,7 @@ public class Game {
         mainTextArea.setText(Main.l.prompt);
 
         choice1.setText("Give up");
-        choice2.setText("Walk toward abandoned carnival");
+        choice2.setText("<html><center>Walk toward <br> abandoned carnival</center></html>");
         choice3.setText("");
         choice1.setVisible(true);
         choice2.setVisible(true);
@@ -602,9 +602,9 @@ public class Game {
         position = "panelP";
         mainTextArea.setText(Main.p.prompt);
 
-        choice1.setText("You sure you don't want to give up?");
+        choice1.setText("<html><center>You sure you don't <br> want to give up?</center></html>");
         choice2.setText("Go to the mirror building");
-        choice3.setText("Go to the hotdog building");
+        choice3.setText("<html><center>Go to the hotdog <br> building</center></html>");
         choice1.setVisible(true);
         choice2.setVisible(true);
         choice3.setVisible(true);
@@ -654,7 +654,7 @@ public class Game {
         position = "panelS";
         mainTextArea.setText(Main.s.prompt);
 
-        choice1.setText("Locate the source of the smell");
+        choice1.setText("<html><center>Locate the <br> source of the smell</center></html>");
         choice2.setText("Leave the building");
         choice3.setText("");
         choice1.setVisible(true);
@@ -694,8 +694,8 @@ public class Game {
         position = "panelU";
         mainTextArea.setText(Main.u.prompt);
 
-        choice1.setText("Run as fast as you can in a straight line");
-        choice2.setText("Try to escape the maze");
+        choice1.setText("<html><center>Run as fast as you <br> can in a straight line</center></html>");
+        choice2.setText("<html><center>Try to escape <br> the maze</center></html>");
         choice3.setText("");
         choice1.setVisible(true);
         choice2.setVisible(true);
@@ -735,7 +735,7 @@ public class Game {
         mainTextArea.setText(Main.w.prompt);
 
         choice1.setText("Push the door");
-        choice2.setText("Walk out the way you came");
+        choice2.setText("<html><center>Walk out the <br> way you came</center></html>");
         choice3.setText("");
         choice1.setVisible(true);
         choice2.setVisible(true);
@@ -851,9 +851,9 @@ public class Game {
         position = "panelAD";
         mainTextArea.setText(Main.ad.prompt);
 
-        choice1.setText("You sure you don't want to give up?");
+        choice1.setText("<html><center>You sure you don't <br> want to give up?</center></html>");
         choice2.setText("Go to the mirror building");
-        choice3.setText("Go to the hotdog building");
+        choice3.setText("<html><center>Go to the hotdog <br> building</center></html>");
         choice1.setVisible(true);
         choice2.setVisible(true);
         choice3.setVisible(true);
