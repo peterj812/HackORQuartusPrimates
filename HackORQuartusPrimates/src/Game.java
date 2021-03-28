@@ -98,12 +98,12 @@ public class Game {
         //adds the title name and the play button to the panel
         titleNamePanel.add(titleNameLabel);
         playGameButtonPanel.add(playGameButton);
-	endGameButtonPanel.add(endGameButton);
+        endGameButtonPanel.add(endGameButton);
 
         //adds the panels to the container
         con.add(titleNamePanel);
         con.add(playGameButtonPanel);
-	con.add(endGameButtonPanel);
+        con.add(endGameButtonPanel);
         window.setVisible(true);
     }
     
@@ -236,17 +236,14 @@ public class Game {
     	
         picturePanel = new JPanel();
         picturePanel.setBounds(200, 90, 500, 500);
-	picturePanel.setBackground(Color.blue);
+        picturePanel.setBackground(Color.blue);
 
         con.add(picturePanel);
         pictureLabel = new JLabel();
-	image1 = new ImageIcon(".//Images//TSA.jpg.jpeg");
-	pictureLabel.setIcon(image1);
         tsaNormal = new ImageIcon(".//Images//TSA.jpg.jpeg");
         pictureLabel.setIcon(tsaNormal);
         picturePanel.add(pictureLabel);
 		
-    	
         position = "panelInit";
         mainTextArea.setText(Main.init.prompt);
 
