@@ -103,6 +103,18 @@ public class Game {
         con.add(endGameButtonPanel);
         window.setVisible(true);
     }
+    
+    //method to set up typing
+    public void createrTextEdit() {
+    	// Make start button come here
+    	// Set title and play button vis to false
+    	
+    	
+    	
+    	// Implement entering of name here
+    	
+    	// Have continue button move to createGameScreen
+    }
 
     //function that creates the game screen 
     public void createGameScreen() {
