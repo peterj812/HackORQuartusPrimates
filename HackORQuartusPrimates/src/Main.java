@@ -27,7 +27,7 @@ public class Main {
 	public static Player jimbo = new Player("");
 
 	static Panel homescreen, choosename, init, a, b, c, d, e, f, g, h, i, j, k, l, l1, m, m1, n, o, p, q, r, s, t, u, v,
-			w, x, y, z, aa, ab, ac, ad, ae, af, ag, ah, ai, go, win, winC, home;
+			w, x, y, z, aa, ab, ac, ad, ae, af, ah, ai, go, win, winC, home;
 	static JPanel titleNamePanel, playGameButtonPanel, mainTextPanel, choiceButtonPanel, playerPanel;
 	static JLabel titleNameLabel, hpLabel, hpLabelNumber;
 
@@ -143,7 +143,6 @@ public class Main {
 				"\n" + "You scream, spooking the clown who chases after you, a hungry look on his face");
 		af = new Panel("",
 				"\n" + "You ask the clown if he needs help cooking. He nods and you join him.");
-		ag = new Panel("", "");
 		ah = new Panel("", "GAME OVER!" + "\n" + " You died in the plane crash!");
 		ai = new Panel("", "GAME OVER!" + "\n" + " The bleeding is too much, you feel the life rushing out of you. You know there's nothing left to do but let death take you.");
 		home = new Panel("", "Laughing Stock");
