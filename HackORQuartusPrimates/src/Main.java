@@ -126,20 +126,21 @@ public class Main {
 		x = new Panel("", "The door doesn't budge.");
 		y = new Panel("",
 				"GAME OVER." + "\n" + "Trust us, we're doing you a favor. You're not smart enough to make it any farther. Your arms fall off and you bleed out.");
-		z = new Panel("", "");
+		z = new Panel("",
+				"GAME OVER." + "\n" + "You run into a clown and are knocked out");
 		aa = new Panel("",
 				"You turn and leave the hotdog building. The smell of meat gets fainter. Maybe you made the wrong choice...");
 		ab = new Panel("", "You open your backpack.");
 		ac = new Panel("",
 				"You push open the door. To your horror, you see a clown cooking what looks like a deceased mime!");
 		ad = new Panel("", "You walk back into the carnival and once again can see the two buildings");
-		ae = new Panel("", "");
-		af = new Panel("", "");
+		ae = new Panel("",
+				"GAME OVER." + "\n" + "You scream, spooking the clown who promptly attacks and eats you");
+		af = new Panel("",
+				"YOU WIN!" + "\n" + "You join the clown and live happily ever after");
 		ag = new Panel("", "");
 		ah = new Panel("", "GAME OVER");
 		home = new Panel("", "Laughing Stock");
-
-		// SET CHOICES
 
 	}
 
