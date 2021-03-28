@@ -636,7 +636,7 @@ public class Game {
     //supposed to transition to a death screen when player chooses to bad routes but still doesn't work yet
     
     public void deathGeneric() {
-    	position = "death";
+    	position = "deathG";
     	mainTextArea.setText(Main.ah.prompt);
     	//GAME OVER
 		choice1.setText("Restart");
@@ -648,16 +648,14 @@ public class Game {
     }
     
     public void restart() {
-    	position = "restart";
-    	mainTextArea.setText("");
-    	//GAME OVER
-		choice1.setText("");
-		choice2.setText("");
-		choice3.setText("");
-		choice1.setVisible(false);
-		choice2.setVisible(false);
-		choice3.setVisible(false);
-    	
+    	titleNamePanel.add(titleNameLabel);
+        playGameButtonPanel.add(playGameButton);
+        endGameButtonPanel.add(endGameButton);
+        
+        con.add(titleNamePanel);
+        con.add(playGameButtonPanel);
+        con.add(endGameButtonPanel);
+        window.setVisible(true);
     }
     
     public void deathShrapnel() {
@@ -850,6 +848,7 @@ public class Game {
     			break;
     		case "panelY": 
     			deathGeneric(); break;
+
     		case "panelAA": 
     			switch(buttonPressed) {
     			case "c1": panelAD();break;
@@ -868,10 +867,11 @@ public class Game {
     			case "c3": panelS(); break;
     			}
     			break;
-    		case "restart":
-    			switch(buttonPressed) {
-    			case "c1": panelInit(); break;
-    			}
+    		case "deathG":
+            	switch(buttonPressed) {
+            		case "c1": panelInit(); break;
+            	}
+            	break;
             }
         }
     }
