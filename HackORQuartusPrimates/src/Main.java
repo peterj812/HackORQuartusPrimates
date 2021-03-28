@@ -63,12 +63,12 @@ public class Main {
 	static final void initialize() {
 
 		// these should be between 0 and 100 inclusive
-		double hasAdultItemChance = 25;
+		/*double hasAdultItemChance = 25;
 		double hasBandagesChance = 25;
 		double hasKnifeChance = 25;
 		double hasSmallEngine = 25;
 		double hasWaterBottleChance = 25;
-		double tripChance = 25;
+		double tripChance = 25; */
 
 		// ITEMS
 		adultItem = new Item("adult item", true);

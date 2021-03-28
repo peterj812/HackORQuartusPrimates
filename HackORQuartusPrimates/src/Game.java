@@ -21,7 +21,7 @@ public class Game {
     JFrame window;
     Container con;
     JPanel titleNamePanel, endGameButtonPanel, playGameButtonPanel, mainTextPanel, choiceButtonPanel, playerPanel, picturePanel;
-    JLabel titleNameLabel, hpLabel, hpLabelNumber, pictureLabel;
+    JLabel titleNameLabel, hpLabel, hpLabelNumber, pictureLabel, mainTextArea;
     
     Font titleFont = new Font("Times New Roman", Font.BOLD, 90);
     Font titleButtonFont = new Font("Times New Roman", Font.PLAIN, 60);
@@ -1061,6 +1061,11 @@ public class Game {
             	case "c1": panelL(); break;
             	}
             	break;
+            case "panelN":
+            	switch(buttonPressed) {
+            	case "c1": panelO(); //walk in
+            	case "c2": panelAB(); // backpack
+            	}
             case "panelO":
             	deathShrapnel(); break;
             	
@@ -1127,7 +1132,13 @@ public class Game {
     			switch(buttonPressed) {
     			case "c1": panelAD();break;
     			}
-    			break;   
+    			break;  
+    		case "panelAB": 
+    			switch(buttonPressed) {
+    			case "c1": panelO(); break;
+    			case "c2": panelL1(); break;
+    			}
+    			break;
     		case "panelAC": 
     			switch(buttonPressed) {
     			case "c1": panelAE();break;
