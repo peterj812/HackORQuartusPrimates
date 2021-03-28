@@ -20,12 +20,7 @@ import java.util.Random;
 
 import javax.swing.*;
 import javax.swing.ImageIcon;
-import javax.swing.JTextArea;
 import javax.swing.JTextField;
-import javax.swing.JButton;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JFrame;
 
 public class Main {
 	private static Random rand = new Random();
@@ -61,7 +56,6 @@ public class Main {
 		injury(min_damage, max_damage);
 	}
 
-	// TODO: finish this method please :)
 	void injury(int min_damage, int max_damage) {
 		int damage = 0; // determine the damage using min_damage and max_damage inclusive
 		jimbo.setHealth(jimbo.getHealth() - damage);
