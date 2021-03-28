@@ -21,9 +21,15 @@ public class Game {
     Container con;
     JPanel titleNamePanel, endGameButtonPanel, playGameButtonPanel, mainTextPanel, choiceButtonPanel, playerPanel, picturePanel;
     JLabel titleNameLabel, hpLabel, hpLabelNumber, pictureLabel;
-    Font titleFont = new Font("Times New Roman", Font.PLAIN, 40);
-    Font normalFont = new Font("Times New Roman", Font.PLAIN, 30);
+
+    Font titleFont = new Font("Times New Roman", Font.BOLD, 200);
+    Font titleButtonFont = new Font("Times New Roman", Font.PLAIN, 60);
+    Font promptFont = new Font("Times New Roman", Font.PLAIN, 20);
+    Font choiceFont = new Font("Times New Roman", Font.PLAIN, 40);
+    Font otherButtonFont = new Font("Times New Roman", Font.PLAIN, 40);
+    
     JButton endGameButton, playGameButton, choice1, choice2, choice3;
+
     JTextArea mainTextArea;
     String position;
     int playerHp;
@@ -44,7 +50,6 @@ public class Game {
         //setting the window of the game
         window = new JFrame();
         window.setExtendedState(JFrame.MAXIMIZED_BOTH);       
-
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         window.getContentPane().setBackground(Color.black);
         window.setLayout(null);
@@ -53,7 +58,7 @@ public class Game {
 
         //creates the title page panel
         titleNamePanel = new JPanel();
-        titleNamePanel.setBounds(200, 200, 700, 200);
+        titleNamePanel.setBounds(0, 200, 1900, 400);
         titleNamePanel.setBackground(Color.black);
         titleNameLabel = new JLabel("Laughing Stock");
         titleNameLabel.setForeground(Color.white);
@@ -61,31 +66,31 @@ public class Game {
 
         //panel that holds the buttons in order to play the game
         playGameButtonPanel = new JPanel();
-        playGameButtonPanel.setBounds(200, 400, 200, 100);
-        playGameButtonPanel.setBackground(Color.black);
+        playGameButtonPanel.setBounds(820, 600, 200, 100);
+        playGameButtonPanel.setBackground(Color.white);
+
+        //button that prompts user to play the game
+        playGameButton = new JButton("PLAY");
+        playGameButton.setBackground(Color.white);
+        playGameButton.setForeground(Color.black);
+        playGameButton.setFont(titleButtonFont);
+        
+        playGameButton.addActionListener(tsHandler);
+        playGameButton.setFocusPainted(false);
         
         //panel that holds the end game button
         endGameButtonPanel = new JPanel();
-        endGameButtonPanel.setBounds(800, 15, 200, 100);
+        endGameButtonPanel.setBounds(0, 15, 200, 100);
         endGameButtonPanel.setBackground(Color.black);
         
         //button that prompts user to end the game
         endGameButton = new JButton("EXIT");
-        endGameButton.setBackground(Color.black);
+        endGameButton.setBackground(Color.white);
         endGameButton.setForeground(Color.black);
-        endGameButton.setFont(normalFont);
+        endGameButton.setFont(otherButtonFont);
         
         endGameButton.addActionListener(eHandler);
         endGameButton.setFocusPainted(false);
-
-        //button that prompts user to play the game
-        playGameButton = new JButton("PLAY");
-        playGameButton.setBackground(Color.black);
-        playGameButton.setForeground(Color.black);
-        playGameButton.setFont(normalFont);
-        
-        playGameButton.addActionListener(tsHandler);
-        playGameButton.setFocusPainted(false);
         
         //adds the title name and the play button to the panel
         titleNamePanel.add(titleNameLabel);
@@ -108,31 +113,31 @@ public class Game {
 
         //creates a text area panel that shows the message to the user
         mainTextPanel = new JPanel();
-        mainTextPanel.setBounds(100, 100, 800, 150);
+        mainTextPanel.setBounds(580, 200, 100, 200);
         mainTextPanel.setBackground(Color.black);
         con.add(mainTextPanel);
 
         //sets the text area
         mainTextArea = new JTextArea();
-        mainTextArea.setBounds(100, 350, 600, 250);
-        mainTextArea.setBackground(Color.black);
+        mainTextArea.setBounds(100, 350, 1000, 250);
+        mainTextArea.setBackground(Color.red);
         mainTextArea.setForeground(Color.white);
-        mainTextArea.setFont(normalFont);
+        mainTextArea.setFont(promptFont);
         mainTextArea.setLineWrap(true);
         mainTextPanel.add(mainTextArea);
 
         //choice button panel that shows the choices for the user
         choiceButtonPanel = new JPanel();
-        choiceButtonPanel.setBounds(400, 590, 400, 150);
+        choiceButtonPanel.setBounds(400, 800, 1100, 100);
         choiceButtonPanel.setBackground(Color.black);
-        choiceButtonPanel.setLayout(new GridLayout(3,1));
+        choiceButtonPanel.setLayout(new GridLayout(1,3));
         con.add(choiceButtonPanel);
 
         //creates choice 1 button
         choice1 = new JButton();
         choice1.setBackground(Color.white);
         choice1.setForeground(Color.black);
-        choice1.setFont(normalFont);
+        choice1.setFont(choiceFont);
         choice1.setFocusPainted(false);
         choice1.addActionListener(cHandler);
         choice1.setActionCommand("c1");
@@ -142,7 +147,7 @@ public class Game {
         choice2 = new JButton();
         choice2.setBackground(Color.white);
         choice2.setForeground(Color.black);
-        choice2.setFont(normalFont);
+        choice2.setFont(choiceFont);
         choice2.setFocusPainted(false);
         choice2.addActionListener(cHandler);
         choice2.setActionCommand("c2");
@@ -152,7 +157,7 @@ public class Game {
         choice3 = new JButton();
         choice3.setBackground(Color.white);
         choice3.setForeground(Color.black);
-        choice3.setFont(normalFont);
+        choice3.setFont(choiceFont);
         choice3.setFocusPainted(false);
         choice3.addActionListener(cHandler);
         choice3.setActionCommand("c3");
@@ -167,13 +172,13 @@ public class Game {
         
         //sets the hp label
         hpLabel = new JLabel("HP: ");
-        hpLabel.setFont(normalFont);
+        hpLabel.setFont(otherButtonFont);
         hpLabel.setForeground(Color.white);
         playerPanel.add(hpLabel);
 
         //sets the number of the hp label
         hpLabelNumber = new JLabel();
-        hpLabelNumber.setFont(normalFont);
+        hpLabelNumber.setFont(otherButtonFont);
         hpLabelNumber.setForeground(Color.white);
         playerPanel.add(hpLabelNumber);
 
