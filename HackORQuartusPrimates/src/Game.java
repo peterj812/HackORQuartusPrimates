@@ -25,8 +25,8 @@ public class Game {
 
     Font titleFont = new Font("Times New Roman", Font.BOLD, 90);
     Font titleButtonFont = new Font("Times New Roman", Font.PLAIN, 60);
-    Font promptFont = new Font("Times New Roman", Font.PLAIN, 20);
-    Font choiceFont = new Font("Times New Roman", Font.PLAIN, 40);
+    Font promptFont = new Font("Times New Roman", Font.PLAIN, 30);
+    Font choiceFont = new Font("Times New Roman", Font.PLAIN, 20);
     Font otherButtonFont = new Font("Times New Roman", Font.PLAIN, 40);
     
     JButton endGameButton, playGameButton, choice1, choice2, choice3;
@@ -106,6 +106,18 @@ public class Game {
 	con.add(endGameButtonPanel);
         window.setVisible(true);
     }
+    
+    //method to set up typing
+    public void createrTextEdit() {
+    	// Make start button come here
+    	// Set title and play button vis to false
+    	
+    	
+    	
+    	// Implement entering of name here
+    	
+    	// Have continue button move to createGameScreen
+    }
 
     //function that creates the game screen 
     public void createGameScreen() {
@@ -116,22 +128,22 @@ public class Game {
 
         //creates a text area panel that shows the message to the user
         mainTextPanel = new JPanel();
-        mainTextPanel.setBounds(0, 200, 720, 250);
+        mainTextPanel.setBounds(2, 500, 700, 100);
         mainTextPanel.setBackground(Color.black);
         con.add(mainTextPanel);
 
         //sets the text area
         mainTextArea = new JTextArea();
-        mainTextArea.setBounds(0, 350, 700, 250);
-        mainTextArea.setBackground(Color.red);
-        mainTextArea.setForeground(Color.white);
+        mainTextArea.setBounds(2, 500, 680, 100);
+        mainTextArea.setBackground(Color.white);
+        mainTextArea.setForeground(Color.black);
         mainTextArea.setFont(promptFont);
         mainTextArea.setLineWrap(true);
         mainTextPanel.add(mainTextArea);
 
         //choice button panel that shows the choices for the user
         choiceButtonPanel = new JPanel();
-        choiceButtonPanel.setBounds(0, 600, 720, 100);
+        choiceButtonPanel.setBounds(9, 600, 680, 70);
         choiceButtonPanel.setBackground(Color.black);
         choiceButtonPanel.setLayout(new GridLayout(1,3));
         con.add(choiceButtonPanel);
