@@ -27,7 +27,7 @@ public class Main {
 	public static Player jimbo = new Player("");
 
 	static Panel homescreen, choosename, init, a, b, c, d, e, f, g, h, i, j, k, l, l1, m, m1, n, o, p, q, r, s, t, u, v,
-			w, x, y, z, aa, ab, ac, ad, ae, af, ag, ah, go, win, winC, home;
+			w, x, y, z, aa, ab, ac, ad, ae, af, ag, ah, ai, go, win, winC, home;
 	static JPanel titleNamePanel, playGameButtonPanel, mainTextPanel, choiceButtonPanel, playerPanel;
 	static JLabel titleNameLabel, hpLabel, hpLabelNumber;
 
@@ -147,15 +147,17 @@ public class Main {
 				"<html><center>You push open the door. <br> To your horror, you see a clown cooking what looks like a deceased mime!</center></html>");
 		ad = new Panel("", "<html><center>You walk back into the carnival and once again can see the two buildings</center></html>");
 		ae = new Panel("",
-				"<html><center>As you run you hear the laughing of a clown close in on you. <br> Suddenly, you feel a blunt object hit you in the head.</center></html>");
+				"<html><center>You scream, spooking the clown who chases after you, a hungry look on his face.</center></html>");
 		af = new Panel("",
 				"<html><center>You ask the clown if he needs help cooking. <br> He nods and you join him.</center></html>");
 		ag = new Panel("", "");
 		ah = new Panel("", "<html><center>GAME OVER! <br> You died in the plane crash!</center</html>");
 		home = new Panel("", "<html><center>Laughing Stock</center></html>");
 		go = new Panel("", "<html><center>GAME OVER!</center></html>");
-        win = new Panel("", "<html><center>Congratulations! You win!</center></html>");
-        winC = new Panel("YOU WIN!", "<html><center>Joining the clown, <br> you and he develop an unbreakable bond and live happily ever after</center></html>");
+    win = new Panel("", "<html><center>Congratulations! You win!</center></html>");
+    winC = new Panel("YOU WIN!", "<html><center>Joining the clown, <br> you and he develop an unbreakable bond and live happily ever after</center></html>");
+		ai = new Panel("", "<html><center>GAME OVER! <br> The bleeding is too much, you feel the life rushing out of you. <br> You know there's nothing left to do but let death take you.</center></html>");
+
 
 	}
 
