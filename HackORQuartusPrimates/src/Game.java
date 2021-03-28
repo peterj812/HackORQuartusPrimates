@@ -313,7 +313,7 @@ public class Game {
     }
     
     public void panelC() {
-    	winningC();
+    	winning();
         position = "panelC";
         mainTextArea.setText(Main.c.prompt);
 
@@ -474,7 +474,13 @@ public class Game {
     }
     
     public void panelK() {
-    	//bleeding image
+    	  picturePanel = new JPanel();
+          picturePanel.setBounds(110, -5, 500, 500);
+          con.add(picturePanel);
+          pictureLabel = new JLabel();
+          bleedingImage = new ImageIcon(".//Images//BleedingOut.jpg");
+          pictureLabel.setIcon(bleedingImage);
+          picturePanel.add(pictureLabel);
         position = "panelK";
         mainTextArea.setText(Main.k.prompt);
 
@@ -955,6 +961,14 @@ public class Game {
     }
     
     public void deathShrapnel() {
+    	 picturePanel = new JPanel();
+         picturePanel.setBounds(110, -5, 500, 500);
+         con.add(picturePanel);
+         pictureLabel = new JLabel();
+         deathGeneric = new ImageIcon(".//Images//YouDiedGeneric.jpg");
+         pictureLabel.setIcon(deathGeneric);
+         picturePanel.add(pictureLabel);
+    	
     	position = "deathS";
     	mainTextArea.setText(Main.ai.prompt);
     	Main.injury(10, 11);
@@ -972,6 +986,14 @@ public class Game {
     
     //supposed to transition to a winning screen when player chooses great routes
     public void winning() {
+    	picturePanel = new JPanel();
+        picturePanel.setBounds(110, -5, 500, 500);
+        con.add(picturePanel);
+        pictureLabel = new JLabel();
+        winImage = new ImageIcon(".//Images//YouWin.jpg");
+        pictureLabel.setIcon(winImage);
+        picturePanel.add(pictureLabel);
+    	
     	position = "winning";
     	mainTextArea.setText(Main.win.prompt);
     	
@@ -984,6 +1006,13 @@ public class Game {
     }
     
     public void winningC() {
+    	 picturePanel.setBounds(110, -5, 500, 500);
+         con.add(picturePanel);
+         pictureLabel = new JLabel();
+         happilyEverAfter = new ImageIcon(".//Images//HappilyEverAfter.jpg");
+         pictureLabel.setIcon(happilyEverAfter);
+         picturePanel.add(pictureLabel);
+    	
     	position = "winningC";
     	mainTextArea.setText(Main.winC.prompt);
     	
