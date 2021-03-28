@@ -103,7 +103,7 @@ public class Main {
 		g = new Panel("",
 				"<html><center>You get startled by an announcement. <br> MAYDAY! MAYDAY! PLANE GOING DOWN! <br> *Crash noises*</center></html>");
 		h = new Panel("",
-				"<html><center>Time to relax! <br> As you put your feet up on the chair, <br> 0the Airmarshall sitting in front of you stands up and knocks you out.</center></html>");
+				"<html><center>Time to relax! <br> As you put your feet up on the chair, <br> the Airmarshall sitting in front of you stands up and knocks you out.</center></html>");
 		i = new Panel("",
 				"<html><center>You are shaken up by the plane crash, <br> you are lucky to have survived, it seems no one else did. <br> Is that a carnival next to you?</center></html>");
 		j = new Panel("",
@@ -134,7 +134,7 @@ public class Main {
 				"<html><center>You walk further into the building. Quickly, you become lost in a maze of mirrors. <br> Which way is forward? Where did you come from? <br> You swear the sound of the clowns is even closer now.</center></html>");
 		v = new Panel("", "<html><center>The door doesn't budge.</center></html>");
 		w = new Panel("",
-				"<html><center>You follow your nose and find a door slightly gaped. It looks like it leads into a kitchen.</center></html>");
+				"<html><center>You follow your nose and find a door slightly gaped. <br> It looks like it leads into a kitchen.</center></html>");
 		x = new Panel("", "<html><center>The door doesn't budge.</center></html>");
 		y = new Panel("",
 				"<html><center>GAME OVER. <br> Trust us, we're doing you a favor. You're not smart enough to <br> make it any farther. Your arms fall off and you bleed out.</center></html>");
