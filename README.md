@@ -1,5 +1,5 @@
-# GAME NAME
-Quartus Primates HackOR 2021 Project Repo
+# Laughing Stonk
+### Quartus Primates HackOR 2021 Project Repo
 
 Afrter 48 hours of programming, drawing, laughing, crying, yelling, taco bell, room clearing farts, and some good ole wifi outages coal has turned into a ight jem. Join us on an adventure of a lifetime which will likely be short in this humerous horror choose your own adventure game. Hand drawn art and a "riveting" story line really make you want to continue, but it seems that you just can never get it correct. 
 
@@ -16,19 +16,19 @@ How to Play
 
  Speed Run Leaderboards Any%
  --------------------------
-  WR: 0.54 sec - Peter Jacobson
-  2.  0.58 sec - Peter Jacobson
+  1. 0.54 sec (WR) - Peter Jacobson 
+  2. 0.58 sec - Peter Jacobson
 
 Credits
 -------
-==Project Manager==
+#### Project Manager
 Peter Jacobson
 
-==Lead Developer==
+#### Lead Developer
 Sam Platt
 
-==Script Supervisor & Artist==
+#### Script Supervisor & Artist
 Liam Erickson
 
-==Head of Search & GUI Guy==
+#### Head of Search & GUI Guy
 Ronin Ganoot
