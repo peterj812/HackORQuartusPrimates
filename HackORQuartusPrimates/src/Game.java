@@ -926,7 +926,7 @@ public class Game {
     
     public void deathShrapnel() {
     	position = "deathS";
-    	mainTextArea.setText(Main.o.prompt);
+    	mainTextArea.setText(Main.ai.prompt);
     	Main.injury(10, 11);
     	playerHp = Main.jimbo.getHealth();
     	hpLabelNumber.setText("" + playerHp);
@@ -1054,7 +1054,7 @@ public class Game {
             	}
             	break;
             case "panelK":
-            	deathGeneric(); break;
+            	deathShrapnel(); break;
             	
             case "panelL":
             	switch(buttonPressed) {
