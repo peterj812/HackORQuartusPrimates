@@ -89,15 +89,15 @@ public class Main {
 		init = new Panel("TSA Checkpoint",
 				"<html><center> Welcome to hel...Los Angeles International Airport,<br> your flight leaves soon so you better get a move on.</center></html>");
 		a = new Panel("",
-				"<html><center>You have contraband in your bag! Good thing you checked...</html></center>");
+				"<html><center>You have a water bottler in your bag! Good thing you checked...</html></center>");
 		b = new Panel("",
-				"<html><center>TSA found contraband in your luggage! <br> You have been arrested and put on a terrorist watch list <br> for having CONTRABAND in the airport.</center></html>");
+				"<html><center>TSA found a water bottle in your luggage! <br> You have been arrested and put on a terrorist watch list <br> for having water in the airport.</center></html>");
 		c = new Panel("",
 				"<html><center>YOU WIN! It's a pandemic, staying home is a smart choice! <br> (Yet do you feel this is a deserved victory?</center></html>");
 		d = new Panel("",
 				"<html><center>You successfully got on the flight and are sitting comfortably. <br> Only a few hours to go</center></html>");
 		e = new Panel("",
-				"<html><center>TSA found contraband in your luggage! <br> You have been arrested and put on a terrorist watch list <br> for having CONTRABAND in the airport.</center></break>");
+				"<html><center>TSA found a water bottle in your luggage! <br> You have been arrested and put on a terrorist watch list <br> for having water in the airport.</center></break>");
 		f = new Panel("Crash site",
 				"<html><center>You get startled by an announcement. <br> MAYDAY! MAYDAY! PLANE GOING DOWN! <br> *Crash noises*</center></html>");
 		g = new Panel("",
@@ -122,13 +122,13 @@ public class Main {
 		o = new Panel("",
 				"<html><center>GAMEOVER. <br> The pain from the shrapnel is too much to handle. <br> Your body gives in on itself, and you feel the life leave you.</center></html>");
 		p = new Panel("",
-				"<html><center>You walk further into the carnival. The sky becomes darker as you leave <br> the fire of the crash. The air getting even thinner. You can hear the sound of clowns laughing in the distance. <br> It seems the noise is coming towards you. You can see a building to your left, and a building to your right. <br> The left building has a giant mirror on it, the right has a giant hotdog on top.</center></html>");
+				"<html><center>You walk further into the carnival. The sky becomes darker as you leave the fire of the crash. <br> The air getting even thinner. You can hear the sound of clowns laughing in the distance. <br> It seems the noise is coming towards you. You can see a building to your left, and a building <br> to your right. The left building has a giant mirror on it, the right has a giant hotdog on top.</center></html>");
 		q = new Panel("",
 				"<html><center>GAME OVER. <br> <q>F*** this</q> you say to yourself as you curl into a fetal position, <br> giving yourself up to the darkness. You can hear the faint sound of a clown laughing. <br> It seems to be coming closer.</center></html>");
 		r = new Panel("",
 				"<html><center>You go towards the mirror building in hopes of finding a telephone, <br> maybe a place to collect your thoughts. As you walk through the front door, <br> you hear it slam shut behind you.</center></html>");
 		s = new Panel("",
-				"<html><center>You go towards the hotdog building in hopes of finding a telephone, <br> maybe a place to collect your thoughts. As you enter the building the sweet aroma of freshly cooked meat fills your nose. <br> Strange, no one seems to be around.</center></html>");
+				"<html><center>You go towards the hotdog building in hopes of finding a telephone, <br> maybe a place to collect your thoughts. <br> As you enter the building the sweet aroma of freshly cooked meat fills your nose. <br> Strange, no one seems to be around.</center></html>");
 		t = new Panel("", "<html><center>The door doesn't budge.</center></html>");
 		u = new Panel("",
 				"<html><center>You walk further into the building. Quickly, you become lost in a maze of mirrors. <br> Which way is forward? Where did you come from? <br> You swear the sound of the clowns is even closer now.</center></html>");
