@@ -37,7 +37,8 @@ public class Game {
     int playerHp;
     ImageIcon image1, image2;
     ImageIcon tsaNormal, tsaMad, planeMarshall, planeOne, planeTwo, planeCrash, mirrorBuilding, inHotDogBuild,
-    hotDogBuild, gates, feetBandage, doorSlams, doorInHotDogBuild, backPack, afterPickUpBandage, twoBuilding;
+    hotDogBuild, gates, feetBandage, doorSlams, doorInHotDogBuild, backPack, afterPickUpBandage, twoBuilding, happilyEverAfter,
+    fetalPos, clownCooking, bleedingImage, winImage, deathGeneric;
 
     TitleScreenHandler tsHandler = new TitleScreenHandler();
     ExitHandler eHandler = new ExitHandler();
@@ -312,6 +313,7 @@ public class Game {
     }
     
     public void panelC() {
+    	winningC();
         position = "panelC";
         mainTextArea.setText(Main.c.prompt);
 
@@ -472,6 +474,7 @@ public class Game {
     }
     
     public void panelK() {
+    	//bleeding image
         position = "panelK";
         mainTextArea.setText(Main.k.prompt);
 
@@ -583,6 +586,7 @@ public class Game {
     
     // TODO: add choices
     public void panelO() {
+    	deathGeneric();
         position = "panelO";
         mainTextArea.setText(Main.o.prompt);
 
@@ -615,6 +619,14 @@ public class Game {
     }
     
     public void panelQ() {
+    	picturePanel = new JPanel();
+        picturePanel.setBounds(110, -5, 500, 500);
+        con.add(picturePanel);
+        pictureLabel = new JLabel();
+        happilyEverAfter = new ImageIcon(".//Images//FetalPos.jpg");
+        pictureLabel.setIcon(happilyEverAfter);
+        picturePanel.add(pictureLabel);
+
         position = "panelQ";
         mainTextArea.setText(Main.q.prompt);
 
@@ -631,8 +643,8 @@ public class Game {
         picturePanel.setBounds(110, -5, 500, 500);
         con.add(picturePanel);
         pictureLabel = new JLabel();
-        mirrorBuilding = new ImageIcon(".//Images//MirrorBuilding.jpg");
-        pictureLabel.setIcon(mirrorBuilding);
+        doorSlams = new ImageIcon(".//Images//DoorSlams.jpg");
+        pictureLabel.setIcon(doorSlams);
         picturePanel.add(pictureLabel);
         
         position = "panelR";
@@ -691,8 +703,8 @@ public class Game {
         picturePanel.setBounds(110, -5, 500, 500);
         con.add(picturePanel);
         pictureLabel = new JLabel();
-        twoBuilding = new ImageIcon(".//Images//2Building.jpg");
-        pictureLabel.setIcon(twoBuilding);
+        mirrorBuilding = new ImageIcon(".//Images//MirrorBuilding.jpg");
+        pictureLabel.setIcon(mirrorBuilding);
         picturePanel.add(pictureLabel);
 
         position = "panelU";
@@ -731,8 +743,8 @@ public class Game {
         picturePanel.setBounds(110, -5, 500, 500);
         con.add(picturePanel);
         pictureLabel = new JLabel();
-        doorInHotDogBuild = new ImageIcon(".//Images//DoorInHotDogBuild.jpg");
-        pictureLabel.setIcon(doorInHotDogBuild);
+        hotDogBuild = new ImageIcon(".//Images//HotDogBuild.jpg");
+        pictureLabel.setIcon(hotDogBuild);
         picturePanel.add(pictureLabel);
 
         position = "panelW";
@@ -767,6 +779,7 @@ public class Game {
     }
     
     public void panelY() {
+    	deathGeneric();
         position = "panelY";
         mainTextArea.setText(Main.y.prompt);
 
@@ -779,6 +792,7 @@ public class Game {
     }
     
     public void panelZ() {
+    	deathGeneric();
         position = "panelZ";
         mainTextArea.setText(Main.z.prompt);
 
@@ -831,7 +845,14 @@ public class Game {
     }
     
     public void panelAC() {
-        //clown cooking image missing? possibly
+    	picturePanel = new JPanel();
+        picturePanel.setBounds(110, -5, 500, 500);
+        con.add(picturePanel);
+        pictureLabel = new JLabel();
+        clownCooking = new ImageIcon(".//Images//ClownCooking.jpg");
+        pictureLabel.setIcon(clownCooking);
+        picturePanel.add(pictureLabel);
+         
         position = "panelAC";
         mainTextArea.setText(Main.ac.prompt);
 
@@ -864,6 +885,7 @@ public class Game {
     }
     
     public void panelAE() {
+    	deathGeneric();
         position = "panelAE";
         mainTextArea.setText(Main.ae.prompt);
 
@@ -876,6 +898,13 @@ public class Game {
     }
     
     public void panelAF() {
+    	picturePanel.setBounds(110, -5, 500, 500);
+        con.add(picturePanel);
+        pictureLabel = new JLabel();
+        clownCooking = new ImageIcon(".//Images//ClownCooking.jpg");
+        pictureLabel.setIcon(clownCooking);
+        picturePanel.add(pictureLabel);
+        
         position = "panelAF";
         mainTextArea.setText(Main.af.prompt);
 
@@ -891,6 +920,14 @@ public class Game {
     //supposed to transition to a death screen when player chooses to bad routes but still doesn't work yet
     
     public void deathGeneric() {
+        picturePanel = new JPanel();
+        picturePanel.setBounds(110, -5, 500, 500);
+        con.add(picturePanel);
+        pictureLabel = new JLabel();
+        deathGeneric = new ImageIcon(".//Images//YouDiedGeneric.jpg");
+        pictureLabel.setIcon(deathGeneric);
+        picturePanel.add(pictureLabel);
+
     	position = "deathG";
     	mainTextArea.setText(Main.go.prompt);
     	Main.injury(10, 11);
