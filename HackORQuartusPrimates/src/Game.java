@@ -750,7 +750,7 @@ public class Game {
             	break;
             case "panelK":
             	death(); break;
-            	
+            	git 
             case "panelL":
             	switch(buttonPressed) {
             		case "c1": panelP(); break;
