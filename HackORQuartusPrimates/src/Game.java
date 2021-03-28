@@ -21,20 +21,9 @@ public class Game {
     Container con;
     JPanel titleNamePanel, endGameButtonPanel, playGameButtonPanel, mainTextPanel, choiceButtonPanel, playerPanel, picturePanel;
     JLabel titleNameLabel, hpLabel, hpLabelNumber, pictureLabel;
-<<<<<<< HEAD
-<<<<<<< HEAD
     JTextField jtext;
     
-    Font titleFont = new Font("Times New Roman", Font.BOLD, 200);
-=======
-
     Font titleFont = new Font("Times New Roman", Font.BOLD, 90);
->>>>>>> f49412de41f795c3abe76a35e136ded70229b611
-=======
-    JTextField jtext;
-
-    Font titleFont = new Font("Times New Roman", Font.BOLD, 90);
->>>>>>> aed54d727523b7359695bcc2a73ed8502be5aef0
     Font titleButtonFont = new Font("Times New Roman", Font.PLAIN, 60);
     Font promptFont = new Font("Times New Roman", Font.PLAIN, 20);
     Font choiceFont = new Font("Times New Roman", Font.PLAIN, 40);
