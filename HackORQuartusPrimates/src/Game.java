@@ -204,18 +204,30 @@ public class Game {
     }
     
     private void takeDamageL() {
-    	Main.injury(2, 5);
+    	int min_damage = 2;
+		int max_damage = 5;
+    	Main.injury(min_damage, max_damage);
     	playerHp = Main.jimbo.getHealth();
     	hpLabelNumber.setText("" + playerHp);
     }
     
     private void takeDamageH() {
-    	Main.injury(5, 11);
+    	int min_damage = 5;
+		int max_damage = 11;
+    	Main.injury(min_damage, max_damage);
     	playerHp = Main.jimbo.getHealth();
     	hpLabelNumber.setText("" + playerHp);
     	if (playerHp <= 0) {
     		deathCrash();
     	}
+    }
+    
+    private void applyBandage() {
+    	int min_gain = 3;
+		int max_gain = 6;
+		Main.heal(min_gain, max_gain);
+		playerHp = Main.jimbo.getHealth();
+    	hpLabelNumber.setText("" + playerHp);
     }
         
     //where it shows the hp bar with a unspecified hp
@@ -806,8 +818,8 @@ public class Game {
         position = "panelAB";
         mainTextArea.setText(Main.ab.prompt);
 
-        choice1.setText("Close backpack and head to the carnival");
-        choice2.setText("Take out shrapnel and apply bandage");
+        choice1.setText("Yes");
+        choice2.setText("No");
         choice3.setText("");
         choice1.setVisible(true);
         choice2.setVisible(true);
@@ -1022,7 +1034,7 @@ public class Game {
             	break;
             case "panelG":
             	switch(buttonPressed) {
-            		case "c1": panelI(); break;
+            		case "c1": panelJ(); break;
             	}
             	break;
             case "panelH":
@@ -1050,6 +1062,8 @@ public class Game {
             		case "c2": panelP(); break;
             	}
             	break;
+            case "panelL1":
+            		panelL(); break;
             case "panelM":
             	switch(buttonPressed) {
             		case "c1": panelN(); break;
@@ -1063,9 +1077,10 @@ public class Game {
             	break;
             case "panelN":
             	switch(buttonPressed) {
-            	case "c1": panelO(); //walk in
-            	case "c2": panelAB(); // backpack
+            	case "c1": panelO(); break;
+            	case "c2": panelAB(); break;
             	}
+            	break;
             case "panelO":
             	deathShrapnel(); break;
             	
@@ -1132,11 +1147,15 @@ public class Game {
     			switch(buttonPressed) {
     			case "c1": panelAD();break;
     			}
-    			break;  
-    		case "panelAB": 
+    			break;
+    		case "panelAB":
     			switch(buttonPressed) {
-    			case "c1": panelO(); break;
-    			case "c2": panelL1(); break;
+    			case "c1": {
+        			panelL1();
+        			applyBandage();
+        			break;
+        		}
+    			case "c2": panelO(); break;
     			}
     			break;
     		case "panelAC": 

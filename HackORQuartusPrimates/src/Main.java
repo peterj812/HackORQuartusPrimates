@@ -59,6 +59,11 @@ public class Main {
 		int damage = rand.nextInt(max_damage - min_damage) + min_damage; // determine the damage using min_damage and max_damage inclusive
 		jimbo.setHealth(jimbo.getHealth() - damage);
 	}
+	
+	static void heal(int min_gain, int max_gain) {
+		int regain = rand.nextInt(max_gain - min_gain) + min_gain; // determine the damage using min_damage and max_damage inclusive
+		jimbo.setHealth(jimbo.getHealth() + regain);
+	}
 
 	static final void initialize() {
 
@@ -102,7 +107,7 @@ public class Main {
 				"GAME OVER." + "\n" + "As you pull the shrapnel out of your body, you feel the life quickly leave your body.");
 		l = new Panel("",
 				"You approach the carnival." + "\n" + "The air feels thinner here, as if something is sucking it out of the world." + "\n" + "You feel a shiver go down your spine as you walk through the clown headed gates.");
-		l1 = new Panel("", "");
+		l1 = new Panel("", "You feel relieved. There's nothing else here, time to head into the carnival");
 		m = new Panel("", "As you stare into the firey wreck of the plane, you notice a bandage lying at your feet.");
 		m1 = new Panel("",
 				"You stare at the crash and see nothing but burning rubble. For some reason, all you can think of is George Bush.");
@@ -130,7 +135,7 @@ public class Main {
 				"GAME OVER." + "\n" + "You run into a clown and are knocked out");
 		aa = new Panel("",
 				"You turn and leave the hotdog building. The smell of meat gets fainter. Maybe you made the wrong choice...");
-		ab = new Panel("", "You open your backpack.");
+		ab = new Panel("", "You have a bandage. Would you like to apply it?");
 		ac = new Panel("",
 				"You push open the door. To your horror, you see a clown cooking what looks like a deceased mime!");
 		ad = new Panel("", "You walk back into the carnival and once again can see the two buildings");
@@ -139,7 +144,7 @@ public class Main {
 		af = new Panel("",
 				"YOU WIN!" + "\n" + "You join the clown and live happily ever after");
 		ag = new Panel("", "");
-		ah = new Panel("", "GAME OVER");
+		ah = new Panel("", "GAME OVER!" + "\n" + " You died in the plane crash!");
 		home = new Panel("", "Laughing Stock");
 
 	}
