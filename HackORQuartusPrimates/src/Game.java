@@ -158,15 +158,11 @@ public class Game {
 
         //creates choice 1 button
         choice1 = new JButton();
-<<<<<<< HEAD
+
         choice1.setBackground(Color.white);
         choice1.setForeground(Color.black);
         choice1.setFont(choiceFont);
-=======
-        choice1.setBackground(Color.black);
-        choice1.setForeground(Color.white);
-        choice1.setFont(normalFont);
->>>>>>> cd4ea2e1307a57ee2abda6804a9d0ce00b9fd0d7
+
         choice1.setFocusPainted(false);
         choice1.addActionListener(cHandler);
         choice1.setActionCommand("c1");
@@ -174,15 +170,11 @@ public class Game {
         
         //creates choice 2 button
         choice2 = new JButton();
-<<<<<<< HEAD
+
         choice2.setBackground(Color.white);
         choice2.setForeground(Color.black);
         choice2.setFont(choiceFont);
-=======
-        choice2.setBackground(Color.black);
-        choice2.setForeground(Color.white);
-        choice2.setFont(normalFont);
->>>>>>> cd4ea2e1307a57ee2abda6804a9d0ce00b9fd0d7
+
         choice2.setFocusPainted(false);
         choice2.addActionListener(cHandler);
         choice2.setActionCommand("c2");
@@ -242,10 +234,7 @@ public class Game {
     	
         picturePanel = new JPanel();
         picturePanel.setBounds(200, 90, 500, 500);
-<<<<<<< HEAD
-=======
-        //picturePanel.setBackground(Color.blue);
->>>>>>> cd4ea2e1307a57ee2abda6804a9d0ce00b9fd0d7
+
         con.add(picturePanel);
         pictureLabel = new JLabel();
         tsaNormal = new ImageIcon(".//Images//TSA.jpg.jpeg");
