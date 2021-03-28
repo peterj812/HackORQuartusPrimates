@@ -34,6 +34,7 @@ public class Game {
     JTextArea mainTextArea;
     String position;
     int playerHp;
+    ImageIcon image1, image2;
     ImageIcon tsaNormal, tsaMad, planeMarshall, planeOne, planeTwo, planeCrash, mirrorBuilding, inHotDogBuild,
     hotDogBuild, gates, feetBandage, doorSlams, doorInHotDogBuild, backPack, afterPickUpBandage, twoBuilding;
 
@@ -97,10 +98,12 @@ public class Game {
         //adds the title name and the play button to the panel
         titleNamePanel.add(titleNameLabel);
         playGameButtonPanel.add(playGameButton);
+	endGameButtonPanel.add(endGameButton);
 
         //adds the panels to the container
         con.add(titleNamePanel);
         con.add(playGameButtonPanel);
+	con.add(endGameButtonPanel);
         window.setVisible(true);
     }
 
@@ -206,9 +209,12 @@ public class Game {
     	
         picturePanel = new JPanel();
         picturePanel.setBounds(200, 90, 500, 500);
+	picturePanel.setBackground(Color.blue);
 
         con.add(picturePanel);
         pictureLabel = new JLabel();
+	image1 = new ImageIcon(".//Images//TSA.jpg.jpeg");
+	picutreLabel.setIcon(image1);
         tsaNormal = new ImageIcon(".//Images//TSA.jpg.jpeg");
         pictureLabel.setIcon(tsaNormal);
         picturePanel.add(pictureLabel);
