@@ -586,7 +586,7 @@ public class Game {
     
     // TODO: add choices
     public void panelO() {
-    	deathGeneric();1
+    	deathGeneric();
         position = "panelO";
         mainTextArea.setText(Main.o.prompt);
 
