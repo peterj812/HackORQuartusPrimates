@@ -241,7 +241,8 @@ public class Game {
     public void panelInit() {
     	
     	 //these picture panels is what calls the images from the folder
-    	
+    	playerHp = Main.health;
+        hpLabelNumber.setText("" + playerHp);
         picturePanel = new JPanel();
         picturePanel.setBounds(110, -5, 500, 500);
         picturePanel.setBackground(Color.black);
