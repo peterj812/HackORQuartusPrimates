@@ -130,8 +130,8 @@ public class Game {
 
         //creates choice 1 button
         choice1 = new JButton();
-        choice1.setBackground(Color.black);
-        choice1.setForeground(Color.white);
+        choice1.setBackground(Color.white);
+        choice1.setForeground(Color.black);
         choice1.setFont(normalFont);
         choice1.setFocusPainted(false);
         choice1.addActionListener(cHandler);
@@ -140,8 +140,8 @@ public class Game {
         
         //creates choice 2 button
         choice2 = new JButton();
-        choice2.setBackground(Color.black);
-        choice2.setForeground(Color.white);
+        choice2.setBackground(Color.white);
+        choice2.setForeground(Color.black);
         choice2.setFont(normalFont);
         choice2.setFocusPainted(false);
         choice2.addActionListener(cHandler);
@@ -150,8 +150,8 @@ public class Game {
         
         //creates choice 3 button
         choice3 = new JButton();
-        choice3.setBackground(Color.black);
-        choice3.setForeground(Color.white);
+        choice3.setBackground(Color.white);
+        choice3.setForeground(Color.black);
         choice3.setFont(normalFont);
         choice3.setFocusPainted(false);
         choice3.addActionListener(cHandler);
