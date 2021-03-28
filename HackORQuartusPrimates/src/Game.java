@@ -236,12 +236,8 @@ public class Game {
     	
         picturePanel = new JPanel();
         picturePanel.setBounds(200, 90, 500, 500);
-	picturePanel.setBackground(Color.blue);
-
         con.add(picturePanel);
         pictureLabel = new JLabel();
-	image1 = new ImageIcon(".//Images//TSA.jpg.jpeg");
-	pictureLabel.setIcon(image1);
         tsaNormal = new ImageIcon(".//Images//TSA.jpg.jpeg");
         pictureLabel.setIcon(tsaNormal);
         picturePanel.add(pictureLabel);
