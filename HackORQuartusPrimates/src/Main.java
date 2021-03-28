@@ -88,8 +88,8 @@ public class Main {
 		d = new Panel("", "You successfully got on the flight and are sitting comfortably. Only a few hours to go");
 		e = new Panel("",
 				"TSA found contraband in your luggage! You have been arrested and put on a terrorist watch list for having CONTRABAND in the airport.");
-		f = new Panel("Crash site", "You get startled by an announcement." + "\n" + "\"EMERGENCY! EMERGENCY! PLANE GOING DOWN!\"" + "\n" + "*Crash noises*");
-		g = new Panel("", "You get startled by an announcement." + "\n" + "\"EMERGENCY! EMERGENCY! PLANE GOING DOWN!\"" + "\n" + "*Crash noises*");
+		f = new Panel("Crash site", "You get startled by an announcement." + "\n" + "\"MAYDAY! MAYDAY! PLANE GOING DOWN!\"" + "\n" + "*Crash noises*");
+		g = new Panel("", "You get startled by an announcement." + "\n" + "\"MAYDAY! MAYDAY! PLANE GOING DOWN!\"" + "\n" + "*Crash noises*");
 		h = new Panel("",
 				"Time to relax!" + "\n" + "As you put your feet up on the chair, the Airmarshall sitting in front of you stands up and knocks you out.");
 		i = new Panel("",
@@ -104,7 +104,7 @@ public class Main {
 		m = new Panel("", "As you stare into the firey wreck of the plane, you notice a bandage lying at your feet.");
 		m1 = new Panel("",
 				"You stare at the crash and see nothing but burning rubble. For some reason, all you can think of is George Bush.");
-		n = new Panel("", "You put the bandage in your backpack.");
+		n = new Panel("", "You pick up the bandage.");
 		o = new Panel("",
 				"GAMEOVER." + "\n" + "The pain from the shrapnel is too much to handle. Your body gives in on itself, and you feel the life leave you");
 		p = new Panel("",
