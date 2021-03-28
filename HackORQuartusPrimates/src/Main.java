@@ -1,26 +1,24 @@
 
 import java.awt.Color;
 import java.awt.Container;
-import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.Font;
 import java.awt.*;
 
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Random;
 import java.util.Set;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
-
-import java.util.Random;
-
-import javax.swing.*;
-import javax.swing.ImageIcon;
 import javax.swing.JTextField;
+import javax.swing.*;
 
 public class Main {
 	private static Random rand = new Random();
@@ -151,10 +149,6 @@ public class Main {
 			jimbo.addItem(in);
 		}
 	}
-
-	// TODO: change mainTextArea, choice1, choice2, and choice3 dynamically based on
-	// Panel pan
-	// TODO: see Game.java's method public void airport for guide
 
 	public static void main(String[] args) {
 		initialize();
