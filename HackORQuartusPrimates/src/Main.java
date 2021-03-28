@@ -81,13 +81,8 @@ public class Main {
 		// PANELS/PROMPTS
 		homescreen = new Panel("Homescreen", "");
 		choosename = new Panel("", "What's your name?");
-<<<<<<< HEAD
-		init = new Panel("TSA Checkpoint",
-				"Welcome to hel...Los Angeles International Airport, your flight leaves soon so you better get a move on.");
-=======
 
 		init = new Panel("TSA Checkpoint", "Welcome to hel...Los Angeles International Airport, your flight leaves soon so you better get a move on.");
->>>>>>> cd4ea2e1307a57ee2abda6804a9d0ce00b9fd0d7
 		a = new Panel("", "You have contraband in your bag! Good thing you checked...");
 		b = new Panel("",
 				"You have been arrested and put on a terrorist watch list for having CONTRABAND in the airport.");
