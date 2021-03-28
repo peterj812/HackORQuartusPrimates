@@ -23,7 +23,7 @@ public class Game {
     JFrame window;
     Container con;
     JPanel titleNamePanel, endGameButtonPanel, playGameButtonPanel, mainTextPanel, choiceButtonPanel, playerPanel, picturePanel;
-    JLabel titleNameLabel, hpLabel, hpLabelNumber, pictureLabel;
+    JLabel titleNameLabel, hpLabel, hpLabelNumber, pictureLabel, mainTextArea;
     
     JTextArea mainTextArea = new JTextArea();
     Font titleFont = new Font("Times New Roman", Font.BOLD, 90);
@@ -185,13 +185,13 @@ public class Game {
 
         //shows the status of the player when they lose or gain hp
         playerPanel = new JPanel();
-        playerPanel.setBounds(110, 0, 102, 37);
-        playerPanel.setBackground(Color.red);
+        playerPanel.setBounds(5, 5, 105, 37);
+        playerPanel.setBackground(Color.black);
         playerPanel.setLayout(new GridLayout(1,3));
         con.add(playerPanel);
       
         //sets the hp label
-        hpLabel = new JLabel("HP:");
+        hpLabel = new JLabel("HP ");
         hpLabel.setFont(hpFont);
         hpLabel.setForeground(Color.white);
         playerPanel.add(hpLabel);
@@ -208,18 +208,30 @@ public class Game {
     }
     
     private void takeDamageL() {
-    	Main.injury(2, 5);
+    	int min_damage = 2;
+		int max_damage = 5;
+    	Main.injury(min_damage, max_damage);
     	playerHp = Main.jimbo.getHealth();
     	hpLabelNumber.setText("" + playerHp);
     }
     
     private void takeDamageH() {
-    	Main.injury(5, 11);
+    	int min_damage = 5;
+		int max_damage = 11;
+    	Main.injury(min_damage, max_damage);
     	playerHp = Main.jimbo.getHealth();
     	hpLabelNumber.setText("" + playerHp);
     	if (playerHp <= 0) {
     		deathCrash();
     	}
+    }
+    
+    private void applyBandage() {
+    	int min_gain = 3;
+		int max_gain = 6;
+		Main.heal(min_gain, max_gain);
+		playerHp = Main.jimbo.getHealth();
+    	hpLabelNumber.setText("" + playerHp);
     }
         
     //where it shows the hp bar with a unspecified hp
@@ -811,8 +823,8 @@ public class Game {
         position = "panelAB";
         mainTextArea.setText(Main.ab.prompt);
 
-        choice1.setText("Close backpack and head to the carnival");
-        choice2.setText("Take out shrapnel and apply bandage");
+        choice1.setText("Yes");
+        choice2.setText("No");
         choice3.setText("");
         choice1.setVisible(true);
         choice2.setVisible(true);
@@ -926,7 +938,7 @@ public class Game {
     
     public void deathShrapnel() {
     	position = "deathS";
-    	mainTextArea.setText(Main.o.prompt);
+    	mainTextArea.setText(Main.ai.prompt);
     	Main.injury(10, 11);
     	playerHp = Main.jimbo.getHealth();
     	hpLabelNumber.setText("" + playerHp);
@@ -1034,7 +1046,7 @@ public class Game {
             	break;
             case "panelG":
             	switch(buttonPressed) {
-            		case "c1": panelI(); break;
+            		case "c1": panelJ(); break;
             	}
             	break;
             case "panelH":
@@ -1054,7 +1066,7 @@ public class Game {
             	}
             	break;
             case "panelK":
-            	deathGeneric(); break;
+            	deathShrapnel(); break;
             	
             case "panelL":
             	switch(buttonPressed) {
@@ -1062,6 +1074,8 @@ public class Game {
             		case "c2": panelP(); break;
             	}
             	break;
+            case "panelL1":
+            		panelL(); break;
             case "panelM":
             	switch(buttonPressed) {
             		case "c1": panelN(); break;
@@ -1071,6 +1085,12 @@ public class Game {
             case "panelM1":
             	switch(buttonPressed) {
             	case "c1": panelL(); break;
+            	}
+            	break;
+            case "panelN":
+            	switch(buttonPressed) {
+            	case "c1": panelO(); break;
+            	case "c2": panelAB(); break;
             	}
             	break;
             case "panelO":
@@ -1139,7 +1159,17 @@ public class Game {
     			switch(buttonPressed) {
     			case "c1": panelAD();break;
     			}
-    			break;   
+    			break;
+    		case "panelAB":
+    			switch(buttonPressed) {
+    			case "c1": {
+        			panelL1();
+        			applyBandage();
+        			break;
+        		}
+    			case "c2": panelO(); break;
+    			}
+    			break;
     		case "panelAC": 
     			switch(buttonPressed) {
     			case "c1": panelAE();break;
