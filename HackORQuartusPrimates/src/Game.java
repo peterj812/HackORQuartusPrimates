@@ -19,18 +19,17 @@ public class Game {
 
     JFrame window;
     Container con;
-    JPanel titleNamePanel, endGameButtonPanel, playGameButtonPanel, mainTextPanel, choiceButtonPanel, playerPanel, picturePanel;
+    JPanel titleNamePanel, playGameButtonPanel, mainTextPanel, choiceButtonPanel, playerPanel, picturePanel;
     JLabel titleNameLabel, hpLabel, hpLabelNumber, pictureLabel;
     Font titleFont = new Font("Times New Roman", Font.PLAIN, 40);
     Font normalFont = new Font("Times New Roman", Font.PLAIN, 30);
-    JButton endGameButton, playGameButton, choice1, choice2, choice3;
+    JButton playGameButton, choice1, choice2, choice3;
     JTextArea mainTextArea;
     String position;
     int playerHp;
-    ImageIcon image1, image2;
+    ImageIcon tsaNormal, tsaMad, plane1;
 
     TitleScreenHandler tsHandler = new TitleScreenHandler();
-    ExitHandler eHandler = new ExitHandler();
     ChoiceHandler cHandler = new ChoiceHandler();
 
     public static void main(String[] args) {
@@ -63,25 +62,11 @@ public class Game {
         playGameButtonPanel = new JPanel();
         playGameButtonPanel.setBounds(200, 400, 200, 100);
         playGameButtonPanel.setBackground(Color.black);
-        
-        //panel that holds the end game button
-        endGameButtonPanel = new JPanel();
-        endGameButtonPanel.setBounds(800, 15, 200, 100);
-        endGameButtonPanel.setBackground(Color.black);
-        
-        //button that prompts user to end the game
-        endGameButton = new JButton("EXIT");
-        endGameButton.setBackground(Color.black);
-        endGameButton.setForeground(Color.black);
-        endGameButton.setFont(normalFont);
-        
-        endGameButton.addActionListener(eHandler);
-        endGameButton.setFocusPainted(false);
 
         //button that prompts user to play the game
         playGameButton = new JButton("PLAY");
         playGameButton.setBackground(Color.black);
-        playGameButton.setForeground(Color.black);
+        playGameButton.setForeground(Color.white);
         playGameButton.setFont(normalFont);
         
         playGameButton.addActionListener(tsHandler);
@@ -90,12 +75,10 @@ public class Game {
         //adds the title name and the play button to the panel
         titleNamePanel.add(titleNameLabel);
         playGameButtonPanel.add(playGameButton);
-        endGameButtonPanel.add(endGameButton);
 
         //adds the panels to the container
         con.add(titleNamePanel);
         con.add(playGameButtonPanel);
-        con.add(endGameButtonPanel);
         window.setVisible(true);
     }
 
@@ -130,8 +113,8 @@ public class Game {
 
         //creates choice 1 button
         choice1 = new JButton();
-        choice1.setBackground(Color.white);
-        choice1.setForeground(Color.black);
+        choice1.setBackground(Color.black);
+        choice1.setForeground(Color.white);
         choice1.setFont(normalFont);
         choice1.setFocusPainted(false);
         choice1.addActionListener(cHandler);
@@ -140,8 +123,8 @@ public class Game {
         
         //creates choice 2 button
         choice2 = new JButton();
-        choice2.setBackground(Color.white);
-        choice2.setForeground(Color.black);
+        choice2.setBackground(Color.black);
+        choice2.setForeground(Color.white);
         choice2.setFont(normalFont);
         choice2.setFocusPainted(false);
         choice2.addActionListener(cHandler);
@@ -150,8 +133,8 @@ public class Game {
         
         //creates choice 3 button
         choice3 = new JButton();
-        choice3.setBackground(Color.white);
-        choice3.setForeground(Color.black);
+        choice3.setBackground(Color.black);
+        choice3.setForeground(Color.white);
         choice3.setFont(normalFont);
         choice3.setFocusPainted(false);
         choice3.addActionListener(cHandler);
@@ -193,16 +176,16 @@ public class Game {
     public void panelInit() {
     	
     	 //these picture panels is what calls the images from the folder
-    	/*
+    	
         picturePanel = new JPanel();
         picturePanel.setBounds(200, 90, 500, 500);
-        picturePanel.setBackground(Color.blue);
+        //picturePanel.setBackground(Color.blue);
         con.add(picturePanel);
         pictureLabel = new JLabel();
-        image1 = new ImageIcon(".//Images//TSA.jpg.jpeg");
-        pictureLabel.setIcon(image1);
+        tsaNormal = new ImageIcon(".//Images//TSA.jpg.jpeg");
+        pictureLabel.setIcon(tsaNormal);
         picturePanel.add(pictureLabel);
-		*/
+		
     	
         position = "panelInit";
         mainTextArea.setText(Main.init.prompt);
@@ -213,6 +196,15 @@ public class Game {
     }
     
     public void panelA() {
+        picturePanel = new JPanel();
+        picturePanel.setBounds(200, 90, 500, 500);
+        //picturePanel.setBackground(Color.blue);
+        con.add(picturePanel);
+        pictureLabel = new JLabel();
+        tsaNormal = new ImageIcon(".//Images//TSA.jpg.jpeg");
+        pictureLabel.setIcon(tsaNormal);
+        picturePanel.add(pictureLabel);
+
         position = "panelA";
         mainTextArea.setText(Main.a.prompt);
 
@@ -226,6 +218,15 @@ public class Game {
     public void panelB() {
         position = "panelB";
         mainTextArea.setText(Main.b.prompt);
+
+        picturePanel = new JPanel();
+        picturePanel.setBounds(200, 90, 500, 500);
+        //picturePanel.setBackground(Color.blue);
+        con.add(picturePanel);
+        pictureLabel = new JLabel();
+        tsaMad = new ImageIcon(".//Images//Tsamad.jpg");
+        pictureLabel.setIcon(tsaMad);
+        picturePanel.add(pictureLabel);
         
         choice1.setText("Next.....");
         choice2.setText("");
@@ -249,6 +250,15 @@ public class Game {
     public void panelD() {
         position = "panelD";
         mainTextArea.setText(Main.d.prompt);
+
+        picturePanel = new JPanel();
+        picturePanel.setBounds(200, 90, 500, 500);
+        //picturePanel.setBackground(Color.blue);
+        con.add(picturePanel);
+        pictureLabel = new JLabel();
+        tsaMad = new ImageIcon(".//Images//Plane1.jpg");
+        pictureLabel.setIcon(tsaMad);
+        picturePanel.add(pictureLabel);
 
         choice1.setText("Fall Asleep");
         choice2.setText("Keep reading paper");
@@ -665,13 +675,6 @@ public class Game {
         public void actionPerformed(ActionEvent event) {
             createGameScreen();
         }
-    }
-    
-    //action that handles the exit button
-    public class ExitHandler implements ActionListener {
-    	public void actionPerformed(ActionEvent event) {
-    		System.exit(0);
-    	}
     }
     
     //actions that handle the choices when user 
