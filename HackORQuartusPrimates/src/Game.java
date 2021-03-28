@@ -964,7 +964,27 @@ public class Game {
 		choice2.setVisible(false);
 		choice3.setVisible(false);
     }
-    
+
+    public void winningC() {
+        picturePanel = new JPanel();
+        picturePanel.setBounds(110, -5, 500, 500);
+        con.add(picturePanel);
+        pictureLabel = new JLabel();
+        happilyEverAfter = new ImageIcon(".//Images//HappilyEverAfter.jpg");
+        pictureLabel.setIcon(happilyEverAfter);
+        picturePanel.add(pictureLabel);
+
+    	position = "winningC";
+    	mainTextArea.setText(Main.winC.prompt);
+    	
+		choice1.setText("");
+		choice2.setText("Play again?");
+		choice3.setText("");
+		choice1.setVisible(true);
+		choice2.setVisible(true);
+		choice3.setVisible(true);
+    }
+
     //actions that handle the titlescreen
     public class TitleScreenHandler implements ActionListener {
 
