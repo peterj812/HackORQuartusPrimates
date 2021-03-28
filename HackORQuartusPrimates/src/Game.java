@@ -25,7 +25,7 @@ public class Game {
     
     Font titleFont = new Font("Times New Roman", Font.BOLD, 90);
     Font titleButtonFont = new Font("Times New Roman", Font.PLAIN, 60);
-    Font promptFont = new Font("Calibri", Font.BOLD, 20);
+    Font promptFont = new Font("Calibri", Font.BOLD, 16); 
     Font choiceFont = new Font("Calibri", Font.BOLD, 18);
     Font hpFont = new Font("Calibri", Font.BOLD, 35);
     Font otherButtonFont = new Font("Times New Roman", Font.PLAIN, 45);
@@ -274,7 +274,7 @@ public class Game {
 
         choice1.setText("<html><center>Put bag down and <br> go through security</center></html>");
         choice2.setText("");
-        choice3.setText("Throw away contraband");
+        choice3.setText("Throw away the water");
         choice1.setVisible(true);
         choice2.setVisible(true);
         choice3.setVisible(true);
@@ -465,7 +465,7 @@ public class Game {
 
         choice1.setText("Pull out the shrapnel");
         choice2.setText("Examine the plane crash");
-        choice3.setText("Walk toward abandoned carnival");
+        choice3.setText("<html><center>Walk toward <br> abandoned carnival</center></html>");
         choice1.setVisible(true);
         choice2.setVisible(true);
         choice3.setVisible(true);
