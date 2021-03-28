@@ -24,9 +24,8 @@ public class Game {
     JFrame window;
     Container con;
     JPanel titleNamePanel, endGameButtonPanel, playGameButtonPanel, mainTextPanel, choiceButtonPanel, playerPanel, picturePanel;
-    JLabel titleNameLabel, hpLabel, hpLabelNumber, pictureLabel;
+    JLabel titleNameLabel, hpLabel, hpLabelNumber, pictureLabel, mainTextArea;
     
-    JTextArea mainTextArea = new JTextArea();
     Font titleFont = new Font("Times New Roman", Font.BOLD, 90);
     Font titleButtonFont = new Font("Times New Roman", Font.PLAIN, 60);
     Font promptFont = new Font("Calibri", Font.BOLD, 20);
@@ -122,12 +121,11 @@ public class Game {
         con.add(mainTextPanel);
 
         //sets the text area
-        mainTextArea = new JTextArea();
+        mainTextArea = new JLabel();
         mainTextArea.setBounds(2, 500, 680, 100);
         mainTextArea.setBackground(Color.white);
         mainTextArea.setForeground(Color.black);
         mainTextArea.setFont(promptFont);
-        mainTextArea.setLineWrap(true);
         mainTextPanel.add(mainTextArea);
 
         //choice button panel that shows the choices for the user
@@ -174,13 +172,13 @@ public class Game {
 
         //shows the status of the player when they lose or gain hp
         playerPanel = new JPanel();
-        playerPanel.setBounds(110, 0, 102, 37);
-        playerPanel.setBackground(Color.red);
+        playerPanel.setBounds(5, 5, 105, 37);
+        playerPanel.setBackground(Color.black);
         playerPanel.setLayout(new GridLayout(1,3));
         con.add(playerPanel);
       
         //sets the hp label
-        hpLabel = new JLabel("HP:");
+        hpLabel = new JLabel("HP ");
         hpLabel.setFont(hpFont);
         hpLabel.setForeground(Color.white);
         playerPanel.add(hpLabel);
