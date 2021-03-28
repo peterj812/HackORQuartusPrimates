@@ -27,7 +27,7 @@ public class Main {
 	public static Player jimbo = new Player("");
 
 	static Panel homescreen, choosename, init, a, b, c, d, e, f, g, h, i, j, k, l, l1, m, m1, n, o, p, q, r, s, t, u, v,
-			w, x, y, z, aa, ab, ac, ad, ae, af, ag, ah, home;
+			w, x, y, z, aa, ab, ac, ad, ae, af, ag, ah, ai, home;
 	static JPanel titleNamePanel, playGameButtonPanel, mainTextPanel, choiceButtonPanel, playerPanel;
 	static JLabel titleNameLabel, hpLabel, hpLabelNumber;
 
@@ -104,7 +104,7 @@ public class Main {
 		j = new Panel("",
 				"You seem to have been impaled by some shrapnel. At least you survived as it seems no one else did." + "\n" + "Is that a carnival next to you?");
 		k = new Panel("",
-				"GAME OVER." + "\n" + "As you pull the shrapnel out of your body, you feel the life quickly leave your body.");
+				"You're bleeding!");
 		l = new Panel("",
 				"You approach the carnival." + "\n" + "The air feels thinner here, as if something is sucking it out of the world." + "\n" + "You feel a shiver go down your spine as you walk through the clown headed gates.");
 		l1 = new Panel("", "You feel relieved. There's nothing else here, time to head into the carnival");
@@ -145,6 +145,7 @@ public class Main {
 				"YOU WIN!" + "\n" + "You join the clown and live happily ever after");
 		ag = new Panel("", "");
 		ah = new Panel("", "GAME OVER!" + "\n" + " You died in the plane crash!");
+		ai = new Panel("", "GAME OVER!" + "\n" + " The bleeding is too much, you feel the life rushing out of you. You know there's nothing left to do but let death take you.");
 		home = new Panel("", "Laughing Stock");
 
 	}
