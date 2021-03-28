@@ -20,7 +20,7 @@ public class Game {
 
     JFrame window;
     Container con;
-    JPanel titleNamePanel, endGameButtonPanel, playGameButtonPanel, mainTextPanel, choiceButtonPanel, playerPanel, picturePanel;
+    JPanel titleNamePanel, chooseNamePanel, endGameButtonPanel, playGameButtonPanel, mainTextPanel, choiceButtonPanel, playerPanel, picturePanel;
     JLabel titleNameLabel, hpLabel, hpLabelNumber, pictureLabel;
     
     Font titleFont = new Font("Times New Roman", Font.BOLD, 90);
@@ -29,7 +29,7 @@ public class Game {
     Font choiceFont = new Font("Times New Roman", Font.PLAIN, 20);
     Font otherButtonFont = new Font("Times New Roman", Font.PLAIN, 40);
     
-    JButton endGameButton, playGameButton, choice1, choice2, choice3;
+    JButton endGameButton, chooseNameButton, playGameButton, choice1, choice2, choice3;
 
     JTextArea mainTextArea;
     String position;
@@ -37,10 +37,13 @@ public class Game {
     ImageIcon image1, image2;
     ImageIcon tsaNormal, tsaMad, planeMarshall, planeOne, planeTwo, planeCrash, mirrorBuilding, inHotDogBuild,
     hotDogBuild, gates, feetBandage, doorSlams, doorInHotDogBuild, backPack, afterPickUpBandage, twoBuilding;
-
+    
+    static JTextField chooseNameTextField = new JTextField(10);
+    
     TitleScreenHandler tsHandler = new TitleScreenHandler();
     ExitHandler eHandler = new ExitHandler();
     ChoiceHandler cHandler = new ChoiceHandler();
+    ChooseNameHandler cnHandler = new ChooseNameHandler();
 
     public static void main(String[] args) {
 
@@ -66,7 +69,12 @@ public class Game {
         titleNameLabel = new JLabel("Laughing Stock");
         titleNameLabel.setForeground(Color.white);
         titleNameLabel.setFont(titleFont);
-
+        
+        //creates the panel for setting the player's name
+        chooseNamePanel = new JPanel();
+        chooseNamePanel.setBounds(50, 200, 600, 200); // TODO: change these values later to look better
+        chooseNamePanel.setBackground(Color.white);
+        
         //panel that holds the buttons in order to play the game
         playGameButtonPanel = new JPanel();
         playGameButtonPanel.setBounds(250, 400, 200, 100);
@@ -80,6 +88,15 @@ public class Game {
         
         playGameButton.addActionListener(tsHandler);
         playGameButton.setFocusPainted(false);
+        
+        //button that prompts the user to submit their choice of name
+        chooseNameButton = new JButton("ENTER CHOICE");
+        chooseNameButton.setBackground(Color.white);
+        chooseNameButton.setForeground(Color.black);
+        chooseNameButton.setFont(titleButtonFont);
+        
+        chooseNameButton.addActionListener(cnHandler);
+        chooseNameButton.setFocusPainted(false);
         
         //panel that holds the end game button
         endGameButtonPanel = new JPanel();
@@ -104,19 +121,8 @@ public class Game {
         con.add(titleNamePanel);
         con.add(playGameButtonPanel);
         con.add(endGameButtonPanel);
+        con.add(chooseNamePanel);
         window.setVisible(true);
-    }
-    
-    //method to set up typing
-    public void createrTextEdit() {
-    	// Make start button come here
-    	// Set title and play button vis to false
-    	
-    	
-    	
-    	// Implement entering of name here
-    	
-    	// Have continue button move to createGameScreen
     }
 
     //function that creates the game screen 
@@ -125,7 +131,7 @@ public class Game {
         //sets the title panel and play button to false
         titleNamePanel.setVisible(false);
         playGameButtonPanel.setVisible(false);
-
+        
         //creates a text area panel that shows the message to the user
         mainTextPanel = new JPanel();
         mainTextPanel.setBounds(2, 500, 700, 100);
@@ -182,6 +188,12 @@ public class Game {
         choice3.addActionListener(cHandler);
         choice3.setActionCommand("c3");
         choiceButtonPanel.add(choice3);
+        
+        //creates a Label to prompt the user to enter their name
+        JLabel chooseNameLabel = new JLabel("Please enter your name:");
+        chooseNamePanel.add(chooseNameLabel);
+        chooseNamePanel.add(chooseNameTextField);
+        chooseNamePanel.add(chooseNameButton);
 
         //shows the status of the player when they lose or gain hp
         playerPanel = new JPanel();
@@ -202,8 +214,7 @@ public class Game {
         hpLabelNumber.setForeground(Color.white);
         playerPanel.add(hpLabelNumber);
 
-        //calls playerSetup method
-        playerSetup();
+        setPlayerName();
 
     }
     
@@ -222,8 +233,20 @@ public class Game {
     	}
     }
         
+    public void setPlayerName() {
+    	choiceButtonPanel.setVisible(false);
+    	chooseNamePanel.setVisible(true);
+    	mainTextPanel.setVisible(false);
+    	playerPanel.setVisible(false);
+    }
+    
     //where it shows the hp bar with a unspecified hp
     public void playerSetup () {
+    	choiceButtonPanel.setVisible(true);
+    	chooseNamePanel.setVisible(false);
+    	mainTextPanel.setVisible(true);
+    	playerPanel.setVisible(true);
+    	
         playerHp = Main.health;
         hpLabelNumber.setText("" + playerHp);
         panelInit();
@@ -940,7 +963,6 @@ public class Game {
         choice3.setText("Go through metal detector");
     }
     
-    
     //supposed to transition to a winning screen when player chooses great routes
     public void winning() {
     	position = "winning";
@@ -956,10 +978,17 @@ public class Game {
     
     //actions that handle the titlescreen
     public class TitleScreenHandler implements ActionListener {
-
         public void actionPerformed(ActionEvent event) {
             createGameScreen();
         }
+    }
+    
+    public class ChooseNameHandler implements ActionListener {
+    	public void actionPerformed(ActionEvent event) {
+    		Main.jimbo.setName(chooseNameTextField.getText());
+    		
+    		playerSetup();
+    	}
     }
     
     public class ExitHandler implements ActionListener {
