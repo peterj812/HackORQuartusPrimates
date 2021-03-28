@@ -1,5 +1,3 @@
-package HackORQuartusPrimates.HackORQuartusPrimates.src;
-
 
 //import statements
 import java.awt.Color;
@@ -29,11 +27,7 @@ public class Game {
     Font titleFont = new Font("Times New Roman", Font.BOLD, 90);
     Font titleButtonFont = new Font("Times New Roman", Font.PLAIN, 60);
     Font promptFont = new Font("Calibri", Font.BOLD, 20);
-<<<<<<< HEAD
     Font choiceFont = new Font("Calibri", Font.BOLD, 12);
-=======
-    Font choiceFont = new Font("Calibri", Font.BOLD, 18);
->>>>>>> 26d49b4ed84e149cb93acd702303054d417440be
     Font hpFont = new Font("Calibri", Font.BOLD, 35);
     Font otherButtonFont = new Font("Times New Roman", Font.PLAIN, 45);
     
@@ -45,7 +39,7 @@ public class Game {
     ImageIcon image1, image2;
     ImageIcon tsaNormal, tsaMad, planeMarshall, planeOne, planeTwo, planeCrash, mirrorBuilding, inHotDogBuild,
     hotDogBuild, gates, feetBandage, doorSlams, doorInHotDogBuild, backPack, afterPickUpBandage, twoBuilding, 
-    clownCooking, winImage, deathGeneric;
+    clownCooking, winImage, deathGeneric, fetalPos, happilyEverAfter;
 
     TitleScreenHandler tsHandler = new TitleScreenHandler();
     ExitHandler eHandler = new ExitHandler();
@@ -296,11 +290,11 @@ public class Game {
         mainTextArea.setText(Main.c.prompt);
 
         choice1.setText("");
-        choice2.setText("Play again?");
+        choice2.setText("");
         choice3.setText("");
-        choice1.setVisible(true);
-        choice2.setVisible(true);
-        choice3.setVisible(true);
+        choice1.setVisible(false);
+        choice2.setVisible(false);
+        choice3.setVisible(false);
     }
     
     public void panelD() {
@@ -344,10 +338,10 @@ public class Game {
         position = "panelE";
         mainTextArea.setText(Main.e.prompt);
 
-        choice1.setText("Next");
+        choice1.setText("");
         choice2.setText("");
         choice3.setText("");
-        choice1.setVisible(true);
+        choice1.setVisible(false);
         choice2.setVisible(false);
         choice3.setVisible(false);
     }
@@ -404,11 +398,11 @@ public class Game {
         mainTextArea.setText(Main.h.prompt);
 
         choice1.setText("");
-        choice2.setText("Restart");
+        choice2.setText("");
         choice3.setText("");
-        choice1.setVisible(true);
-        choice2.setVisible(true);
-        choice3.setVisible(true);
+        choice1.setVisible(false);
+        choice2.setVisible(false);
+        choice3.setVisible(false);
     }
     
     public void panelI() {
@@ -568,11 +562,11 @@ public class Game {
         mainTextArea.setText(Main.o.prompt);
 
         choice1.setText("");
-        choice2.setText("Restart");
+        choice2.setText("");
         choice3.setText("");
-        choice1.setVisible(true);
-        choice2.setVisible(true);
-        choice3.setVisible(true);
+        choice1.setVisible(false);
+        choice2.setVisible(false);
+        choice3.setVisible(false);
     }
     
     public void panelP() {
@@ -596,25 +590,23 @@ public class Game {
     }
     
     public void panelQ() {
-        //deathGeneric();
-
         picturePanel = new JPanel();
         picturePanel.setBounds(110, -5, 500, 500);
         con.add(picturePanel);
         pictureLabel = new JLabel();
-        deathGeneric = new ImageIcon(".//Images//YouDiedGeneric.jpg");
-        pictureLabel.setIcon(deathGeneric);
+        happilyEverAfter = new ImageIcon(".//Images//FetalPos.jpg");
+        pictureLabel.setIcon(happilyEverAfter);
         picturePanel.add(pictureLabel);
 
         position = "panelQ";
         mainTextArea.setText(Main.q.prompt);
 
         choice1.setText("");
-        choice2.setText("Restart");
+        choice2.setText("");
         choice3.setText("");
-        choice1.setVisible(true);
-        choice2.setVisible(true);
-        choice3.setVisible(true);
+        choice1.setVisible(false);
+        choice2.setVisible(false);
+        choice3.setVisible(false);
     }
     
     public void panelR() {
@@ -762,11 +754,11 @@ public class Game {
         mainTextArea.setText(Main.y.prompt);
 
         choice1.setText("");
-        choice2.setText("Restart");
+        choice2.setText("");
         choice3.setText("");
-        choice1.setVisible(true);
-        choice2.setVisible(true);
-        choice3.setVisible(true);
+        choice1.setVisible(false);
+        choice2.setVisible(false);
+        choice3.setVisible(false);
     }
     
     public void panelZ() {
@@ -776,11 +768,11 @@ public class Game {
         mainTextArea.setText(Main.z.prompt);
 
         choice1.setText("");
-        choice2.setText("Continue");
+        choice2.setText("");
         choice3.setText("");     
-        choice1.setVisible(true);
-        choice2.setVisible(true);
-        choice3.setVisible(true);
+        choice1.setVisible(false);
+        choice2.setVisible(false);
+        choice3.setVisible(false);
     }
     
     public void panelAA() {
@@ -836,7 +828,7 @@ public class Game {
         mainTextArea.setText(Main.ac.prompt);
 
         choice1.setText("Screeeeeaaammm!!!");
-        choice2.setText("Ask if he needs help");
+        choice2.setText("Run out of the building");
         choice3.setText("");
         choice1.setVisible(true);
         choice2.setVisible(true);
@@ -869,11 +861,11 @@ public class Game {
         mainTextArea.setText(Main.ae.prompt);
 
         choice1.setText("");
-        choice2.setText("Continue");
+        choice2.setText("");
         choice3.setText("");
-        choice1.setVisible(true);
-        choice2.setVisible(true);
-        choice3.setVisible(true);
+        choice1.setVisible(false);
+        choice2.setVisible(false);
+        choice3.setVisible(false);
     }
     
     public void panelAF() {
@@ -881,11 +873,11 @@ public class Game {
         mainTextArea.setText(Main.af.prompt);
 
         choice1.setText("");
-        choice2.setText("Continue");
+        choice2.setText("");
         choice3.setText("");
-        choice1.setVisible(true);
-        choice2.setVisible(true);
-        choice3.setVisible(true);
+        choice1.setVisible(false);
+        choice2.setVisible(false);
+        choice3.setVisible(false);
     }
     
     public void panelAG() {
@@ -912,30 +904,30 @@ public class Game {
         picturePanel.add(pictureLabel);
 
     	position = "deathG";
-    	mainTextArea.setText(Main.go.prompt);
+    	mainTextArea.setText(Main.ah.prompt);
     	Main.injury(10, 11);
     	playerHp = Main.jimbo.getHealth();
     	hpLabelNumber.setText("" + playerHp);
 
     	//GAME OVER
-		choice1.setText("");
-		choice2.setText("Restart");
+		choice1.setText("Restart");
+		choice2.setText("");
 		choice3.setText("");
 		choice1.setVisible(true);
-		choice2.setVisible(true);
-		choice3.setVisible(true);
+		choice2.setVisible(false);
+		choice3.setVisible(false);
     }
     
     public void deathCrash() {
-    	position = "deathC";
+    	position = "deathG";
     	mainTextArea.setText(Main.ah.prompt);
     	//GAME OVER
-		choice1.setText("");
-		choice2.setText("Restart");
+		choice1.setText("Restart");
+		choice2.setText("");
 		choice3.setText("");
 		choice1.setVisible(true);
-		choice2.setVisible(true);
-		choice3.setVisible(true);
+		choice2.setVisible(false);
+		choice3.setVisible(false);
     }
     
     public void deathShrapnel() {
@@ -945,12 +937,12 @@ public class Game {
     	playerHp = Main.jimbo.getHealth();
     	hpLabelNumber.setText("" + playerHp);
     	//GAME OVER, SHRAPNEL IN YOUR LEG WAS TOO MUCH
-		choice1.setText("");
-		choice2.setText("Restart");
+		choice1.setText("Restart");
+		choice2.setText("");
 		choice3.setText("");
 		choice1.setVisible(true);
-		choice2.setVisible(true);
-		choice3.setVisible(true);
+		choice2.setVisible(false);
+		choice3.setVisible(false);
     }
 
     public void restart() {
@@ -974,26 +966,14 @@ public class Game {
         picturePanel.add(pictureLabel);
 
     	position = "winning";
-    	mainTextArea.setText(Main.win.prompt);
+    	mainTextArea.setText(Main.c.prompt);
     	
-		choice1.setText("");
-		choice2.setText("Play again?");
+		choice1.setText("Restart");
+		choice2.setText("");
 		choice3.setText("");
 		choice1.setVisible(true);
-		choice2.setVisible(true);
-		choice3.setVisible(true);
-    }
-    
-    public void winningC() {
-    	position = "winningC";
-    	mainTextArea.setText(Main.winC.prompt);
-    	
-		choice1.setText("");
-		choice2.setText("Play again?");
-		choice3.setText("");
-		choice1.setVisible(true);
-		choice2.setVisible(true);
-		choice3.setVisible(true);
+		choice2.setVisible(false);
+		choice3.setVisible(false);
     }
     
     //actions that handle the titlescreen
@@ -1039,11 +1019,9 @@ public class Game {
             	break;
             case "panelB":
             	deathGeneric();break;
+            	
             case "panelC":
-            	switch(buttonPressed) {
-    			case "c2": panelInit(); break;
-    			}
-    			break;
+            	winning();break;
             
             case "panelD":
             	switch(buttonPressed) {
@@ -1074,10 +1052,8 @@ public class Game {
             	}
             	break;
             case "panelH":
-            	switch(buttonPressed) {
-        		case "c2": panelInit(); break;
-            	}
-            	break;
+            	deathGeneric(); break;
+            	
             case "panelI":
             	switch(buttonPressed) {
             		case "c1": panelL(); break;
@@ -1112,10 +1088,7 @@ public class Game {
             	}
             	break;
             case "panelO":
-            	switch(buttonPressed) {
-    			case "c2": panelInit(); break;
-    			}
-    			break;
+            	deathShrapnel(); break;
             	
             case "panelP":
             	switch(buttonPressed) {
@@ -1125,10 +1098,7 @@ public class Game {
             	}
             	break;
             case "panelQ":
-            	switch(buttonPressed) {
-    			case "c2": panelInit(); break;
-    			}
-    			break;
+            	deathGeneric(); break;
             	
             case "panelR": 
 				switch(buttonPressed) {
@@ -1177,12 +1147,8 @@ public class Game {
     			}
     			break;
     		case "panelY": 
-            	switch(buttonPressed) {
-    			case "c2": panelInit(); break;
-    			}
-    			break;
-    		case "panelZ":
     			deathGeneric(); break;
+
     		case "panelAA": 
     			switch(buttonPressed) {
     			case "c1": panelAD();break;
@@ -1199,38 +1165,6 @@ public class Game {
     			case "c1": panelQ();break;
     			case "c2": panelR();break;
     			case "c3": panelS(); break;
-    			}
-    			break;
-    		case "panelAE":
-    			deathGeneric(); break;
-            case "panelAF":
-            	switch(buttonPressed) {
-    			case "c2": winningC(); break;
-    			}
-    			break;
-            case "deathG":
-            	switch(buttonPressed) {
-    			case "c2": panelInit(); break;
-    			}
-    			break;
-            case "deathS":
-            	switch(buttonPressed) {
-    			case "c2": panelInit(); break;
-    			}
-    			break;
-            case "deathC":
-            	switch(buttonPressed) {
-    			case "c2": panelInit(); break;
-    			}
-    			break;
-            case "winning":
-            	switch(buttonPressed) {
-    			case "c2": panelInit(); break;
-    			}
-    			break;
-            case "winningC":
-            	switch(buttonPressed) {
-    			case "c2": panelInit(); break;
     			}
     			break;
             }
