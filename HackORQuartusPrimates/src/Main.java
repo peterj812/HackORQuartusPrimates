@@ -27,7 +27,7 @@ public class Main {
 	public static Player jimbo = new Player("");
 
 	static Panel homescreen, choosename, init, a, b, c, d, e, f, g, h, i, j, k, l, l1, m, m1, n, o, p, q, r, s, t, u, v,
-			w, x, y, z, aa, ab, ac, ad, ae, af, ag, ah, ai, home;
+			w, x, y, z, aa, ab, ac, ad, ae, af, ag, ah, ai, go, win, winC, home;
 	static JPanel titleNamePanel, playGameButtonPanel, mainTextPanel, choiceButtonPanel, playerPanel;
 	static JLabel titleNameLabel, hpLabel, hpLabelNumber;
 
@@ -132,7 +132,7 @@ public class Main {
 		y = new Panel("",
 				"GAME OVER." + "\n" + "Trust us, we're doing you a favor. You're not smart enough to make it any farther. Your arms fall off and you bleed out.");
 		z = new Panel("",
-				"GAME OVER." + "\n" + "You run into a clown and are knocked out");
+				"\n" + "As you run you hear the laughing of a clown close in on you. Suddenly, you feel a blunt object hit you in the head.");
 		aa = new Panel("",
 				"You turn and leave the hotdog building. The smell of meat gets fainter. Maybe you made the wrong choice...");
 		ab = new Panel("", "You have a bandage. Would you like to apply it?");
@@ -140,13 +140,16 @@ public class Main {
 				"You push open the door. To your horror, you see a clown cooking what looks like a deceased mime!");
 		ad = new Panel("", "You walk back into the carnival and once again can see the two buildings");
 		ae = new Panel("",
-				"GAME OVER." + "\n" + "You scream, spooking the clown who promptly attacks and eats you");
+				"\n" + "You scream, spooking the clown who chases after you, a hungry look on his face");
 		af = new Panel("",
-				"YOU WIN!" + "\n" + "You join the clown and live happily ever after");
+				"\n" + "You ask the clown if he needs help cooking. He nods and you join him.");
 		ag = new Panel("", "");
 		ah = new Panel("", "GAME OVER!" + "\n" + " You died in the plane crash!");
 		ai = new Panel("", "GAME OVER!" + "\n" + " The bleeding is too much, you feel the life rushing out of you. You know there's nothing left to do but let death take you.");
 		home = new Panel("", "Laughing Stock");
+		go = new Panel("", "GAME OVER!");
+		win = new Panel("", "Congradulations! You win!");
+		winC = new Panel("YOU WIN!", "Joining the clown, you and he develop and unbreakable bond and live happily ever after");
 
 	}
 
