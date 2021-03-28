@@ -98,12 +98,12 @@ public class Game {
         //adds the title name and the play button to the panel
         titleNamePanel.add(titleNameLabel);
         playGameButtonPanel.add(playGameButton);
-	endGameButtonPanel.add(endGameButton);
+        endGameButtonPanel.add(endGameButton);
 
         //adds the panels to the container
         con.add(titleNamePanel);
         con.add(playGameButtonPanel);
-	con.add(endGameButtonPanel);
+        con.add(endGameButtonPanel);
         window.setVisible(true);
     }
     
@@ -242,7 +242,6 @@ public class Game {
         pictureLabel.setIcon(tsaNormal);
         picturePanel.add(pictureLabel);
 		
-    	
         position = "panelInit";
         mainTextArea.setText(Main.init.prompt);
 
