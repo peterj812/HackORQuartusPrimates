@@ -10,6 +10,7 @@ import javax.swing.*;
 import javax.swing.ImageIcon;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
+import javax.swing.JComponent;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -19,9 +20,8 @@ public class Game {
 
     JFrame window;
     Container con;
-    JPanel titleNamePanel, endGameButtonPanel, playGameButtonPanel, mainTextPanel, choiceButtonPanel, playerPanel, picturePanel;
+    JPanel titleNamePanel, endGameButtonPanel, playGameButtonPanel, chooseNamePanel, mainTextPanel, choiceButtonPanel, playerPanel, picturePanel;
     JLabel titleNameLabel, hpLabel, hpLabelNumber, pictureLabel;
-    JTextField jtext;
     
     Font titleFont = new Font("Times New Roman", Font.BOLD, 90);
     Font titleButtonFont = new Font("Times New Roman", Font.PLAIN, 60);
@@ -29,7 +29,7 @@ public class Game {
     Font choiceFont = new Font("Times New Roman", Font.PLAIN, 40);
     Font otherButtonFont = new Font("Times New Roman", Font.PLAIN, 40);
     
-    JButton endGameButton, playGameButton, choice1, choice2, choice3;
+    JButton endGameButton, playGameButton,chooseNameButton, choice1, choice2, choice3;
 
     JTextArea mainTextArea;
     String position;
@@ -69,6 +69,12 @@ public class Game {
         playGameButtonPanel = new JPanel();
         playGameButtonPanel.setBounds(250, 400, 200, 100);
         playGameButtonPanel.setBackground(Color.white);
+        
+        chooseNamePanel = new JPanel();
+        chooseNamePanel.setBounds(150, 200, 500, 300);
+        chooseNamePanel.setBackground(Color.black);
+        chooseNamePanel.setForeground(Color.white);
+        chooseNamePanel.setFont(titleFont);
 
         //button that prompts user to play the game
         playGameButton = new JButton("PLAY");
@@ -111,6 +117,7 @@ public class Game {
         //sets the title panel and play button to false
         titleNamePanel.setVisible(false);
         playGameButtonPanel.setVisible(false);
+        chooseNamePanel.setVisible(false);
 
         //creates a text area panel that shows the message to the user
         mainTextPanel = new JPanel();
@@ -183,7 +190,7 @@ public class Game {
         hpLabelNumber.setForeground(Color.white);
         playerPanel.add(hpLabelNumber);
 
-        //calls playerSetup function
+        //calls playerSetup method
         playerSetup();
 
     }
