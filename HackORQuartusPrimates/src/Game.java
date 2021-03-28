@@ -21,9 +21,14 @@ public class Game {
     Container con;
     JPanel titleNamePanel, endGameButtonPanel, playGameButtonPanel, mainTextPanel, choiceButtonPanel, playerPanel, picturePanel;
     JLabel titleNameLabel, hpLabel, hpLabelNumber, pictureLabel;
+<<<<<<< HEAD
     JTextField jtext;
     
     Font titleFont = new Font("Times New Roman", Font.BOLD, 200);
+=======
+
+    Font titleFont = new Font("Times New Roman", Font.BOLD, 90);
+>>>>>>> f49412de41f795c3abe76a35e136ded70229b611
     Font titleButtonFont = new Font("Times New Roman", Font.PLAIN, 60);
     Font promptFont = new Font("Times New Roman", Font.PLAIN, 20);
     Font choiceFont = new Font("Times New Roman", Font.PLAIN, 40);
@@ -50,7 +55,7 @@ public class Game {
 
         //setting the window of the game
         window = new JFrame();
-        window.setExtendedState(JFrame.MAXIMIZED_BOTH);       
+        window.setSize(720,720);       
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         window.getContentPane().setBackground(Color.black);
         window.setLayout(null);
@@ -59,7 +64,7 @@ public class Game {
 
         //creates the title page panel
         titleNamePanel = new JPanel();
-        titleNamePanel.setBounds(0, 200, 1900, 400);
+        titleNamePanel.setBounds(0, 200, 720, 200);
         titleNamePanel.setBackground(Color.black);
         titleNameLabel = new JLabel("Laughing Stock");
         titleNameLabel.setForeground(Color.white);
@@ -67,7 +72,7 @@ public class Game {
 
         //panel that holds the buttons in order to play the game
         playGameButtonPanel = new JPanel();
-        playGameButtonPanel.setBounds(820, 600, 200, 100);
+        playGameButtonPanel.setBounds(250, 400, 200, 100);
         playGameButtonPanel.setBackground(Color.white);
 
         //button that prompts user to play the game
@@ -114,13 +119,13 @@ public class Game {
 
         //creates a text area panel that shows the message to the user
         mainTextPanel = new JPanel();
-        mainTextPanel.setBounds(580, 200, 100, 200);
+        mainTextPanel.setBounds(0, 200, 720, 250);
         mainTextPanel.setBackground(Color.black);
         con.add(mainTextPanel);
 
         //sets the text area
         mainTextArea = new JTextArea();
-        mainTextArea.setBounds(100, 350, 1000, 250);
+        mainTextArea.setBounds(0, 350, 700, 250);
         mainTextArea.setBackground(Color.red);
         mainTextArea.setForeground(Color.white);
         mainTextArea.setFont(promptFont);
@@ -129,7 +134,7 @@ public class Game {
 
         //choice button panel that shows the choices for the user
         choiceButtonPanel = new JPanel();
-        choiceButtonPanel.setBounds(400, 800, 1100, 100);
+        choiceButtonPanel.setBounds(0, 600, 720, 100);
         choiceButtonPanel.setBackground(Color.black);
         choiceButtonPanel.setLayout(new GridLayout(1,3));
         con.add(choiceButtonPanel);
