@@ -10,6 +10,7 @@ import javax.swing.*;
 import javax.swing.ImageIcon;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
+import javax.swing.JComponent;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -21,8 +22,7 @@ public class Game {
     Container con;
     JPanel titleNamePanel, endGameButtonPanel, playGameButtonPanel, mainTextPanel, choiceButtonPanel, playerPanel, picturePanel;
     JLabel titleNameLabel, hpLabel, hpLabelNumber, pictureLabel;
-    JTextField jtext;
-
+    
     Font titleFont = new Font("Times New Roman", Font.BOLD, 90);
     Font titleButtonFont = new Font("Times New Roman", Font.PLAIN, 60);
     Font promptFont = new Font("Times New Roman", Font.PLAIN, 30);
@@ -202,7 +202,7 @@ public class Game {
         hpLabelNumber.setForeground(Color.white);
         playerPanel.add(hpLabelNumber);
 
-        //calls playerSetup function
+        //calls playerSetup method
         playerSetup();
 
     }
