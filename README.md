@@ -27,7 +27,7 @@ Peter Jacobson @peterj812
 #### Lead Developer
 Sam Platt @platt-sam
 
-#### Script Supervisor & Artist
+#### Script Supervisor, Artist & Developer
 Liam Erickson @ericksonl
 
 #### Head of Search & GUI Guy
