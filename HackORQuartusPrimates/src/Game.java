@@ -181,13 +181,13 @@ public class Game {
 
         //shows the status of the player when they lose or gain hp
         playerPanel = new JPanel();
-        playerPanel.setBounds(110, 0, 102, 37);
-        playerPanel.setBackground(Color.red);
+        playerPanel.setBounds(5, 5, 105, 37);
+        playerPanel.setBackground(Color.black);
         playerPanel.setLayout(new GridLayout(1,3));
         con.add(playerPanel);
       
         //sets the hp label
-        hpLabel = new JLabel("HP:");
+        hpLabel = new JLabel("HP ");
         hpLabel.setFont(hpFont);
         hpLabel.setForeground(Color.white);
         playerPanel.add(hpLabel);
