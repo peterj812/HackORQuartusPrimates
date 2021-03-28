@@ -33,13 +33,13 @@ public class Main {
 	public static Player jimbo = new Player("");
 	
 	static Panel homescreen, choosename, init, a, b, c, d, e, f, g, h, i, j, k, l, l1, m, m1, n, o, p, q, r, s, t, u, v, w, x, y, z, aa, ab, ac, ad, ae, af, ag;
-  static JPanel titleNamePanel, playGameButtonPanel, mainTextPanel, choiceButtonPanel, playerPanel;
-  static JLabel titleNameLabel, hpLabel, hpLabelNumber;
+	static JPanel titleNamePanel, playGameButtonPanel, mainTextPanel, choiceButtonPanel, playerPanel;
+	static JLabel titleNameLabel, hpLabel, hpLabelNumber;
 
-  static Font titleFont = new Font("Times New Roman", Font.PLAIN, 30);
-  static Font normalFont = new Font("Times New Roman", Font.PLAIN, 30);
-  static JButton playGameButton, choice1, choice2, choice3;
-  static JTextArea mainTextArea;
+	static Font titleFont = new Font("Times New Roman", Font.PLAIN, 30);
+	static Font normalFont = new Font("Times New Roman", Font.PLAIN, 30);
+	static JButton playGameButton, choice1, choice2, choice3;
+	static JTextArea mainTextArea;
 	static JFrame window;
 	static Container con;
 
