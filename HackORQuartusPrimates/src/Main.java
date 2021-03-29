@@ -1,14 +1,6 @@
 
-import java.awt.Color;
 import java.awt.Container;
 import java.awt.Font;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.*;
-
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Set;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -17,10 +9,6 @@ import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
 import java.util.Random;
-
-import javax.swing.*;
-import javax.swing.ImageIcon;
-import javax.swing.JTextField;
 
 public class Main {
 	private static Random rand = new Random();
@@ -37,8 +25,9 @@ public class Main {
 	static JTextArea mainTextArea;
 	static JFrame window;
 	static Container con;
-
-	static Item adultItem, bandages, knife, smallEngine, waterBottle;
+	
+	//ITEMS IMPLEMENTED IN FUTURE
+	//static Item adultItem, bandages, knife, smallEngine, waterBottle;
 	static Game gam;
 	public static int health = jimbo.getHealth();
 
@@ -75,13 +64,15 @@ public class Main {
 		double hasWaterBottleChance = 25;
 		double tripChance = 25; */
 
-		// ITEMS
+		// ITEMS TO BE IMPLEMENTED IN FUTURE
+		/*
 		adultItem = new Item("adult item", true);
 		bandages = new Item("bandages", false);
 		knife = new Item("knife", true);
 		smallEngine = new Item("small engine", true);
 		waterBottle = new Item("water bottle", true);
-
+		*/
+		
 		// PANELS/PROMPTS
 		homescreen = new Panel("Homescreen", "");
 		choosename = new Panel("", "What's your name?");
@@ -144,7 +135,7 @@ public class Main {
 				"<html><center>You turn and leave the hotdog building. <br> The smell of meat gets fainter. Maybe you made the wrong choice...</center></html>");
 		ab = new Panel("", "<html><center>You have a bandage. Would you like to apply it?</center></html>");
 		ac = new Panel("",
-				"<html><center>You push open the door. <br> To your horror, you see a clown cooking what looks like a deceased mime!</center></html>");
+				"<html><center>You pull open the door. <br> To your horror, you see a clown cooking what looks like a deceased mime!</center></html>");
 		ad = new Panel("", "<html><center>You walk back into the carnival and once again can see the two buildings</center></html>");
 		ae = new Panel("",
 				"<html><center>You scream, spooking the clown who chases after you, a hungry look on his face.</center></html>");
@@ -154,7 +145,7 @@ public class Main {
 		home = new Panel("", "<html><center>Laughing Stock</center></html>");
 		go = new Panel("", "<html><center>GAME OVER!</center></html>");
     win = new Panel("", "<html><center>Congratulations! You win!</center></html>");
-    winC = new Panel("YOU WIN!", "<html><center>Joining the clown, <br> you and he develop an unbreakable bond and live happily ever after</center></html>");
+    winC = new Panel("", "<html><center>Joining the clown, <br> you and he develop an unbreakable bond and live happily ever after</center></html>");
 		ai = new Panel("", "<html><center>GAME OVER! <br> The bleeding is too much, you feel the life rushing out of you. <br> You know there's nothing left to do but let death take you.</center></html>");
 
 	}
