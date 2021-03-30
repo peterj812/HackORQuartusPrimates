@@ -6,11 +6,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.*;
 
-import javax.swing.*;
+
 import javax.swing.ImageIcon;
-import javax.swing.JTextArea;
-import javax.swing.JTextField;
-import javax.swing.JComponent;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -38,7 +35,7 @@ public class Game {
     ImageIcon image1, image2;
     ImageIcon tsaNormal, tsaMad, planeMarshall, planeOne, planeTwo, planeCrash, mirrorBuilding, inHotDogBuild,
     hotDogBuild, gates, feetBandage, doorSlams, doorInHotDogBuild, backPack, afterPickUpBandage, twoBuilding, happilyEverAfter,
-    fetalPos, clownCooking, bleedingImage, winImage, deathGeneric;
+    fetalPos, clownCooking, bleedingImage, winImage, deathGeneric, doorOutHotDogBuild;
 
     TitleScreenHandler tsHandler = new TitleScreenHandler();
     ExitHandler eHandler = new ExitHandler();
@@ -103,6 +100,7 @@ public class Game {
         window.setVisible(true);
     }
     
+    /*
     //method to set up typing
     public void createrTextEdit() {
     	// Make start button come here
@@ -114,7 +112,7 @@ public class Game {
     	
     	// Have continue button move to createGameScreen
     }
-
+	*/
     //function that creates the game screen 
     public void createGameScreen() {
 
@@ -233,17 +231,17 @@ public class Game {
         
     //where it shows the hp bar with a unspecified hp
     public void playerSetup () {
+    	Main.jimbo.setHealth(10);
         playerHp = Main.health;
         hpLabelNumber.setText("" + playerHp);
         panelInit();
     }
 
+    
     //choices to show the first scenario
     public void panelInit() {
     	
     	 //these picture panels is what calls the images from the folder
-    	playerHp = Main.health;
-        hpLabelNumber.setText("" + playerHp);
         picturePanel = new JPanel();
         picturePanel.setBounds(110, -5, 500, 500);
         picturePanel.setBackground(Color.black);
@@ -424,6 +422,9 @@ public class Game {
         picturePanel.add(pictureLabel);
         position = "panelH";
         mainTextArea.setText(Main.h.prompt);
+    	Main.injury(10, 11);
+    	playerHp = Main.jimbo.getHealth();
+    	hpLabelNumber.setText("" + playerHp);
 
         choice1.setText("");
         choice2.setText("Restart");
@@ -629,12 +630,15 @@ public class Game {
         picturePanel.setBounds(110, -5, 500, 500);
         con.add(picturePanel);
         pictureLabel = new JLabel();
-        happilyEverAfter = new ImageIcon(".//Images//FetalPos.jpg");
-        pictureLabel.setIcon(happilyEverAfter);
+        fetalPos = new ImageIcon(".//Images//FetalPos.jpg");
+        pictureLabel.setIcon(fetalPos);
         picturePanel.add(pictureLabel);
 
         position = "panelQ";
         mainTextArea.setText(Main.q.prompt);
+    	Main.jimbo.setHealth(0);
+    	playerHp = Main.jimbo.getHealth();
+    	hpLabelNumber.setText("" + playerHp);
 
         choice1.setText("");
         choice2.setText("Restart");
@@ -749,14 +753,14 @@ public class Game {
         picturePanel.setBounds(110, -5, 500, 500);
         con.add(picturePanel);
         pictureLabel = new JLabel();
-        hotDogBuild = new ImageIcon(".//Images//HotDogBuild.jpg");
+        hotDogBuild = new ImageIcon(".//Images//DoorInHotDogBuild.jpg");
         pictureLabel.setIcon(hotDogBuild);
         picturePanel.add(pictureLabel);
 
         position = "panelW";
         mainTextArea.setText(Main.w.prompt);
 
-        choice1.setText("Push the door");
+        choice1.setText("Pull the door");
         choice2.setText("");
         choice3.setText("<html><center>Walk out the <br> way you came</center></html>");
         choice1.setVisible(true);
@@ -815,8 +819,8 @@ public class Game {
         picturePanel.setBounds(110, -5, 500, 500);
         con.add(picturePanel);
         pictureLabel = new JLabel();
-        doorInHotDogBuild = new ImageIcon(".//Images//DoorInHotDogBuild.jpg");
-        pictureLabel.setIcon(doorInHotDogBuild);
+        doorOutHotDogBuild = new ImageIcon(".//Images//HotDogOut.jpg");
+        pictureLabel.setIcon(doorOutHotDogBuild);
         picturePanel.add(pictureLabel);
 
         position = "panelAA";
@@ -971,7 +975,7 @@ public class Game {
     	
     	position = "deathS";
     	mainTextArea.setText(Main.ai.prompt);
-    	Main.injury(10, 11);
+    	Main.jimbo.setHealth(0);
     	playerHp = Main.jimbo.getHealth();
     	hpLabelNumber.setText("" + playerHp);
     	//GAME OVER, SHRAPNEL IN YOUR LEG WAS TOO MUCH
@@ -1006,18 +1010,19 @@ public class Game {
     }
     
     public void winningC() {
-    	 picturePanel.setBounds(110, -5, 500, 500);
-         con.add(picturePanel);
-         pictureLabel = new JLabel();
-         happilyEverAfter = new ImageIcon(".//Images//HappilyEverAfter.jpg");
-         pictureLabel.setIcon(happilyEverAfter);
-         picturePanel.add(pictureLabel);
+        picturePanel = new JPanel();
+        picturePanel.setBounds(110, -5, 500, 500);
+        con.add(picturePanel);
+        pictureLabel = new JLabel();
+        happilyEverAfter = new ImageIcon(".//Images//HappilyEverAfter.jpg");
+        pictureLabel.setIcon(happilyEverAfter);
+        picturePanel.add(pictureLabel);
     	
     	position = "winningC";
     	mainTextArea.setText(Main.winC.prompt);
     	
 		choice1.setText("");
-		choice2.setText("Play again?");
+		choice2.setText("Continue");
 		choice3.setText("");
 		choice1.setVisible(true);
 		choice2.setVisible(true);
@@ -1069,7 +1074,7 @@ public class Game {
             	deathGeneric();break;
             case "panelC":
             	switch(buttonPressed) {
-    			case "c2": panelInit(); break;
+    			case "c2": playerSetup(); break;
     			}
     			break;
             
@@ -1103,7 +1108,7 @@ public class Game {
             	break;
             case "panelH":
             	switch(buttonPressed) {
-        		case "c2": panelInit(); break;
+        		case "c2": playerSetup(); break;
             	}
             	break;
             case "panelI":
@@ -1149,7 +1154,7 @@ public class Game {
             	break;
             case "panelO":
             	switch(buttonPressed) {
-    			case "c2": panelInit(); break;
+    			case "c2": playerSetup(); break;
     			}
     			break;
             	
@@ -1162,7 +1167,7 @@ public class Game {
             	break;
             case "panelQ":
             	switch(buttonPressed) {
-    			case "c2": panelInit(); break;
+    			case "c2": playerSetup(); break;
     			}
     			break;
             	
@@ -1214,7 +1219,7 @@ public class Game {
     			break;
     		case "panelY": 
             	switch(buttonPressed) {
-    			case "c2": panelInit(); break;
+    			case "c2": playerSetup(); break;
     			}
     			break;
     		case "panelZ":
@@ -1256,27 +1261,27 @@ public class Game {
     			break;
             case "deathG":
             	switch(buttonPressed) {
-    			case "c2": panelInit(); break;
+    			case "c2": playerSetup(); break;
     			}
     			break;
             case "deathS":
             	switch(buttonPressed) {
-    			case "c2": panelInit(); break;
+    			case "c2": playerSetup(); break;
     			}
     			break;
             case "deathC":
             	switch(buttonPressed) {
-    			case "c2": panelInit(); break;
+    			case "c2": playerSetup(); break;
     			}
     			break;
             case "winning":
             	switch(buttonPressed) {
-    			case "c2": panelInit(); break;
+    			case "c2": playerSetup(); break;
     			}
     			break;
             case "winningC":
             	switch(buttonPressed) {
-    			case "c2": panelInit(); break;
+    			case "c2": winning(); break;
     			}
     			break;
             }
