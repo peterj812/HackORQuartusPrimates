@@ -10,9 +10,9 @@ How to Play
   3. Click choices as prompts come up and if the next panel seems off, it definely isn't an error on our part you just don't get modern story telling.
   4. Cry or rejoice if you ever get through.
 
- Known Bugs (Small Spoilers)
+ Known Bug/Fixes (Small Spoilers)
  ---------------------------
- - If you die in the plane crash you must quit and restart the game, hitting restart does not update the plane crash event.
+ - Resizing the window will result in the TSA image being shown on some systems.
 
  Speed Run Leaderboards Any%
  --------------------------
