@@ -1,4 +1,4 @@
-# Laughing Stonk
+# Laughing Stock
 ### Quartus Primates HackOR 2021 Project Repo
 
 After 48 hours of programming, drawing, laughing, crying, yelling, taco bell, room clearing farts, and some good ole wifi outages coal has turned into a ight gem. Join us on an adventure of a lifetime which will likely be short in this humorous horror choose your own adventure game. Hand drawn art and a "riveting" story line really make you want to continue, but it seems that you just can never get it correct. 
